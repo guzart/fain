@@ -22,12 +22,19 @@
     "url": "https://github.com/guzart/fain/issues"
   },
   "homepage": "https://github.com/guzart/fain#readme",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  },
+  "peerDependencies": {
+    "react": "^15.3"
+  },
   "devDependencies": {
     "eslint": "^3.9.1",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.6.0",
+    "react": "^15.3.2",
     "webpack": "^1.13.3"
   }
 }
