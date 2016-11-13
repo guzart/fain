@@ -1,0 +1,39 @@
+@import '~floccus_ui/styles/variables';
+@import '~floccus_ui/styles/mixins';
+
+.card {
+  @include border-radius($card-border-radius);
+  background-color: $card-bg;
+  border: $card-border-width solid $card-border-color;
+  display: block;
+  margin-bottom: $card-spacer-y;
+  position: relative;
+}
+
+.block {
+  @include clearfix;
+  padding: $card-spacer-x;
+}
+
+.header {
+  @include clearfix;
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+  margin-bottom: 0;
+  padding: $card-spacer-y $card-spacer-x;
+}
+
+.subtitle {
+  margin-bottom: 0;
+  margin-top: -($card-spacer-y / 2);
+}
+
+.text {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.title {
+  margin-bottom: $card-spacer-y;
+}

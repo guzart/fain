@@ -1,0 +1,153 @@
+// 1. OPTIONS
+// =======
+
+$enable-flex: true;
+$enable-shadows: true;
+$enable-rounded: true;
+$enable-transitions: true;
+
+
+// 2. COLORS
+// ======
+
+$gray: #55595c;
+$gray-dark: #373a3c;
+$gray-light: #818a91;
+$gray-lighter: #eceeef;
+$gray-lightest: #f7f7f9;
+
+$brand-danger: #d9534f;
+$brand-info: #5bc0de;
+$brand-inverse: $gray-dark;
+$brand-primary: #0275d8;
+$brand-success: #5cb85c;
+$brand-warning: #f0ad4e;
+
+// 3. SPACING
+// =======
+
+$spacer: 1rem;
+// $spacer-x: $spacer;
+$spacer-y: $spacer;
+// $spacers: (
+//   0: (
+//     x: 0,
+//     y: 0
+//   ),
+//   1: (
+//     x: $spacer-x,
+//     y: $spacer-y
+//   ),
+//   2: (
+//     x: ($spacer-x * 1.5),
+//     y: ($spacer-y * 1.5)
+//   ),
+//   3: (
+//     x: ($spacer-x * 3),
+//     y: ($spacer-y * 3)
+//   )
+// );
+$border-width: 1px;
+
+// 6. GRID BREAKPOINTS
+// ===================
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// 7. GRID CONTAINERS
+// ==================
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+// 8. GRID COLUMNS
+// ===============
+
+$grid-gutter-width-base: 30px;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base,
+);
+
+// 9. FONTS
+// ========
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 1rem;
+
+$headings-margin-bottom: ($spacer / 2);
+$headings-font-family: inherit;
+$headings-font-weight: 500;
+$headings-line-height: 1.1;
+$headings-color: inherit;
+
+$line-height-base: 1.5;
+
+// COMPONENTS
+// ==========
+
+$border-radius: .25rem;
+
+// BUTTONS
+// =======
+
+$btn-active-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+$btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+$btn-font-weight: normal;
+$btn-line-height: 1.25;
+$btn-padding-x: 1rem;
+$btn-padding-y: .5rem;
+
+$btn-primary-color: #fff;
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: $btn-primary-bg;
+
+$btn-border-radius: $border-radius;
+
+// FORMS
+// =====
+
+$cursor-disabled: not-allowed;
+
+$input-bg: #fff;
+$input-bg-disabled: $gray-lighter;
+$input-bg-focus: $input-bg;
+$input-border-color: rgba(0, 0, 0, .15);
+$input-border-focus: #66afe9;
+$input-border-radius: $border-radius;
+$input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+$input-box-shadow-focus: rgba(102, 175, 233, .6);
+$input-btn-border-width: $border-width;
+$input-color: $gray;
+$input-color-focus: $input-color;
+$input-color-placeholder: #999;
+$input-line-height: 1.25;
+$input-padding-x: .75rem;
+$input-padding-y: .5rem;
+
+$form-group-margin-bottom: $spacer-y;
+
+// CARDS
+// =====
+
+$card-spacer-x: 1.25rem;
+$card-spacer-y: .75rem;
+$card-border-width: 1px;
+$card-border-radius: $border-radius;
+$card-border-color: rgba(0, 0, 0, .125);
+// $card-border-radius-inner:
+$card-cap-bg: #f5f5f5;
+$card-bg: #fff;

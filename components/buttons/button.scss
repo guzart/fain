@@ -1,0 +1,42 @@
+@import '~floccus_ui/styles/variables';
+@import '~floccus_ui/styles/mixins';
+
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  @include border-radius($border-radius);
+  font-size: $font-size;
+  padding: $padding-y $padding-x;
+}
+
+@mixin button-variant($color, $background, $border) {
+  $active-background: darken($background, 10%);
+  $active-border: darken($border, 12%);
+
+  @include box-shadow($btn-box-shadow);
+  @include hover {
+    background-color: $active-background;
+    border-color: $active-border;
+    color: $color;
+  }
+
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+}
+
+.btn {
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-border-radius);
+  border: $input-btn-border-width solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  // transition: all .2s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}

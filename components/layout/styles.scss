@@ -1,0 +1,11 @@
+@import '~floccus_ui/styles/variables';
+@import '~floccus_ui/styles/mixins';
+
+.container {
+  @include make-container;
+  @include make-container-max-widths;
+}
+
+.containerFluid {
+  @include make-container;
+}
