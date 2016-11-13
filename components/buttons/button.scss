@@ -1,5 +1,5 @@
-@import '~floccus_ui/styles/variables';
-@import '~floccus_ui/styles/mixins';
+@import '../../styles/variables';
+@import '../../styles/mixins';
 
 @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
   @include border-radius($border-radius);
