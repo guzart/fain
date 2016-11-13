@@ -1,0 +1,29 @@
+@import '../styles/variables';
+
+.bgFaded {
+  background-color: $gray-lightest !important; // sass-lint:disable-line no-important
+}
+
+.bgPrimary {
+  background-color: $brand-primary !important; // sass-lint:disable-line no-important
+}
+
+.bgSuccess {
+  background-color: $brand-success !important; // sass-lint:disable-line no-important
+}
+
+.bgInfo {
+  background-color: $brand-info !important; // sass-lint:disable-line no-important
+}
+
+.bgWarning {
+  background-color: $brand-warning !important; // sass-lint:disable-line no-important
+}
+
+.bgDanger {
+  background-color: $brand-danger !important; // sass-lint:disable-line no-important
+}
+
+.bgInverse {
+  background-color: $brand-inverse !important; // sass-lint:disable-line no-important
+}

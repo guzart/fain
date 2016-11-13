@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.nav {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.navLink {
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  display: inline-block;
+}
