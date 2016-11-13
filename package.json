@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/guzart/fain#readme",
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "lodash": "^4.16.6"
   },
   "peerDependencies": {
     "react": "^15.3"
