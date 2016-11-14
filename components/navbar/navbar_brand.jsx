@@ -13,11 +13,17 @@ class NavbarBrand extends React.Component { // eslint-disable-line react/prefer-
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    componentClass: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  };
+
+  static defaultProps = {
+    componentClass: 'div',
   };
 
   render() {
-    const { children, className, ...other } = this.props;
+    const { children, className, componentClass: Component, ...other } = this.props;
     const { navbarTheme } = this.context;
+
     const nodeClassName = classNames(
       className,
       styles.navbarBrand,
@@ -25,9 +31,9 @@ class NavbarBrand extends React.Component { // eslint-disable-line react/prefer-
     );
 
     return (
-      <div {...other} className={nodeClassName}>
+      <Component {...other} className={nodeClassName}>
         {children}
-      </div>
+      </Component>
     );
   }
 }
