@@ -9,7 +9,7 @@ import styles from './styles.scss';
 
 class NavbarNavLink extends React.Component {
   static contextTypes = {
-    theme: FainPropTypes.navbarTheme,
+    navbarTheme: FainPropTypes.navbarTheme,
   };
 
   static propTypes = {
@@ -19,8 +19,13 @@ class NavbarNavLink extends React.Component {
 
   render() {
     const { children, className, ...other } = this.props;
-    const { theme } = this.context;
-    const nodeClassName = classNames(className, styles.navbarNavLink, styles[`navbarNavLink${theme}`]);
+    const { navbarTheme } = this.context;
+    const nodeClassName = classNames(
+      className,
+      styles.navbarNavLink,
+      styles[`navbarNavLink${navbarTheme}`],
+    );
+
     return (
       <NavLink {...other} className={nodeClassName}>
         {children}

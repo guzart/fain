@@ -1,29 +1,29 @@
 @import '../styles/variables';
 
-.bgFaded {
+.faded {
   background-color: $gray-lightest !important; // sass-lint:disable-line no-important
 }
 
-.bgPrimary {
+.primary {
   background-color: $brand-primary !important; // sass-lint:disable-line no-important
 }
 
-.bgSuccess {
+.success {
   background-color: $brand-success !important; // sass-lint:disable-line no-important
 }
 
-.bgInfo {
+.info {
   background-color: $brand-info !important; // sass-lint:disable-line no-important
 }
 
-.bgWarning {
+.warning {
   background-color: $brand-warning !important; // sass-lint:disable-line no-important
 }
 
-.bgDanger {
+.danger {
   background-color: $brand-danger !important; // sass-lint:disable-line no-important
 }
 
-.bgInverse {
+.inverse {
   background-color: $brand-inverse !important; // sass-lint:disable-line no-important
 }

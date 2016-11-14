@@ -9,13 +9,14 @@ import styles from './styles.scss';
 
 class Navbar extends React.Component {
   static childContextTypes = {
-    theme: FainPropTypes.navbarTheme,
+    navbarTheme: FainPropTypes.navbarTheme,
   };
 
   static propTypes = {
     backgroundTheme: FainPropTypes.backgroundTheme,
     children: PropTypes.node,
     className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+    theme: FainPropTypes.navbarTheme,
   };
 
   static defaultProps = {
@@ -24,8 +25,7 @@ class Navbar extends React.Component {
   };
 
   getChildContext() {
-    const { theme } = this.props;
-    return { theme };
+    return { navbarTheme: this.props.theme };
   }
 
   render() {
