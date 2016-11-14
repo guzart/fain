@@ -1,18 +1,5 @@
-import Form from './form';
-import FormCheckControl from './form_check_control';
-import FormControl from './form_control';
-import FormGroup from './form_group';
-import FormLabel from './form_label';
-
-Form.CheckControl = FormCheckControl;
-Form.Control = FormControl;
-Form.Group = FormGroup;
-Form.Label = FormLabel;
-
-export default {
-  Form,
-  FormCheckControl,
-  FormControl,
-  FormGroup,
-  FormLabel,
-};
+export { default as CheckControl } from './form_check_control';
+export { default as Control } from './form_control';
+export { default as Group } from './form_group';
+export { default as Label } from './form_label';
+export { default as Form } from './form';

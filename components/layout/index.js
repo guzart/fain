@@ -1,5 +1,1 @@
-import Container from './container';
-
-export default {
-  Container,
-};
+export { default as Container } from './container';

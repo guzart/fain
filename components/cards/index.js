@@ -1,19 +1,5 @@
-import Card from './card';
-import CardBlock from './card_block';
-import CardHeader from './card_header';
-import CardText from './card_text';
-import CardTitle from './card_title';
-
-Card.Block = CardBlock;
-Card.Header = CardHeader;
-Card.Text = CardText;
-Card.Title = CardTitle;
-
-export default {
-  Card,
-  CardBlock,
-  CardHeader,
-  CardText,
-  CardTitle,
-  Card,
-};
+export { default as Block } from './card_block';
+export { default as Header } from './card_header';
+export { default as Text } from './card_text';
+export { default as Title } from './card_title';
+export { default as Card } from './card';
