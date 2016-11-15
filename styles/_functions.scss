@@ -1,0 +1,3 @@
+@function titleize($text) {
+  @return '#{to_upper_case(str-slice($text, 1, 1))}#{str-slice($text, 2)}';
+}
