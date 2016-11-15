@@ -1,6 +1,7 @@
 # fain
 
-React components based on bootstrap 4 using CSS modules
+React components based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/) using
+[CSS modules](https://github.com/css-modules/css-modules).
 
 ## Install
 
