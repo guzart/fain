@@ -1,5 +1,6 @@
-export { default as CheckControl } from './form_check_control';
-export { default as Control } from './form_control';
-export { default as Group } from './form_group';
-export { default as Label } from './form_label';
+// @flow
+
+export { default as Button } from './form_button';
+export { default as CheckGroup } from './form_check_group';
+export { default as InputGroup } from './form_input_group';
 export { default as Form } from './form';
