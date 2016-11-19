@@ -1,44 +1,88 @@
+// @flow
+
 import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import styles from './styles.scss';
 
-function buildDescriptor(offset, pull, push, size, base) {
+type ColumnDescriptor = {
+  offset?: number,
+  pull?: number,
+  push?: number,
+  size?: number,
+};
+
+function buildDescriptor(
+  offset?: number, pull?: number, push?: number, size?: number, base?: ColumnDescriptor,
+) {
   const defaults = { offset: 0, pull: 0, push: 0, size: 0 };
   return Object.assign(defaults, { offset, pull, push, size }, base || {});
 }
 
-function getColumnStyles(name, descriptor) {
+function getColumnStyles(name: string, descriptor: ColumnDescriptor) {
   const { offset, pull, push, size } = descriptor;
   const classes = [];
 
-  if (offset > 0) {
+  if (offset && offset > 0) {
     classes.push(styles[`offset${name}${offset}`]);
   }
 
-  if (pull > 0) {
+  if (pull && pull > 0) {
     classes.push(styles[`pull${name}${pull}`]);
   }
 
-  if (push > 0) {
+  if (push && push > 0) {
     classes.push(styles[`push${name}${push}`]);
   }
 
-  if (size > 0) {
+  if (size && size > 0) {
     classes.push(styles[`col${name}${size}`]);
   }
 
   return classes;
 }
 
-const ColumnDescriptorPropType = PropTypes.shape({
-  offset: PropTypes.number,
-  pull: PropTypes.number,
-  push: PropTypes.number,
-  size: PropTypes.number,
-});
+type Props = {
+  children?: React.Element<*>,
+  className?: ClassName,
 
-function Column(props) {
+  // large
+  largeOffset?: number,
+  largePull?: number,
+  largePush?: number,
+  largeSize?: number,
+  large?: ColumnDescriptor,
+
+  // medium
+  mediumOffset?: number,
+  mediumPull?: number,
+  mediumPush?: number,
+  mediumSize?: number,
+  medium?: ColumnDescriptor,
+
+  // small
+  smallOffset?: number,
+  smallPull?: number,
+  smallPush?: number,
+  smallSize?: number,
+  small?: ColumnDescriptor,
+
+  // xLarge
+  xLargeOffset?: number,
+  xLargePull?: number,
+  xLargePush?: number,
+  xLargeSize?: number,
+  xLarge?: ColumnDescriptor,
+
+  // xSmall
+  xSmallOffset?: number,
+  xSmallPull?: number,
+  xSmallPush?: number,
+  xSmallSize?: number,
+  xSmall?: ColumnDescriptor,
+};
+
+function Column(props: Props) {
   const {
     children, className,
     largeOffset, largePull, largePush, largeSize, large,
@@ -71,46 +115,6 @@ function Column(props) {
     </div>
   );
 }
-
-Column.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-
-  // large
-  largeOffset: PropTypes.number,
-  largePull: PropTypes.number,
-  largePush: PropTypes.number,
-  largeSize: PropTypes.number,
-  large: ColumnDescriptorPropType,
-
-  // medium
-  mediumOffset: PropTypes.number,
-  mediumPull: PropTypes.number,
-  mediumPush: PropTypes.number,
-  mediumSize: PropTypes.number,
-  medium: ColumnDescriptorPropType,
-
-  // small
-  smallOffset: PropTypes.number,
-  smallPull: PropTypes.number,
-  smallPush: PropTypes.number,
-  smallSize: PropTypes.number,
-  small: ColumnDescriptorPropType,
-
-  // xLarge
-  xLargeOffset: PropTypes.number,
-  xLargePull: PropTypes.number,
-  xLargePush: PropTypes.number,
-  xLargeSize: PropTypes.number,
-  xLarge: ColumnDescriptorPropType,
-
-  // xSmall
-  xSmallOffset: PropTypes.number,
-  xSmallPull: PropTypes.number,
-  xSmallPush: PropTypes.number,
-  xSmallSize: PropTypes.number,
-  xSmall: ColumnDescriptorPropType,
-};
 
 Column.defaultProps = {
   // large
