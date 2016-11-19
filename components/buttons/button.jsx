@@ -1,6 +1,8 @@
+// @flow
+
 import classNames from 'classnames';
 import omit from 'lodash/omit';
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 import { titleize } from '../../utils/inflectors';
 
@@ -12,7 +14,20 @@ function getButtonStyle(buttonStylesMap) {
   return Object.keys(buttonStylesMap).find(k => styles[k]);
 }
 
-function Button(props) {
+type Props = {
+  children: React.Element<*>,
+  className: ClassName,
+  danger: boolean,
+  info: boolean,
+  outline: boolean,
+  primary: boolean,
+  secondary: boolean,
+  success: boolean,
+  warning: boolean,
+  type: 'button' | 'submit',
+};
+
+function Button(props: Props) {
   const { children, className, outline, type, ...other } = props;
 
   const buttonProps = omit(other, buttonStyles);
@@ -36,19 +51,6 @@ function Button(props) {
     </button>
   );
 }
-
-Button.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  danger: PropTypes.bool,
-  info: PropTypes.bool,
-  outline: PropTypes.bool,
-  primary: PropTypes.bool,
-  secondary: PropTypes.bool,
-  success: PropTypes.bool,
-  warning: PropTypes.bool,
-  type: PropTypes.oneOf(['button', 'submit']),
-};
 
 Button.defaultProps = {
   type: 'button',
