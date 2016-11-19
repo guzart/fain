@@ -1,0 +1,15 @@
+[ignore]
+
+[include]
+
+[libs]
+flow/
+
+[options]
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.scss
+
+# module.name_mapper='^\(.*\)\.s?css$' -> '<PROJECT_ROOT>/CSSModule.js.flow'
+# module.system=haste
