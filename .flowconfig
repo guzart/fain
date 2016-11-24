@@ -1,9 +1,17 @@
 [ignore]
+.*/styled-components/src/.*
 
 [include]
 
 [libs]
-flow/
+flow-typed/
+
+# Styled Components
+node_modules/styled-components/flow-typed/react-native.js
+# node_modules/styled-components/flow-typed/glamor_vx.x.x.js
+# node_modules/styled-components/flow-typed/lodash_v4.x.x.js
+# node_modules/styled-components/flow-typed/react-native.js
+# node_modules/styled-components/flow-typed/inline-style-prefixer_vx.x.x.js
 
 [options]
 module.file_ext=.js
@@ -13,3 +21,5 @@ module.file_ext=.scss
 
 # module.name_mapper='^\(.*\)\.s?css$' -> '<PROJECT_ROOT>/CSSModule.js.flow'
 # module.system=haste
+
+suppress_comment=.*\\$FlowIssue
