@@ -6,6 +6,8 @@ import omit from 'lodash/omit';
 import reduce from 'lodash/reduce';
 import React from 'react';
 
+import type { ClassName } from '../../types.js.flow';
+
 type Props = {
   children?: React.Element<*>,
   className?: ClassName,

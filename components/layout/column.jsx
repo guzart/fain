@@ -3,6 +3,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import type { ClassName } from '../../types.js.flow';
 import styles from './styles.scss';
 
 type ColumnDescriptor = {

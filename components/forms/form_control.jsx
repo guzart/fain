@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import omit from 'lodash/omit';
 import React, { PropTypes } from 'react';
 
+import type { ClassName } from '../../types.js.flow';
 import styles from './styles.scss';
 
 type Props = {
