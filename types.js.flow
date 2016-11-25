@@ -1,0 +1,9 @@
+/* eslint-disable */
+
+declare type ClassName = string | Object;
+
+declare type ComponentProps = { theme: Theme };
+
+declare type CSSValue = any;
+
+declare type StyleFn = (...args: any[]) => string;
