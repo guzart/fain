@@ -1,35 +1,25 @@
 // @flow
 
-type Theme = Object;
-type ComponentProps = { theme: Theme };
-type CSSValue = any;
-type Interpolation = Function | string | number;
-type StyleFn = (...args: CSSValue[]) => Interpolation;
+import type { Theme } from '../theme';
+import type { ComponentProps, CSSValue, StyleFn } from '../types.js.flow';
 
-// TODO: Improve names names
-//  1. Fn that props => theme (props => props.theme) (themeLens?)
-//  2. Fn that theme => componentTheme  (theme => theme.button) (componentThemeLens?)
-//  3. Fn that componentTheme => styleVariantTheme (buttonTheme => buttonTheme.large)
-//  4. Fn that anyTheme => cssValue
+type PropertyLens = (t: Theme) => CSSValue;
 
-export type ThemeLens = (x: Theme) => ?Theme;
-export type PropertyLens = (x: Theme) => CSSValue;
+export const extractTheme =
+  (props: ComponentProps): Theme =>
+    props.theme;
 
-export const themePropLens = // eslint-disable-line
-  (themeLens: ThemeLens) =>
-    (propLens: PropertyLens) =>
-      (props: ComponentProps): CSSValue => propLens(themeLens(props.theme) || {});
+export const themeProperty =
+  (propertyLens: PropertyLens) =>
+    (props: ComponentProps) =>
+      propertyLens(extractTheme(props));
 
-export const themeFeatureLens = themePropLens(t => t.features);
+export const roundedFeature =
+  (styleAction: StyleFn) =>
+    (theme: Theme, ...args: any[]): string => {
+      if (!theme.enableRounded) {
+        return '';
+      }
 
-export const themeFeature =
-  (featureLens: PropertyLens, themeLens: ThemeLens, style: StyleFn) =>
-  (...propLenses: PropertyLens[]) =>
-  (props: ComponentProps): Interpolation => {
-    if (!themeFeatureLens(featureLens)(props)) {
-      return '';
-    }
-
-    const args = propLenses.map(themeLens).map(f => f(props));
-    return style(...args);
-  };
+      return styleAction(...args);
+    };

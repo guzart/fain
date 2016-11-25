@@ -1,16 +1,28 @@
 // @flow
 
-// import classNames from 'classnames';
-// import omit from 'lodash/omit';
-// import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { themeFeature, themePropLens } from '../../utils/theme';
-// import { titleize } from '../../utils/inflectors';
+import type { Theme } from '../../theme';
+import type { ComponentProps, CSSValue } from '../../types.js.flow';
 
-type ButtonSize = 'normal' | 'small' | 'large';
+import { extractTheme, roundedFeature, themeProperty } from '../../utils/theme';
 
-type ButtonStyle = 'normal' | 'danger' | 'info' | 'primary' | 'secondary' | 'success' | 'warning';
+type ButtonSizeSuffix = '' | 'Sm' | 'Lg';
+
+type ButtonSizeTheme = {
+  borderRadius: CSSValue,
+  fontSize: CSSValue,
+  paddingX: CSSValue,
+  paddingY: CSSValue,
+};
+
+type ButtonStyleName = '' | 'Danger' | 'Info' | 'Primary' | 'Secondary' | 'Success' | 'Warning';
+
+type ButtonStyleTheme = {
+  backgroundColor: CSSValue,
+  borderColor: CSSValue,
+  color: CSSValue,
+};
 
 type Props = {
   danger?: boolean,
@@ -24,30 +36,29 @@ type Props = {
   warning?: boolean,
 };
 
+const borderRadius = roundedFeature(br => `
+  border-radius: ${br};
+`);
 
-const theme = themePropLens(t => t.buttons);
+const buttonStyleTheme = (theme: Theme, styleName: ButtonStyleName): ButtonStyleTheme => ({
+  backgroundColor: theme[`btn${styleName}BackgroundColor`],
+  borderColor: theme[`btn${styleName}BorderColor`],
+  color: theme[`btn${styleName}Color`],
+});
 
-const borderRadius = themeFeature(
-  themeFeatures => themeFeatures.rounded,
-  theme,
-  br => `
-    border-radius: ${br};
-  `,
-);
-
-const buttonStyleName = (props: Props): ButtonStyle => {
-  if (props.danger) { return 'danger'; }
-  if (props.info) { return 'info'; }
-  if (props.primary) { return 'primary'; }
-  if (props.secondary) { return 'secondary'; }
-  if (props.success) { return 'success'; }
-  if (props.warning) { return 'warning'; }
-  return 'normal';
+const buttonStyleName = (props: Props): ButtonStyleName => {
+  if (props.danger) { return 'Danger'; }
+  if (props.info) { return 'Info'; }
+  if (props.primary) { return 'Primary'; }
+  if (props.secondary) { return 'Secondary'; }
+  if (props.success) { return 'Success'; }
+  if (props.warning) { return 'Warning'; }
+  return '';
 };
 
-const buttonStyle = (props) => {
-  const style = buttonStyleName(props);
-  const styleTheme = theme(bt => bt[style])(props);
+const buttonStyle = (props: ComponentProps) => {
+  const theme = extractTheme(props);
+  const styleTheme = buttonStyleTheme(theme, buttonStyleName(props));
   return css`
     background-color: ${styleTheme.backgroundColor};
     border-color: ${styleTheme.borderColor};
@@ -55,17 +66,26 @@ const buttonStyle = (props) => {
   `;
 };
 
-const buttonSizeName = (props: Props): ButtonSize => {
-  if (props.small) { return 'small'; }
-  if (props.large) { return 'large'; }
-  return 'normal';
+// Button Size
+
+const buttonSizeTheme = (theme: Theme, suffix: ButtonSizeSuffix): ButtonSizeTheme => ({
+  borderRadius: theme[`btnBorderRadius${suffix}`],
+  fontSize: theme[`btnFontSize${suffix}`],
+  paddingX: theme[`btnPaddingX${suffix}`],
+  paddingY: theme[`btnPaddingY${suffix}`],
+});
+
+const buttonSizeSuffix = (props: Props): ButtonSizeSuffix => {
+  if (props.small) { return 'Sm'; }
+  if (props.large) { return 'Lg'; }
+  return '';
 };
 
-const buttonSize = (props) => {
-  const size = buttonSizeName(props);
-  const sizeTheme = theme(bt => bt[size])(props);
+const buttonSize = (props: ComponentProps) => {
+  const theme = extractTheme(props);
+  const sizeTheme = buttonSizeTheme(theme, buttonSizeSuffix(props));
   return css`
-    ${borderRadius(bt => bt[size].borderRadius)(props)};
+    ${borderRadius(theme, sizeTheme.borderRadius)};
     font-size: ${sizeTheme.fontSize};
     padding-bottom: ${sizeTheme.paddingY};
     padding-left: ${sizeTheme.paddingX};
@@ -74,8 +94,10 @@ const buttonSize = (props) => {
   `;
 };
 
+// Button
+
 const Button = styled.button`
-  border: ${theme(t => t.borderWidth)};
+  border: ${themeProperty(t => t.inputBtnBorderWidth)};
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -86,33 +108,5 @@ const Button = styled.button`
   ${buttonSize}
   ${buttonStyle}
 `;
-
-// function Button(props: Props) {
-//   const { children, outline, type, ...other } = props;
-//
-//   const buttonProps = omit(other, buttonStyles);
-//   // const buttonStyle = getButtonStyle(other);
-//   // const buttonClassName = classNames(
-//   //   className,
-//   //   styles.button,
-//   //   {
-//   //     [styles[buttonStyle]]: !outline,
-//   //     [styles[`outline${titleize(buttonStyle)}`]]: outline,
-//   //   },
-//   // );
-//
-//   return (
-//     <button
-//       {...buttonProps}
-//       type={type}
-//     >
-//       {children}
-//     </button>
-//   );
-// }
-//
-// Button.defaultProps = {
-//   type: 'button',
-// };
 
 export default Button;
