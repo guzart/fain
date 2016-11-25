@@ -6,4 +6,6 @@ declare type ComponentProps = { theme: Theme };
 
 declare type CSSValue = any;
 
+declare type Interpolation = Function | string | number;
+
 declare type StyleFn = (...args: any[]) => string;

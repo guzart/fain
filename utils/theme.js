@@ -23,3 +23,12 @@ export const roundedFeature =
 
       return styleAction(...args);
     };
+
+export const hoverFeature =
+  (styleAction: StyleFn) =>
+    (theme: Theme, ...args: any[]): string =>
+      (theme.enableHoverMediaQuery ? styleAction(...args) : '');
+
+// export const hoverFocus =
+//   (content: Interpolation) =>
+//

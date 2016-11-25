@@ -44,7 +44,7 @@ const options = {
   // enableShadows: false,
   // enableGradients: false,
   // enableTransitions: false,
-  // enableHoverMediaQuery: false,
+  enableHoverMediaQuery: false,
   // enableGridClasses: true,
   // enablePrintStyles: true,
 };

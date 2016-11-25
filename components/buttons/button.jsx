@@ -64,6 +64,11 @@ const buttonStyle = (props: ComponentProps) => {
     border-color: ${styleTheme.borderColor};
     color: ${styleTheme.color};
   `;
+  // ${hover`
+  //   color: ${styleTheme.color};
+  //   background-color: ${activeBackgroundColor};
+  //   border-color: ${activeBorderColor};
+  // `}
 };
 
 // Button Size
