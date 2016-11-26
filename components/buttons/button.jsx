@@ -141,7 +141,8 @@ const buttonSize = (props: ComponentProps) => {
 // Button
 
 const Button = styled.button`
-  border: ${themeProperty(t => t.inputBtnBorderWidth)};
+  border-style: solid;
+  border-width: ${themeProperty(t => t.inputBtnBorderWidth)};
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -150,7 +151,7 @@ const Button = styled.button`
   white-space: nowrap;
   ${buttonSize}
   ${buttonStyle}
-  ${transition`all .2s ease-in-out`}
+  ${transition('all .2s ease-in-out')}
 `;
 
 export default Button;
