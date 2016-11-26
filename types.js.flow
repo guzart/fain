@@ -8,4 +8,6 @@ declare type CSSValue = any;
 
 declare type Interpolation = Function | string | number;
 
+declare type PropertyLens = (t: Theme) => CSSValue;
+
 declare type StyleFn = (...args: any[]) => string;

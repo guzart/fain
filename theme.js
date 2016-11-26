@@ -41,9 +41,9 @@ const colors = {
 const options = {
   // enableFlex: false,
   enableRounded: true,
-  // enableShadows: false,
+  enableShadows: true,
   // enableGradients: false,
-  // enableTransitions: false,
+  enableTransitions: true,
   enableHoverMediaQuery: false,
   // enableGridClasses: true,
   // enablePrintStyles: true,
@@ -105,9 +105,11 @@ const components = {
 // 12. Buttons
 
 const buttons = {
+  btnActiveBoxShadow: 'inset 0 3px 5px rgba(0,0,0,.125)',
   btnBorderRadius: components.borderRadius,
   btnBorderRadiusLg: components.borderRadiusLg,
   btnBorderRadiusSm: components.borderRadiusSm,
+  btnBoxShadow: 'inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075)',
   btnFontSize: fonts.fontSizeBase,
   btnFontSizeLg: fonts.fontSizeLg,
   btnFontSizeSm: fonts.fontSizeSm,

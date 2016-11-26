@@ -1,9 +1,7 @@
 // @flow
 
 import type { Theme } from '../theme';
-import type { ComponentProps, CSSValue, StyleFn } from '../types.js.flow';
-
-type PropertyLens = (t: Theme) => CSSValue;
+import type { ComponentProps, PropertyLens } from '../types.js.flow';
 
 export const extractTheme =
   (props: ComponentProps): Theme =>
@@ -13,22 +11,3 @@ export const themeProperty =
   (propertyLens: PropertyLens) =>
     (props: ComponentProps) =>
       propertyLens(extractTheme(props));
-
-export const roundedFeature =
-  (styleAction: StyleFn) =>
-    (theme: Theme, ...args: any[]): string => {
-      if (!theme.enableRounded) {
-        return '';
-      }
-
-      return styleAction(...args);
-    };
-
-export const hoverFeature =
-  (styleAction: StyleFn) =>
-    (theme: Theme, ...args: any[]): string =>
-      (theme.enableHoverMediaQuery ? styleAction(...args) : '');
-
-// export const hoverFocus =
-//   (content: Interpolation) =>
-//

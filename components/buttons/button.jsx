@@ -5,7 +5,12 @@ import styled, { css } from 'styled-components';
 import type { Theme } from '../../theme';
 import type { ComponentProps, CSSValue } from '../../types.js.flow';
 
-import { extractTheme, roundedFeature, themeProperty } from '../../utils/theme';
+import { darken } from '../../utils/color';
+import { extractTheme, themeProperty } from '../../utils/theme';
+import { borderRadius, boxShadow, hover, hoverFocus, transition } from '../../utils/feature';
+
+
+// Types
 
 type ButtonSizeSuffix = '' | 'Sm' | 'Lg';
 
@@ -36,9 +41,8 @@ type Props = {
   warning?: boolean,
 };
 
-const borderRadius = roundedFeature(br => `
-  border-radius: ${br};
-`);
+
+// Button Style
 
 const buttonStyleTheme = (theme: Theme, styleName: ButtonStyleName): ButtonStyleTheme => ({
   backgroundColor: theme[`btn${styleName}BackgroundColor`],
@@ -59,16 +63,51 @@ const buttonStyleName = (props: Props): ButtonStyleName => {
 const buttonStyle = (props: ComponentProps) => {
   const theme = extractTheme(props);
   const styleTheme = buttonStyleTheme(theme, buttonStyleName(props));
-  return css`
+
+  const regularStyle = css`
     background-color: ${styleTheme.backgroundColor};
     border-color: ${styleTheme.borderColor};
     color: ${styleTheme.color};
   `;
-  // ${hover`
-  //   color: ${styleTheme.color};
-  //   background-color: ${activeBackgroundColor};
-  //   border-color: ${activeBorderColor};
-  // `}
+
+  const activeBackgroundColor = darken(0.62, styleTheme.backgroundColor);
+  const activeBorderColor = darken(0.77, styleTheme.borderColor);
+  const activeStyle = css`
+    background-color: ${activeBackgroundColor};
+    border-color: ${activeBorderColor};
+    color: ${styleTheme.color};
+  `;
+
+  return css`
+    ${regularStyle}
+    ${boxShadow(t => t.btnBoxShadow)}
+
+    ${hover`
+      ${activeStyle}
+    `}
+
+    &:focus {
+      ${activeStyle}
+    }
+
+    &:active {
+      ${activeStyle}
+      background-image: none;
+      ${boxShadow(theme.btnActiveBoxShadow)}
+
+      ${hoverFocus`
+        color: ${styleTheme.color};
+        background-color: ${darken(1.12, styleTheme.backgroundColor)};
+        border-color: ${darken(1.65, styleTheme.borderColor)};
+      `}
+    }
+
+    &:disabled {
+      ${hoverFocus`
+        ${regularStyle}
+      `}
+    }
+  `;
 };
 
 // Button Size
@@ -90,7 +129,7 @@ const buttonSize = (props: ComponentProps) => {
   const theme = extractTheme(props);
   const sizeTheme = buttonSizeTheme(theme, buttonSizeSuffix(props));
   return css`
-    ${borderRadius(theme, sizeTheme.borderRadius)};
+    ${borderRadius(sizeTheme.borderRadius)}; // #01549b
     font-size: ${sizeTheme.fontSize};
     padding-bottom: ${sizeTheme.paddingY};
     padding-left: ${sizeTheme.paddingX};
@@ -106,12 +145,12 @@ const Button = styled.button`
   cursor: pointer;
   display: inline-block;
   text-align: center;
-  transition: all .2s ease-in-out;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   ${buttonSize}
   ${buttonStyle}
+  ${transition`all .2s ease-in-out`}
 `;
 
 export default Button;
