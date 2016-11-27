@@ -199,7 +199,7 @@ const buttonSize = (props: ComponentProps) => {
   const theme = extractTheme(props);
   const sizeTheme = buttonSizeTheme(theme, buttonSizeSuffix(props));
   return css`
-    ${borderRadius(sizeTheme.borderRadius)}; // #01549b
+    ${borderRadius(sizeTheme.borderRadius)};
     font-size: ${sizeTheme.fontSize};
     padding-bottom: ${sizeTheme.paddingY};
     padding-left: ${sizeTheme.paddingX};
