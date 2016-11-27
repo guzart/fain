@@ -32,7 +32,7 @@ const colors = {
   grayDark: '#373a3c',
   // grayLight: '#818a91',
   grayLighter: '#eceeef',
-  // grayLightest: '#f7f7f9',
+  grayLightest: '#f7f7f9',
 };
 
 
@@ -147,10 +147,27 @@ const forms = {
 };
 
 
+// 21. Cards
+
+const cards = {
+  cardBg: '#fff',
+  cardBorderColor: 'rgba(0, 0, 0, .125)',
+  cardBorderRadius: components.borderRadius,
+  cardBorderRadiusInner: `calc(#{${components.borderRadius}} - #{1px})`,
+  cardBorderWidth: '1px',
+  cardCapBg: colors.grayLightest,
+  cardColumnsSmUpColumnGap: '1.25rem',
+  cardDeckMargin: '.625rem',
+  cardImgOverlayPadding: '1.25rem',
+  cardLinkHoverColor: '#fff',
+  cardSpacerX: '1.25rem',
+  cardSpacerY: '.75rem',
+};
+
 // Theme
 
 const theme = Object.assign(
-  {}, colors, options, spacing, body, fonts, components, buttons, forms,
+  {}, colors, options, spacing, body, fonts, components, buttons, forms, cards,
 );
 
 export type Theme = typeof theme;

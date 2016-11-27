@@ -1,25 +1,32 @@
-import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+// @flow
 
-import styles from './styles.scss';
+import React from 'react';
+import styled from 'styled-components';
 
-function CardHeader({ children, className, typeName }) {
+import { clearfix } from '../../utils/feature';
+import { themeProperty } from '../../utils/theme';
+
+type Props = {
+  typeName: string | Function,
+};
+
+function CardHeaderBase({ typeName, ...other }: Props) {
   const TypeName = typeName;
-  return (
-    <TypeName className={classNames(className, styles.header)}>
-      {children}
-    </TypeName>
-  );
+  return <TypeName {...other} />;
 }
 
-CardHeader.defaultProps = {
+CardHeaderBase.defaultProps = {
   typeName: 'div',
 };
 
-CardHeader.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  typeName: PropTypes.string,
-};
+const CardHeader = styled(CardHeaderBase)`
+  ${clearfix()}
+  background-color: ${themeProperty(t => t.cardCapBg)};
+  border-bottom-color: ${themeProperty(t => t.cardBorderColor)};
+  border-bottom-style: solid;
+  border-bottom-width: ${themeProperty(t => t.cardBorderWidth)};
+  margin-bottom: 0;
+  padding: ${themeProperty(t => `${t.cardSpacerY} ${t.cardSpacerX}`)};
+`;
 
 export default CardHeader;

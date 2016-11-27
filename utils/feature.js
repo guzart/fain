@@ -55,3 +55,11 @@ export const hoverFocus =
 export const transition = transitionsFeature(
   (value: CSSValue) => `transition: ${value};`,
 );
+
+export const clearfix = () => css`
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+`;

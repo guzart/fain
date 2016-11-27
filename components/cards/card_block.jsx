@@ -1,19 +1,13 @@
-import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+// @flow
 
-import styles from './styles.scss';
+import styled from 'styled-components';
 
-function CardBlock({ children, className }) {
-  return (
-    <div className={classNames(className, styles.block)}>
-      {children}
-    </div>
-  );
-}
+import { clearfix } from '../../utils/feature';
+import { themeProperty } from '../../utils/theme';
 
-CardBlock.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
+const CardBlock = styled.div`
+  ${clearfix()}
+  padding: ${themeProperty(t => t.cardSpacerX)};
+`;
 
 export default CardBlock;

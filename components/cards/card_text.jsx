@@ -1,19 +1,11 @@
-import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+// @flow
 
-import styles from './styles.scss';
+import styled from 'styled-components';
 
-function CardText({ children, className }) {
-  return (
-    <p className={classNames(className, styles.text)}>
-      {children}
-    </p>
-  );
-}
-
-CardText.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
+const CardText = styled.p`
+  &:last-child {
+    margin-bottom: 0;
+  }
+`;
 
 export default CardText;
