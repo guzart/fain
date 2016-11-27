@@ -1,11 +1,12 @@
 // @flow
 
+import React from 'react';
 import styled, { css } from 'styled-components';
 
 import type { Theme } from '../../theme';
 import type { ComponentProps, CSSValue } from '../../types.js.flow';
 
-import { darken, lighten } from '../../utils/color';
+import { darken } from '../../utils/color';
 import { extractTheme, themeProperty } from '../../utils/theme';
 import { borderRadius, boxShadow, hover, hoverFocus, transition } from '../../utils/feature';
 
@@ -209,7 +210,7 @@ const buttonSize = (props: ComponentProps) => {
 
 // Button
 
-const Button = styled.button`
+const StyledButton = styled.button`
   border-style: solid;
   border-width: ${themeProperty(t => t.inputBtnBorderWidth)};
   cursor: pointer;
@@ -222,5 +223,15 @@ const Button = styled.button`
   ${buttonStyle}
   ${transition('all .2s ease-in-out')}
 `;
+
+function Button({ disabled, tabIndex, ...other }: Props) {
+  return (
+    <StyledButton
+      {...other}
+      disabled={disabled}
+      tabIndex={disabled ? '-1' : tabIndex}
+    />
+  );
+}
 
 export default Button;
