@@ -60,26 +60,31 @@ const buttonStyleName = (props: Props): ButtonStyleName => {
   return '';
 };
 
+const buttonActiveStyle = (theme: ButtonStyleTheme) => {
+  const activeBackgroundColor = darken(0.62, theme.backgroundColor);
+  const activeBorderColor = darken(0.77, theme.borderColor);
+  return css`
+    background-color: ${activeBackgroundColor};
+    border-color: ${activeBorderColor};
+    color: ${theme.color};
+  `;
+};
+
+const buttonBaseStyle = (theme: ButtonStyleTheme) =>
+  css`
+    background-color: ${theme.backgroundColor};
+    border-color: ${theme.borderColor};
+    color: ${theme.color};
+  `;
+
 const buttonStyle = (props: ComponentProps) => {
   const theme = extractTheme(props);
   const styleTheme = buttonStyleTheme(theme, buttonStyleName(props));
-
-  const regularStyle = css`
-    background-color: ${styleTheme.backgroundColor};
-    border-color: ${styleTheme.borderColor};
-    color: ${styleTheme.color};
-  `;
-
-  const activeBackgroundColor = darken(0.62, styleTheme.backgroundColor);
-  const activeBorderColor = darken(0.77, styleTheme.borderColor);
-  const activeStyle = css`
-    background-color: ${activeBackgroundColor};
-    border-color: ${activeBorderColor};
-    color: ${styleTheme.color};
-  `;
+  const baseStyle = buttonBaseStyle(styleTheme);
+  const activeStyle = buttonActiveStyle(styleTheme);
 
   return css`
-    ${regularStyle}
+    ${baseStyle}
     ${boxShadow(t => t.btnBoxShadow)}
 
     ${hover`
@@ -94,6 +99,7 @@ const buttonStyle = (props: ComponentProps) => {
       ${activeStyle}
       background-image: none;
       ${boxShadow(theme.btnActiveBoxShadow)}
+      outline: 0;
 
       ${hoverFocus`
         color: ${styleTheme.color};
@@ -107,7 +113,7 @@ const buttonStyle = (props: ComponentProps) => {
       opacity: .65;
 
       ${hoverFocus`
-        ${regularStyle}
+        ${baseStyle}
       `}
     }
   `;
