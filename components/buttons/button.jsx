@@ -103,6 +103,9 @@ const buttonStyle = (props: ComponentProps) => {
     }
 
     &:disabled {
+      cursor: not-allowed;
+      opacity: .65;
+
       ${hoverFocus`
         ${regularStyle}
       `}
