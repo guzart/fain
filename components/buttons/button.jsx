@@ -5,7 +5,7 @@ import styled, { css } from 'styled-components';
 import type { Theme } from '../../theme';
 import type { ComponentProps, CSSValue } from '../../types.js.flow';
 
-import { darken } from '../../utils/color';
+import { darken, lighten } from '../../utils/color';
 import { extractTheme, themeProperty } from '../../utils/theme';
 import { borderRadius, boxShadow, hover, hoverFocus, transition } from '../../utils/feature';
 
@@ -23,14 +23,20 @@ type ButtonSizeTheme = {
 
 type ButtonStyleName = '' | 'Danger' | 'Info' | 'Primary' | 'Secondary' | 'Success' | 'Warning';
 
+type ButtonOutlineStyleTheme = {
+  color: CSSValue,
+  colorHover: CSSValue,
+};
+
 type ButtonStyleTheme = {
   backgroundColor: CSSValue,
   borderColor: CSSValue,
   color: CSSValue,
 };
 
-type Props = {
+type Props = ComponentProps & {
   danger?: boolean,
+  disabled?: boolean,
   info?: boolean,
   large?: boolean,
   outline?: boolean,
@@ -44,13 +50,23 @@ type Props = {
 
 // Button Style
 
-const buttonStyleTheme = (theme: Theme, styleName: ButtonStyleName): ButtonStyleTheme => ({
-  backgroundColor: theme[`btn${styleName}BackgroundColor`],
-  borderColor: theme[`btn${styleName}BorderColor`],
-  color: theme[`btn${styleName}Color`],
-});
+const getStyleTheme =
+  (theme: Theme, styleName: ButtonStyleName): ButtonStyleTheme => ({
+    backgroundColor: theme[`btn${styleName}Bg`],
+    borderColor: theme[`btn${styleName}Border`],
+    color: theme[`btn${styleName}Color`],
+  });
 
-const buttonStyleName = (props: Props): ButtonStyleName => {
+const getOutlineStyleTheme =
+  (theme: Theme, styleName: ButtonStyleName): ButtonOutlineStyleTheme => {
+    const type = styleName === 'Secondary' ? 'Border' : 'Bg';
+    return {
+      color: theme[`btn${styleName}${type}`],
+      colorHover: '#fff',
+    };
+  };
+
+const getButtonStyleName = (props: Props): ButtonStyleName => {
   if (props.danger) { return 'Danger'; }
   if (props.info) { return 'Info'; }
   if (props.primary) { return 'Primary'; }
@@ -60,51 +76,37 @@ const buttonStyleName = (props: Props): ButtonStyleName => {
   return '';
 };
 
-const buttonActiveStyle = (theme: ButtonStyleTheme) => {
-  const activeBackgroundColor = darken(0.62, theme.backgroundColor);
-  const activeBorderColor = darken(0.77, theme.borderColor);
-  return css`
-    background-color: ${activeBackgroundColor};
-    border-color: ${activeBorderColor};
-    color: ${theme.color};
-  `;
-};
-
-const buttonBaseStyle = (theme: ButtonStyleTheme) =>
-  css`
-    background-color: ${theme.backgroundColor};
-    border-color: ${theme.borderColor};
-    color: ${theme.color};
-  `;
-
-const buttonStyle = (props: ComponentProps) => {
+const outlineButtonStyle = (props: Props) => {
   const theme = extractTheme(props);
-  const styleTheme = buttonStyleTheme(theme, buttonStyleName(props));
-  const baseStyle = buttonBaseStyle(styleTheme);
-  const activeStyle = buttonActiveStyle(styleTheme);
+  const { color, colorHover } = getOutlineStyleTheme(theme, getButtonStyleName(props));
 
   return css`
-    ${baseStyle}
-    ${boxShadow(t => t.btnBoxShadow)}
+    background-color: transparent;
+    background-image: none;
+    border-color: ${color};
+    color: ${color};
 
     ${hover`
-      ${activeStyle}
+      background-color: ${color};
+      border-color: ${color}
+      color: ${colorHover};
     `}
 
     &:focus {
-      ${activeStyle}
+      background-color: ${color};
+      border-color: ${color};
+      color: ${colorHover};
     }
 
     &:active {
-      ${activeStyle}
-      background-image: none;
-      ${boxShadow(theme.btnActiveBoxShadow)}
-      outline: 0;
+      background-color: ${color};
+      border-color: ${color};
+      color: ${colorHover};
 
       ${hoverFocus`
-        color: ${styleTheme.color};
-        background-color: ${darken(1.12, styleTheme.backgroundColor)};
-        border-color: ${darken(1.65, styleTheme.borderColor)};
+        color: ${colorHover};
+        background-color: ${darken(0.62, color)};
+        border-color: ${darken(0.77, color)};
       `}
     }
 
@@ -113,11 +115,69 @@ const buttonStyle = (props: ComponentProps) => {
       opacity: .65;
 
       ${hoverFocus`
-        ${baseStyle}
+        background-color: transparent;
+        background-image: none;
+        color: ${color};
       `}
     }
   `;
 };
+
+const regularButtonStyle = (props: Props) => {
+  const theme = extractTheme(props);
+  const styleName = getButtonStyleName(props);
+  const { backgroundColor, borderColor, color } = getStyleTheme(theme, styleName);
+  const activeBg = darken(0.62, backgroundColor);
+  const activeBorder = darken(0.77, borderColor);
+
+  return css`
+    background-color: ${backgroundColor};
+    border-color: ${borderColor};
+    ${boxShadow(t => t.btnBoxShadow)}
+    color: ${color};
+
+    ${hover`
+      background-color: ${activeBg};
+      border-color: ${activeBorder};
+      color: ${color};
+    `}
+
+    &:focus {
+      background-color: ${activeBg};
+      border-color: ${activeBorder};
+      color: ${color};
+    }
+
+    &:active {
+      background-color: ${activeBg};
+      background-image: none;
+      border-color: ${activeBorder};
+      ${boxShadow(theme.btnActiveBoxShadow)}
+      color: ${color};
+      outline: 0;
+
+      ${hoverFocus`
+        background-color: ${darken(1.12, backgroundColor)};
+        border-color: ${darken(1.65, borderColor)};
+        color: ${color};
+      `}
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: .65;
+
+      ${hoverFocus`
+        background-color: ${backgroundColor};
+        border-color: ${borderColor};
+        color: ${color};
+      `}
+    }
+  `;
+};
+
+const buttonStyle = (props: Props) =>
+  (props.outline ? outlineButtonStyle(props) : regularButtonStyle(props));
 
 // Button Size
 
