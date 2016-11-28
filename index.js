@@ -1,9 +1,9 @@
-import Buttons from './components/buttons';
-import Cards from './components/cards';
-import Forms from './components/forms';
-import Layout from './components/layout';
+// @flow
 
-import './index.scss';
+import * as Buttons from './components/buttons';
+import * as Cards from './components/cards';
+import * as Forms from './components/forms';
+import * as Layout from './components/layout';
 
 export default {
   Buttons,
