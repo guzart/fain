@@ -1,3 +1,5 @@
+// @flow
+
 import { css } from 'styled-components';
 
 import type { ComponentProps } from '../types.js.flow';
