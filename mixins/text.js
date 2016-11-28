@@ -4,7 +4,7 @@ import { css } from 'styled-components';
 
 import type { ComponentProps } from '../types.js.flow';
 
-import { hoverFocus } from '../utils/feature';
+import hoverFocus from '../mixins/hoverFocus';
 import { darken } from '../helpers/color';
 import { extractTheme } from '../utils/theme';
 

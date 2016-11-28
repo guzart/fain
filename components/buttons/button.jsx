@@ -7,8 +7,12 @@ import type { Theme } from '../../theme';
 import type { ComponentProps, CSSValue } from '../../types.js.flow';
 
 import { darken } from '../../helpers/color';
+import borderRadius from '../../mixins/borderRadius';
+import boxShadow from '../../mixins/boxShadow';
+import hover from '../../mixins/hover';
+import hoverFocus from '../../mixins/hoverFocus';
+import transition from '../../mixins/transition';
 import { extractTheme, themeProperty } from '../../utils/theme';
-import { borderRadius, boxShadow, hover, hoverFocus, transition } from '../../utils/feature';
 
 
 // Types

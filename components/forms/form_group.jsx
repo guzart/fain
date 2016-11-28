@@ -2,7 +2,7 @@
 
 import styled, { css } from 'styled-components';
 
-import { flexEnabled } from '../../utils/feature';
+import flexEnabled from '../../helpers/flexEnabled';
 import { mediaBreakpointUp } from '../../utils/layout';
 import { themeProperty } from '../../utils/theme';
 

@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-import { borderRadius } from '../../utils/feature';
+import borderRadius from '../../mixins/borderRadius';
 import { themeProperty } from '../../utils/theme';
 
 const Card = styled.div`

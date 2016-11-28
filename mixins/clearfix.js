@@ -2,10 +2,12 @@
 
 import { css } from 'styled-components';
 
-export const clearfix = () => css`
+const clearfix = () => css`
   &::after {
     clear: both;
     content: "";
     display: table;
   }
 `;
+
+export default clearfix;

@@ -3,7 +3,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import { borderRadius, boxShadow, transition } from '../../utils/feature';
+import borderRadius from '../../mixins/borderRadius';
+import boxShadow from '../../mixins/boxShadow';
+import transition from '../../mixins/transition';
 import { mult, themeProperty } from '../../utils/theme';
 
 type Props = {
