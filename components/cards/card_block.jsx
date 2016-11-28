@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-import { clearfix } from '../../utils/feature';
+import { clearfix } from '../../mixins/clearfix';
 import { themeProperty } from '../../utils/theme';
 
 const CardBlock = styled.div`
