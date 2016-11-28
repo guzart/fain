@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components';
 import type { Theme } from '../../theme';
 import type { ComponentProps, CSSValue } from '../../types.js.flow';
 
-import { darken } from '../../utils/color';
+import { darken } from '../../helpers/color';
 import { extractTheme, themeProperty } from '../../utils/theme';
 import { borderRadius, boxShadow, hover, hoverFocus, transition } from '../../utils/feature';
 

@@ -3,7 +3,7 @@ import { css } from 'styled-components';
 import type { ComponentProps } from '../types.js.flow';
 
 import { hoverFocus } from '../utils/feature';
-import { darken } from '../utils/color';
+import { darken } from '../helpers/color';
 import { extractTheme } from '../utils/theme';
 
 type TextOptions = {
