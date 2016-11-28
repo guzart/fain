@@ -1,7 +1,7 @@
 # fain
 
 React components based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/) using
-[CSS modules](https://github.com/css-modules/css-modules).
+[Styled Components](https://github.com/styled-components/styled-components).
 
 ## Install
 
@@ -18,7 +18,7 @@ module.exports = {
   loaders: [
     {
       test: \/.jsx?$/,
-      exclude: /node_modules\/(?!fain)/,
+      exclude: /node_modules\/(?!fain)/, // except fain
       loader: 'babel',
     },
   ],
