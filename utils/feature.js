@@ -26,14 +26,24 @@ export const featureGate =
         };
 
 
+export const flexFeature = featureGate(t => t.enableFlex);
 export const roundedFeature = featureGate(t => t.enableRounded);
 export const shadowsFeature = featureGate(t => t.enableShadows);
 export const transitionsFeature = featureGate(t => t.enableTransitions);
 export const hoverMediaQueryFeature = featureGate(t => t.enableHoverMediaQuery);
 
-export const borderRadius = roundedFeature((value: CSSValue) => `border-radius: ${value};`);
+export const borderRadius = roundedFeature(
+  (value: CSSValue) => `border-radius: ${value};`,
+  () => 'border-radius: 0;',
+);
 
 export const boxShadow = shadowsFeature((value: CSSValue) => `box-shadow: ${value};`);
+
+export const flexEnabled =
+  flexFeature(
+    (enabledStyle: any) => enabledStyle,
+    (_, disabledStyle: any) => disabledStyle,
+  );
 
 export const hover =
   hoverMediaQueryFeature(

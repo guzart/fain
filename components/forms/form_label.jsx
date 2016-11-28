@@ -1,20 +1,11 @@
-import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+// @flow
 
-import styles from './styles.scss';
+import styled from 'styled-components';
 
-function FormLabel({ children, className, htmlFor, ...other }) {
-  return (
-    <label {...other} className={classNames(className, styles.formLabel)} htmlFor={htmlFor}>
-      {children}
-    </label>
-  );
-}
-
-FormLabel.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  htmlFor: PropTypes.string.isRequired,
-};
+const FormLabel = styled.label`
+  display: inline-block;
+  margin-bottom: .5rem;
+  touch-action: manipulation;
+`;
 
 export default FormLabel;

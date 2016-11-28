@@ -1,20 +1,15 @@
 // @flow
 
-import omit from 'lodash/omit';
 import React from 'react';
 
 import Button from '../buttons/button';
 
-type Props = {
-  children: React.Element<*>,
-};
+// TODO: create a FormLoaderButton that gets form context isSubmitting status and
+// passes it as a showLoader prop
 
-function FormButton(props: Props) {
-  const buttonProps = omit(props, ['children']);
+function FormButton(props: any) {
   return (
-    <Button {...buttonProps} type="submit">
-      {props.children}
-    </Button>
+    <Button {...props} type="submit" />
   );
 }
 

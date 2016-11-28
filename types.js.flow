@@ -1,13 +1,19 @@
 /* eslint-disable */
 
+import type { Theme } from './theme';
+
 declare type ClassName = string | Object;
 
 declare type ComponentProps = { theme: Theme };
 
 declare type CSSValue = any;
 
+declare type GridBreakpoints = { [key: LayoutSizeName]: CSSValue };
+
 declare type Interpolation = Function | string | number;
 
-declare type PropertyLens = (t: Theme) => CSSValue;
+declare type LayoutSizeName = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+
+declare type PropertyLens = (theme: Theme) => CSSValue;
 
 declare type StyleFn = (...args: any[]) => string;

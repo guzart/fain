@@ -1,18 +1,8 @@
 // @flow
 
-import classNames from 'classnames';
 import merge from 'lodash/merge';
-import omit from 'lodash/omit';
 import reduce from 'lodash/reduce';
 import React from 'react';
-
-import type { ClassName } from '../../types.js.flow';
-
-type Props = {
-  children?: React.Element<*>,
-  className?: ClassName,
-  onSubmit: Function,
-};
 
 const getInputName = (node: HTMLInputElement) =>
   (node.getAttribute('name') || node.getAttribute('id')).toString();
@@ -49,6 +39,10 @@ const getFormData = (formNode: HTMLFormElement) =>
     {},
   );
 
+type Props = {
+  onSubmit: Function,
+};
+
 class Form extends React.Component {
   onSubmitHandler = (event: Object) => {
     event.preventDefault();
@@ -62,18 +56,12 @@ class Form extends React.Component {
   formNode: Object;
 
   render() {
-    const { children, className } = this.props;
-    const formProps = omit(this.props, ['children']);
-
     return (
       <form
-        {...formProps}
-        className={classNames(className)}
+        {...this.props}
         onSubmit={this.onSubmitHandler}
         ref={(node) => { this.formNode = node; }}
-      >
-        {children}
-      </form>
+      />
     );
   }
 }

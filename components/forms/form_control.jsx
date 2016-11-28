@@ -1,33 +1,81 @@
 // @flow
 
-import classNames from 'classnames';
-import omit from 'lodash/omit';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import styled, { css } from 'styled-components';
 
-import type { ClassName } from '../../types.js.flow';
-import styles from './styles.scss';
+import { borderRadius, boxShadow, transition } from '../../utils/feature';
+import { mult, themeProperty } from '../../utils/theme';
 
 type Props = {
-  className?: ClassName,
-  id: string,
-  name?: string,
+  typeName: string | Function,
 };
 
-function FormControl(props: Props) {
-  const inputProps = omit(props, ['className']);
-
-  return (
-    <input
-      {...inputProps}
-      className={classNames(props.className, styles.formControl)}
-      id={props.id}
-      name={props.id || props.name}
-    />
-  );
+function FormControlBase({ typeName, ...other }: Props) {
+  const TypeName = typeName;
+  return <TypeName {...other} />;
 }
 
-FormControl.propTypes = {
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
+FormControlBase.defaultProps = {
+  typeName: 'input',
 };
+
+const FormControl = styled(FormControlBase)`
+  background-clip: padding-box;
+  background-color: ${themeProperty(t => t.inputBg)};
+  background-image: none;
+  border: ${themeProperty(t => `${t.inputBtnBorderWidth} solid ${t.inputBorderColor}`)};
+  ${borderRadius(t => t.inputBorderRadius)}
+  ${boxShadow(t => t.inputBoxShadow)}
+  color: ${themeProperty(t => t.inputColor)};
+  display: block;
+  font-size: ${themeProperty(t => t.fontSizeBase)};
+  line-height: ${themeProperty(t => t.inputLineHeight)};
+  padding: ${themeProperty(t => `${t.inputPaddingY} ${t.inputPaddingX}`)};
+  ${transition('border-color ease-in-out .15s, box-shadow ease-in-out .15s')}
+  width: 100%;
+
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+
+  &:focus {
+    background-color: ${themeProperty(t => t.inputBgFocus)};
+    border-color: ${themeProperty(t => t.inputBorderFocus)};
+    color: ${themeProperty(t => t.inputColorFocus)};
+    outline: none;
+    ${boxShadow(t => t.inputBoxShadowFocus)}
+  }
+
+  &::placeholder {
+    color: ${themeProperty(t => t.inputColorPlaceholder)};
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: ${themeProperty(t => t.inputBgDisabled)};
+    opacity: 1;
+  }
+
+  &:disabled {
+    cursor: ${themeProperty(t => t.cursorDisabled)};
+  }
+
+  ${props => (props.typeName !== 'select' ? '' : css`
+    &:not([size]):not([multiple]) {
+      height: ${themeProperty(t => `calc(${t.inputHeight} - ${mult(t.borderWidth, 2)})`)(props)};
+    }
+
+    &:focus::-ms-value {
+      color: ${themeProperty(t => t.inputColor)(props)};
+      background-color: ${themeProperty(t => t.inputBg)(props)};
+    }
+  `)}
+
+  ${props => (props.typeName !== 'file' ? '' : css`
+    display: block;
+  `)}
+`;
 
 export default FormControl;
