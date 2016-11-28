@@ -1,7 +1,6 @@
 // @flow
 
-import type { Theme } from '../theme';
-import type { ComponentProps, PropertyLens } from '../types.js.flow';
+import type { ComponentProps, PropertyLens, Theme } from '../types.js.flow';
 
 const CSS_VALUE_REGEX = /([0-9.]+)(\w*)/;
 
@@ -12,6 +11,11 @@ function splitUnit(value: string, def?: [number, string]): [number, string] {
   }
 
   return [parseFloat(details[1]), details[2]];
+}
+
+export function div(a: string, b: number): string {
+  const [aValue, aUnit] = splitUnit(a);
+  return `${aValue / b}${aUnit}`;
 }
 
 export function mult(a: string, b: number): string {
@@ -25,9 +29,7 @@ export function sum(a: string, b: string): string {
   return `${aValue + bValue}${aUnit}`;
 }
 
-export const extractTheme =
-  (props: ComponentProps): Theme =>
-    props.theme;
+export const extractTheme = (props: ComponentProps): Theme => props.theme;
 
 export const themeProperty =
   (propertyLens: PropertyLens) =>

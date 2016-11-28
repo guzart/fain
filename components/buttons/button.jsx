@@ -3,8 +3,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-import type { Theme } from '../../theme';
-import type { ComponentProps, CSSValue } from '../../types.js.flow';
+import type { ComponentProps, CSSValue, Theme } from '../../types.js.flow';
 
 import { darken } from '../../helpers/color';
 import borderRadius from '../../mixins/borderRadius';
@@ -49,6 +48,7 @@ type Props = ComponentProps & {
   secondary?: boolean,
   small?: boolean,
   success?: boolean,
+  tabIndex?: string,
   warning?: boolean,
 };
 
@@ -199,7 +199,7 @@ const buttonSizeSuffix = (props: Props): ButtonSizeSuffix => {
   return '';
 };
 
-const buttonSize = (props: ComponentProps) => {
+const buttonSize = (props: Props) => {
   const theme = extractTheme(props);
   const sizeTheme = buttonSizeTheme(theme, buttonSizeSuffix(props));
   return css`

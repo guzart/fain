@@ -3,7 +3,7 @@
 import styled, { css } from 'styled-components';
 
 import flexEnabled from '../../helpers/flexEnabled';
-import { mediaBreakpointUp } from '../../utils/layout';
+import { mediaBreakpointUp } from '../../mixins/mediaBreakpoint';
 import { themeProperty } from '../../helpers/theme';
 
 const FormGroup = styled.div`

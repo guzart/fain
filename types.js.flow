@@ -1,19 +1,26 @@
+// @flow
+
 /* eslint-disable */
 
-import type { Theme } from './theme';
+// import type { Theme } from './theme';
+import theme from './theme';
 
-declare type ClassName = string | Object;
+export type Theme = typeof theme;
 
-declare type ComponentProps = { theme: Theme };
+export type ClassName = string | Object;
 
-declare type CSSValue = any;
+export type ComponentProps = { theme: Theme };
 
-declare type GridBreakpoints = { [key: LayoutSizeName]: CSSValue };
+export type CSSValue = any;
 
-declare type Interpolation = Function | string | number;
+export type LayoutSizeName = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
-declare type LayoutSizeName = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type GridBreakpoints = { [key: LayoutSizeName]: CSSValue };
 
-declare type PropertyLens = (theme: Theme) => CSSValue;
+export type GridGutterWidths = { [key: LayoutSizeName]: CSSValue };
 
-declare type StyleFn = (...args: any[]) => string;
+export type Interpolation = Function | string | number;
+
+export type PropertyLens = (theme: Theme) => CSSValue;
+
+export type StyleFn = (...args: any[]) => CSSValue;

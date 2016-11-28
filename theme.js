@@ -1,6 +1,6 @@
 // @flow
 
-import type { GridBreakpoints } from './types.js.flow';
+import type { GridBreakpoints, GridGutterWidths } from './types.js.flow';
 
 import { mult, sum } from './helpers/theme';
 
@@ -282,9 +282,8 @@ const cards = {
 // Theme
 
 const theme = Object.assign(
-  {}, colors, options, spacing, body, gridBreakpoints, fonts, components, buttons, forms, cards,
+  {}, colors, options, spacing, body, gridBreakpoints, gridColumns,
+  fonts, components, buttons, forms, cards,
 );
-
-export type Theme = typeof theme;
 
 export default theme;

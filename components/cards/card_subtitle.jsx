@@ -3,7 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { themeProperty } from '../../helpers/theme';
+import { div, mult, themeProperty } from '../../helpers/theme';
 
 type Props = {
   typeName: string | Function,
@@ -20,7 +20,7 @@ CardTitleBase.defaultProps = {
 
 const CardTitle = styled(CardTitleBase)`
   margin-bottom: 0;
-  margin-top: ${themeProperty(t => -(t.cardSpacerY / 2))};
+  margin-top: ${themeProperty(t => mult(div(t.cardSpacerY, 2), -1))};
 `;
 
 export default CardTitle;
