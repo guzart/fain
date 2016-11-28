@@ -1,6 +1,6 @@
 // @flow
 
-import type { GridBreakpoints, GridGutterWidths } from './types.js.flow';
+import type { ContainerMaxWidths, GridBreakpoints, GridGutterWidths } from './types.js.flow';
 
 import { mult, sum } from './helpers/theme';
 
@@ -82,6 +82,40 @@ const gridBreakpoints: { gridBreakpoints: GridBreakpoints } = {
     xl: '1200px',
   },
 };
+
+
+// 7. Grid Containers
+
+const containerMaxWidths: ContainerMaxWidths = {
+  sm: '540px',
+  md: '720px',
+  lg: '960px',
+  xl: '1140px',
+};
+
+const gridContainers = {
+  containerMaxWidths,
+};
+
+
+// 8. Grid Columns
+
+const gridColumnsBase = {
+  gridColumns: 12,
+  gridGutterWidthBase: '30px',
+};
+
+const gridGutterWidths: GridGutterWidths = {
+  xs: gridColumnsBase.gridGutterWidthBase,
+  sm: gridColumnsBase.gridGutterWidthBase,
+  md: gridColumnsBase.gridGutterWidthBase,
+  lg: gridColumnsBase.gridGutterWidthBase,
+  xl: gridColumnsBase.gridGutterWidthBase,
+};
+
+const gridColumns = Object.assign({}, gridColumnsBase, {
+  gridGutterWidths,
+});
 
 
 // 9. Fonts
@@ -282,7 +316,7 @@ const cards = {
 // Theme
 
 const theme = Object.assign(
-  {}, colors, options, spacing, body, gridBreakpoints, gridColumns,
+  {}, colors, options, spacing, body, gridBreakpoints, gridContainers, gridColumns,
   fonts, components, buttons, forms, cards,
 );
 

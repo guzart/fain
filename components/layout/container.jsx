@@ -1,25 +1,19 @@
-import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+// @flow
 
-import styles from './styles.scss';
+import styled from 'styled-components';
 
-function Container({ children, className, fluid, ...other }) {
-  const containerStyle = fluid ? styles.containerFluid : styles.container;
-  return (
-    <div {...other} className={classNames(className, containerStyle)}>
-      {children}
-    </div>
-  );
-}
+import makeContainer from '../../mixins/makeContainer';
+import makeContainerMaxWidths from '../../mixins/makeContainerMaxWidths';
 
-Container.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  fluid: PropTypes.bool,
+import type { ComponentProps } from '../../types.js.flow';
+
+type Props = ComponentProps & {
+  fluid?: boolean,
 };
 
-Container.defaultProps = {
-  fluid: false,
-};
+const Container = styled.div`
+  ${makeContainer()}
+  ${(props: Props) => (props.fluid ? '' : makeContainerMaxWidths()(props))}
+`;
 
 export default Container;

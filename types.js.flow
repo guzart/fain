@@ -15,9 +15,13 @@ export type CSSValue = any;
 
 export type LayoutSizeName = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
+export type ContainerMaxWidthsName = 'sm' | 'md' | 'lg' | 'xl';
+
 export type GridBreakpoints = { [key: LayoutSizeName]: CSSValue };
 
-export type GridGutterWidths = { [key: LayoutSizeName]: CSSValue };
+export type GridGutterWidths = { [key: LayoutSizeName]: string };
+
+export type ContainerMaxWidths = { [key: ContainerMaxWidthsName]: string };
 
 export type Interpolation = Function | string | number;
 
