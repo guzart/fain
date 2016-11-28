@@ -2,7 +2,7 @@
 
 import { css } from 'styled-components';
 
-import { themeProperty } from './theme';
+import { themeProperty } from '../helpers/theme';
 import type { LayoutSizeName } from '../types.js.flow';
 
 export const mediaBreakpointDown =

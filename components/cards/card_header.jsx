@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import clearfix from '../../mixins/clearfix';
-import { themeProperty } from '../../utils/theme';
+import { themeProperty } from '../../helpers/theme';
 
 type Props = {
   typeName: string | Function,

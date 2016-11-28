@@ -2,7 +2,7 @@
 
 import type { GridBreakpoints } from './types.js.flow';
 
-import { mult, sum } from './utils/theme';
+import { mult, sum } from './helpers/theme';
 
 // TODO: use bootstrap variables convention to allow automating mapping
 // TODO: Evaluate this file and generate a new one with just the values.

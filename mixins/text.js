@@ -6,7 +6,7 @@ import type { ComponentProps } from '../types.js.flow';
 
 import hoverFocus from '../mixins/hoverFocus';
 import { darken } from '../helpers/color';
-import { extractTheme } from '../utils/theme';
+import { extractTheme } from '../helpers/theme';
 
 type TextOptions = {
   hover?: boolean,

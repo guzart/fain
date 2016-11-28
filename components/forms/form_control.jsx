@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components';
 import borderRadius from '../../mixins/borderRadius';
 import boxShadow from '../../mixins/boxShadow';
 import transition from '../../mixins/transition';
-import { mult, themeProperty } from '../../utils/theme';
+import { mult, themeProperty } from '../../helpers/theme';
 
 type Props = {
   typeName: string | Function,

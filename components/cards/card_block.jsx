@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 import clearfix from '../../mixins/clearfix';
-import { themeProperty } from '../../utils/theme';
+import { themeProperty } from '../../helpers/theme';
 
 const CardBlock = styled.div`
   ${clearfix()}

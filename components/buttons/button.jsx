@@ -12,7 +12,7 @@ import boxShadow from '../../mixins/boxShadow';
 import hover from '../../mixins/hover';
 import hoverFocus from '../../mixins/hoverFocus';
 import transition from '../../mixins/transition';
-import { extractTheme, themeProperty } from '../../utils/theme';
+import { extractTheme, themeProperty } from '../../helpers/theme';
 
 
 // Types

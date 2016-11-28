@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 import borderRadius from '../../mixins/borderRadius';
-import { themeProperty } from '../../utils/theme';
+import { themeProperty } from '../../helpers/theme';
 
 const Card = styled.div`
   ${borderRadius(t => t.cardBorderRadius)}

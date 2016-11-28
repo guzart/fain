@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { mult, themeProperty } from '../../utils/theme';
+import { mult, themeProperty } from '../../helpers/theme';
 
 const FormCheck = styled.div`
   display: block;

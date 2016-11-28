@@ -1,3 +1,4 @@
+// @flow
 
 export function titleize(value) {
   const title = value.replace(/-/g, ' ');

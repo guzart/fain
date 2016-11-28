@@ -3,7 +3,7 @@
 import styled from 'styled-components';
 
 import { textMuted } from '../../mixins/text';
-import { mult, themeProperty } from '../../utils/theme';
+import { mult, themeProperty } from '../../helpers/theme';
 
 const FormSupport = styled.small`
   display: block;

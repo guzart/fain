@@ -1,6 +1,6 @@
 // @flow
 
-import { extractTheme } from '../utils/theme';
+import { extractTheme } from '../helpers/theme';
 import type { ComponentProps, CSSValue, PropertyLens, StyleFn } from '../types.js.flow';
 
 const evalFunctions = (list: Array<Function>, args: any[]): Array<CSSValue> =>

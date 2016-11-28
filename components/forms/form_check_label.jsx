@@ -1,6 +1,8 @@
+// @flow
+
 import styled, { css } from 'styled-components';
 
-import { themeProperty } from '../../utils/theme';
+import { themeProperty } from '../../helpers/theme';
 
 const FormCheckLabel = styled.label`
   padding-left: 1.25rem;
