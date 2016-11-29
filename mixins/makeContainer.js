@@ -34,7 +34,7 @@ const makeContainer = (options?: MakeContainerOptions) =>
       margin-left: auto;
       margin-right: auto;
 
-      ${flexEnabled(clearfix())}
+      ${flexEnabled('', clearfix())}
       ${breakpointsStyle}
     `;
   };
