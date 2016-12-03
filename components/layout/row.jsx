@@ -1,19 +1,11 @@
-import classNames from 'classnames';
-import React, { PropTypes } from 'react';
+// @flow
 
-import styles from './styles.scss';
+import styled from 'styled-components';
 
-function Row({ children, className, ...other }) {
-  return (
-    <div {...other} className={classNames(className, styles.row)}>
-      {children}
-    </div>
-  );
-}
+import makeRow from '../../mixins/makeRow';
 
-Row.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-};
+const Row = styled.div`
+  ${makeRow()}
+`;
 
 export default Row;
