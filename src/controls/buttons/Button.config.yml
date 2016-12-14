@@ -1,0 +1,64 @@
+---
+
+title: Button
+
+collated: true
+
+variants:
+  - name: default
+    context:
+      children: Default
+
+  - name: tiny
+    label: "Sizing: Tiny"
+    context:
+      children: Tiny
+      size: tiny
+
+  - name: small
+    label: "Sizing: Small"
+    context:
+      children: Small
+      size: small
+
+  - name: large
+    label: "Sizing: Large"
+    context:
+      children: Large
+      size: large
+
+  - name: expanded
+    label: "Sizing: Expanded"
+    context:
+      children: Expand
+      expanded: true
+
+  - name: secondary
+    label: "Coloring: Secondary"
+    context:
+      children: Secondary
+      color: secondary
+
+  - name: success
+    label: "Coloring: Success"
+    context:
+      children: Success
+      color: success
+
+  - name: alert
+    label: "Coloring: Alert"
+    context:
+      children: Alert
+      color: alert
+
+  - name: warning
+    label: "Coloring: Warning"
+    context:
+      children: Warning
+      color: warning
+
+  - name: disabled
+    label: "Coloring: Disabled"
+    context:
+      children: Disabled
+      color: disabled

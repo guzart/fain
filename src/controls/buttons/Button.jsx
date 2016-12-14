@@ -3,10 +3,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './ButtonStyles.scss';
+import styles from './Button.scss';
 
 type Props = {
   className: ClassName,
+  color: string,
   expanded: boolean,
   size: 'tiny' | 'small' | 'default' | 'large',
   type: 'button' | 'submit',
@@ -17,8 +18,9 @@ function Button(props: Props) {
     props.className,
     styles.button,
     styles[props.size],
+    styles[props.color],
     {
-      expanded: props.expanded,
+      [styles.expanded]: props.expanded,
     },
   );
 

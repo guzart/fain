@@ -6,7 +6,7 @@ fractal.set('project.title', 'Fain Component Library');
 
 fractal.components.engine(reactAdapter);
 fractal.components.set('path', path.join(__dirname, '/src'));
-fractal.components.set('ext', '.view.jsx');
+fractal.components.set('ext', '.react');
 
 fractal.docs.set('path', path.join(__dirname, '/docs'));
 

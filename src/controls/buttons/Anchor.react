@@ -1,0 +1,12 @@
+import React from 'react';
+import Anchor from './Anchor';
+
+export default function ButtonExample() {
+  return (
+    <div>
+      <Anchor href="#">Learn More</Anchor>
+      {' '}
+      <Anchor href="#">View All Features</Anchor>
+    </div>
+  );
+}

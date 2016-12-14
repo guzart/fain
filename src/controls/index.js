@@ -1,1 +1,1 @@
-export * as Buttons from './buttons';
+export * from './buttons';

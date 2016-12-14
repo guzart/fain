@@ -1,1 +1,1 @@
-export * as Controls from './controls';
+export * from './controls';
