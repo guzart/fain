@@ -1,9 +1,10 @@
 {
   "name": "fain",
   "version": "0.4.0",
-  "description": "React components based on bootstrap 4 using CSS modules",
+  "description": "React components based on zurb foundation using CSS modules",
   "main": "index.js",
   "scripts": {
+    "fractal": "fractal start --sync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,7 +13,6 @@
   },
   "keywords": [
     "react",
-    "bootstrap",
     "react-components",
     "css-modules"
   ],
@@ -23,23 +23,36 @@
   },
   "homepage": "https://github.com/guzart/fain#readme",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.5",
     "classnames": "^2.2.5",
+    "foundation-sites": "^6.3.0-rc3",
     "lodash": "^4.17.0"
   },
   "peerDependencies": {
     "react": "^15.3"
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.0",
+    "@frctl/fractal": "^1.0.11",
+    "babel-core": "^6.20.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.9",
     "babel-plugin-transform-class-properties": "^6.18.0",
-    "eslint": "^3.9.1",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.12.1",
     "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-airbnb-base": "^11.0.0",
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-jsx-a11y": "^2.2.3",
-    "eslint-plugin-react": "^6.6.0",
-    "flow-bin": "^0.35.0",
-    "react": "^15.3.2",
-    "webpack": "^1.13.3"
+    "eslint-plugin-react": "^6.8.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "flow-bin": "^0.37.0",
+    "js-beautify": "^1.6.4",
+    "node-sass": "^3.13.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.1.0-beta.28"
   }
 }
