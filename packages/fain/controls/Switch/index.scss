@@ -1,0 +1,14 @@
+@import '~foundation-sites/scss/util/util';
+@import '~foundation-sites/scss/global';
+@import '~foundation-sites/scss/components/switch';
+
+@include foundation-switch;
+
+// Good candidate for utility placeholder
+%show-for-sr {
+  @include element-invisible;
+}
+
+.showForSR {
+  @extend %show-for-sr;
+}

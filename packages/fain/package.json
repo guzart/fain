@@ -1,0 +1,29 @@
+{
+  "name": "fain",
+  "version": "0.4.0",
+  "description": "React components based on zurb foundation using CSS modules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guzart/fain.git"
+  },
+  "keywords": [
+    "react",
+    "react-components",
+    "css-modules"
+  ],
+  "author": "Arturo Guzman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guzart/fain/issues"
+  },
+  "homepage": "https://github.com/guzart/fain#readme",
+  "dependencies": {
+    "babel-runtime": "^6.20.0",
+    "classnames": "^2.2.5"
+  },
+  "peerDependencies": {
+    "foundation-sites": "^6.3.0-rc3",
+    "react": "^15.3"
+  }
+}
