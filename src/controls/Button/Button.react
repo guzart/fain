@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Button';
+import Button from 'fain/controls/Button';
 
 export default function ButtonExample(props) {
   return (

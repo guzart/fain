@@ -3,40 +3,39 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './Button.scss';
+import styles from '../Button/index.scss';
 
 type Props = {
+  children: any,
   className: ClassName,
-  color: string,
+  disabled: boolean,
   expanded: boolean,
   size: 'tiny' | 'small' | 'default' | 'large',
-  type: 'button' | 'submit',
 };
 
-function Button(props: Props) {
+function Anchor(props: Props) {
   const buttonCN = classNames(
     props.className,
     styles.button,
     styles[props.size],
-    styles[props.color],
     {
-      [styles.expanded]: props.expanded,
+      disabled: props.disabled,
+      expanded: props.expanded,
     },
   );
 
   return (
-    <button
+    <a
       {...props}
+      ariaDisabled={props.disabled}
       className={buttonCN}
-      type={props.type}
-    />
+    >{props.children}</a>
   );
 }
 
-Button.defaultProps = {
+Anchor.defaultProps = {
   expanded: false,
   size: 'default',
-  type: 'button',
 };
 
-export default Button;
+export default Anchor;

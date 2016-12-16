@@ -3,7 +3,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './Switch.scss';
+import styles from './index.scss';
 
 type Props = {
   activeLabel?: string,
