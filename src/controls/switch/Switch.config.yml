@@ -1,0 +1,30 @@
+---
+
+title: Switch
+
+collated: true
+
+variants:
+  - name: default
+
+  - name: innerLabel
+    context:
+      activeLabel: Yes
+      inactiveLabel: No
+
+  - name: screenReaderLabel
+    context:
+      checked: true
+      srLabel: Enable feature?
+
+  - name: tiny
+    context:
+      size: tiny
+
+  - name: small
+    context:
+      size: small
+
+  - name: large
+    context:
+      size: large

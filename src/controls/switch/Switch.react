@@ -1,0 +1,19 @@
+import React from 'react';
+import Switch from './Switch';
+
+export default function SwitchExample(props) {
+  return (
+    <p>
+      <span>{props.self.handle}</span>
+      <Switch
+        activeLabel={props.activeLabel}
+        componentClass="span"
+        defaultChecked={props.checked}
+        inactiveLabel={props.inactiveLabel}
+        name={props.self.handle}
+        size={props.size}
+        srLabel={props.srLabel}
+      />
+    </p>
+  );
+}
