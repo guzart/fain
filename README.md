@@ -1,6 +1,6 @@
 # fain
 
-React components based on [Bootstrap 4](https://v4-alpha.getbootstrap.com/) using
+React components based on [ZURB Foundation Sites](http://foundation.zurb.com/sites.html) using
 [CSS modules](https://github.com/css-modules/css-modules).
 
 ## Install
@@ -31,8 +31,8 @@ module.exports = {
 ```js
 import React, { PropTypes } from 'react';
 
-import { Button } from 'fain/components/buttons';
-import { Column, Container, Row } from 'fain/components/layout';
+import { Button } from 'fain/controls/buttons';
+import { Column, Container, Row } from 'fain/layout';
 
 function Root() {
   render() {
@@ -50,3 +50,7 @@ function Root() {
 
 export default Root;
 ```
+
+## Customize
+
+Themability for components is available using [Foundation SASS variables](http://foundation.zurb.com/sites/docs/global.html).
