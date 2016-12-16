@@ -4,6 +4,9 @@
   "description": "React components based on zurb foundation using CSS modules",
   "main": "index.js",
   "scripts": {
+    "build": "npm run build:babel && npm run build:copy-styles",
+    "build:babel": "babel src -d dist",
+    "build:copy-styles": "rsync -am --include '*/' --include '*.scss' --exclude '*' src/ dist/",
     "fractal": "fractal start --sync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,15 +26,15 @@
   },
   "homepage": "https://github.com/guzart/fain#readme",
   "dependencies": {
-    "classnames": "^2.2.5",
-    "foundation-sites": "^6.3.0-rc3",
-    "lodash": "^4.17.0"
+    "classnames": "^2.2.5"
   },
   "peerDependencies": {
+    "foundation-sites": "^6.3.0-rc3",
     "react": "^15.3"
   },
   "devDependencies": {
     "@frctl/fractal": "^1.0.11",
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.20.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.9",
@@ -49,6 +52,7 @@
     "eslint-plugin-react": "^6.8.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "flow-bin": "^0.37.0",
+    "foundation-sites": "^6.3.0-rc3",
     "js-beautify": "^1.6.4",
     "node-sass": "^3.13.1",
     "react": "^15.4.1",
