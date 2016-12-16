@@ -1,0 +1,16 @@
+---
+
+title: Anchor
+
+collated: true
+
+variants:
+  - name: default
+    context:
+      children: Default
+
+  - name: tiny
+    label: "Sizing: Tiny"
+    context:
+      children: Tiny
+      size: tiny

@@ -1,12 +1,11 @@
 import React from 'react';
-import Anchor from 'fain/controls/buttons/Anchor';
+import Anchor from 'fain/controls/Anchor';
 
-export default function ButtonExample() {
+export default function ButtonExample(props) {
   return (
-    <div>
-      <Anchor href="#">Learn More</Anchor>
-      {' '}
-      <Anchor href="#">View All Features</Anchor>
-    </div>
+    <Anchor
+      href="#"
+      size={props.size}
+    >{props.children}</Anchor>
   );
 }
