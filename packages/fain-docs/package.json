@@ -3,6 +3,10 @@
   "version": "0.4.0",
   "description": "Documentation for fain npm package",
   "main": "fractal.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guzart/fain.git"
+  },
   "directories": {
     "doc": "docs"
   },
@@ -13,8 +17,14 @@
   "license": "MIT",
   "devDependencies": {
     "@frctl/fractal": "^1.0.11",
+    "babel-core": "^6.21.0",
+    "babel-plugin-css-modules-transform": "^1.1.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-react": "^6.16.0",
     "fain": ">=0.4",
+    "foundation-sites": "^6.3.0",
     "js-beautify": "^1.6.4",
+    "node-sass": "^4.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   }
