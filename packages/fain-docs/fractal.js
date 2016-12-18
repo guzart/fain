@@ -7,6 +7,7 @@ const rootPath = path.resolve(__dirname, '..', '..');
 fractal.set('project.title', 'Fain Component Library');
 
 fractal.components.engine(reactAdapter);
+fractal.components.set('default.preview', '@preview');
 fractal.components.set('path', path.join(rootPath, 'src'));
 fractal.components.set('ext', '.react');
 fractal.components.set('default.display', {
