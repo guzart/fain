@@ -10,9 +10,11 @@ fractal.components.engine(reactAdapter);
 fractal.components.set('path', path.join(rootPath, 'src'));
 fractal.components.set('ext', '.react');
 fractal.components.set('default.display', {
-  padding: '1rem',
+  padding: '1rem'
 });
 
 fractal.docs.set('path', path.join(__dirname, 'docs'));
+
+fractal.web.set('static.path', path.join(__dirname, 'public'));
 
 module.exports = fractal;

@@ -6,4 +6,7 @@ module.exports = {
       { devDependencies: true }
     ],
   },
+  globals: {
+    Promise: true,
+  }
 };
