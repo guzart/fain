@@ -3,19 +3,14 @@
   "version": "0.4.0",
   "description": "Documentation for fain npm package",
   "main": "fractal.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "fractal": "fractal start --sync"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/guzart/fain.git"
-  },
   "author": "Arturo Guzman",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/guzart/fain/issues"
-  },
-  "homepage": "https://github.com/guzart/fain#readme",
   "devDependencies": {
     "@frctl/fractal": "^1.0.11",
     "fain": ">=0.4",
