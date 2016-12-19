@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@frctl/fractal": "^1.0.11",
+    "@frctl/mandelbrot": "^1.0.7",
     "babel-core": "^6.21.0",
     "babel-plugin-css-modules-transform": "^1.1.0",
     "babel-preset-env": "^1.1.4",

@@ -1,6 +1,16 @@
-const fractal = require('@frctl/fractal').create(); // eslint-disable-line
 const path = require('path');
 
+// change the mount point of the theme, so that it's compatible with github pages
+const mandelbrot = require('@frctl/mandelbrot')({
+  favicon: 'fractal/favicon.ico',
+  lang: 'en-gb',
+  styles: ['default'],
+  static: {
+    mount: 'fractal'
+  }
+});
+
+const fractal = require('@frctl/fractal').create(); // eslint-disable-line
 const reactAdapter = require('./lib/frctl-react-adapter');
 
 const paths = {
@@ -22,6 +32,7 @@ fractal.components.set('default.display', {
 
 fractal.docs.set('path', paths.docs);
 
+fractal.web.theme(mandelbrot);
 fractal.web.set('static.path', paths.static);
 fractal.web.set('builder.dest', paths.dest);
 
