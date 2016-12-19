@@ -3,6 +3,9 @@
 React components based on [ZURB Foundation Sites](http://foundation.zurb.com/sites.html) using
 [CSS modules](https://github.com/css-modules/css-modules).
 
+Take a look at the **[Component Reference](https://guzart.github.io/fain/)** for an overview of
+the available components with the props and their current status.
+
 ## Install
 
 To use these components you need to include this module as part of your ES6 transformations.
