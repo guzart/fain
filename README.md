@@ -26,6 +26,7 @@ with [css-loader](https://github.com/webpack/css-loader).
 // webpack.config.js
 
 var nodeModulesPath = path.resolve('./node_modules');
+
 module.exports = {
   // ...
   loaders: [
