@@ -35,7 +35,7 @@ module.exports = {
       test: \/.scss?$/,
       loader: [
         'style',
-        'css?camelCase',
+        'css?camelCase=1',
         `sass?includePaths[]=${nodeModulesPath}`
       ]
     },
