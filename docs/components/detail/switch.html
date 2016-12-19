@@ -265,13 +265,13 @@
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SwitchExample</span>(<span class="hljs-params">props</span>) </span>{
   <span class="hljs-keyword">return</span> (
     <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{props.self.handle}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{props.meta.self.handle}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">Switch</span>
         <span class="hljs-attr">activeLabel</span>=<span class="hljs-string">{props.activeLabel}</span>
         <span class="hljs-attr">componentClass</span>=<span class="hljs-string">"span"</span>
         <span class="hljs-attr">defaultChecked</span>=<span class="hljs-string">{props.checked}</span>
         <span class="hljs-attr">inactiveLabel</span>=<span class="hljs-string">{props.inactiveLabel}</span>
-        <span class="hljs-attr">name</span>=<span class="hljs-string">{props.self.handle}</span>
+        <span class="hljs-attr">name</span>=<span class="hljs-string">{props.meta.self.handle}</span>
         <span class="hljs-attr">size</span>=<span class="hljs-string">{props.size}</span>
         <span class="hljs-attr">srLabel</span>=<span class="hljs-string">{props.srLabel}</span>
       /&gt;</span>

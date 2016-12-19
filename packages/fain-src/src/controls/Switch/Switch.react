@@ -4,13 +4,13 @@ import Switch from 'fain/controls/Switch';
 export default function SwitchExample(props) {
   return (
     <p>
-      <span>{props.self.handle}</span>
+      <span>{props.meta.self.handle}</span>
       <Switch
         activeLabel={props.activeLabel}
         componentClass="span"
         defaultChecked={props.checked}
         inactiveLabel={props.inactiveLabel}
-        name={props.self.handle}
+        name={props.meta.self.handle}
         size={props.size}
         srLabel={props.srLabel}
       />

@@ -215,10 +215,10 @@
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"referrer"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"origin"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"robots"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"index, follow"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/controls/Button/index.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/controls/Switch/index.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/packages/fain/controls/Button/index.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"/packages/fain/controls/Switch/index.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../controls/Button/index.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../controls/Switch/index.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../packages/fain/controls/Button/index.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../packages/fain/controls/Switch/index.css"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -235,44 +235,52 @@
     <code class="Code Code--lang-">
         <pre><span class="hljs-comment">// @flow</span>
 
-<span class="hljs-comment">/* eslint-disable react/no-danger, react/jsx-filename-extension */</span>
+<span class="hljs-comment">/* eslint-disable
+  no-underscore-dangle,
+  react/no-danger, react/jsx-filename-extension,
+  import/no-extraneous-dependencies */</span>
 
-import glob <span class="hljs-keyword">from</span> <span class="hljs-string">'glob'</span>; <span class="hljs-comment">// eslint-disable-line import/no-extraneous-dependencies</span>
-import path <span class="hljs-keyword">from</span> <span class="hljs-string">'path'</span>;
-import React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> glob from <span class="hljs-string">'glob'</span>;
+<span class="hljs-keyword">import</span> path from <span class="hljs-string">'path'</span>;
+<span class="hljs-keyword">import</span> <span class="hljs-built_in">get</span> from <span class="hljs-string">'lodash/get'</span>;
+<span class="hljs-keyword">import</span> React from <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { utils } from <span class="hljs-string">'@frctl/fractal'</span>;
 
-<span class="hljs-function">function <span class="hljs-title">renderLinkStylesheets</span>(<span class="hljs-params">filePath</span>) </span>{
+function renderLinkStylesheets(props) {
+  <span class="hljs-keyword">const</span> builderUrls = props.fractal.web.<span class="hljs-built_in">get</span>(<span class="hljs-string">'builder.urls'</span>);
+  <span class="hljs-keyword">const</span> filePath = props.filePath;
+
   <span class="hljs-keyword">const</span> publicPath = path.resolve(path.dirname(filePath), <span class="hljs-string">'../../public'</span>);
-  <span class="hljs-keyword">const</span> result = glob.sync(path.<span class="hljs-keyword">join</span>(publicPath, <span class="hljs-string">'**/*.css'</span>));
-  <span class="hljs-keyword">return</span> result
-    .map(f =&gt; path.<span class="hljs-keyword">join</span>(<span class="hljs-string">'/'</span>, path.relative(publicPath, f)))
-    .map(f =&gt; &lt;link rel=<span class="hljs-string">"stylesheet"</span> href={f} key={f} /&gt;);
+  <span class="hljs-keyword">const</span> result = glob.sync(path.join(publicPath, <span class="hljs-string">'**/*.css'</span>));
+  <span class="hljs-built_in">return</span> result
+    .<span class="hljs-built_in">map</span>(f =&gt; path.relative(publicPath, f))
+    .<span class="hljs-built_in">map</span>(f =&gt; utils.relUrlPath(f, <span class="hljs-built_in">get</span>(props, <span class="hljs-string">'meta.env.request.path'</span>, <span class="hljs-string">'/'</span>), builderUrls))
+    .<span class="hljs-built_in">map</span>(f =&gt; &lt;link rel=<span class="hljs-string">"stylesheet"</span> href={f} key={f} /&gt;);
 }
 
 type Props = {
-  filePath: <span class="hljs-keyword">string</span>,
-  <span class="hljs-keyword">yield</span>: <span class="hljs-keyword">string</span>,
+  <span class="hljs-built_in">yield</span>: <span class="hljs-keyword">string</span>,
 };
 
-<span class="hljs-function">function <span class="hljs-title">PreviewTemplate</span>(<span class="hljs-params">props: Props</span>) </span>{
-  <span class="hljs-keyword">return</span> (
+function PreviewTemplate(props: Props) {
+  <span class="hljs-built_in">return</span> (
     &lt;html lang=<span class="hljs-string">"en"</span> dir=<span class="hljs-string">"ltr"</span> prefix=<span class="hljs-string">"og: http://ogp.me/ns#"</span> className=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;
       &lt;head&gt;
         &lt;meta charSet=<span class="hljs-string">"utf-8"</span> /&gt;
         &lt;meta name=<span class="hljs-string">"referrer"</span> content=<span class="hljs-string">"origin"</span> /&gt;
         &lt;meta name=<span class="hljs-string">"robots"</span> content=<span class="hljs-string">"index, follow"</span> /&gt;
         &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;
-        {renderLinkStylesheets(props.filePath)}
+        {renderLinkStylesheets(props)}
       &lt;/head&gt;
       &lt;body&gt;
-        &lt;div dangerouslySetInnerHTML={{ __html: props.<span class="hljs-keyword">yield</span> }} /&gt;
+        &lt;div dangerouslySetInnerHTML={{ __html: props.<span class="hljs-built_in">yield</span> }} /&gt;
       &lt;/body&gt;
     &lt;/html&gt;
   );
 }
 
 
-export <span class="hljs-keyword">default</span> PreviewTemplate;
+<span class="hljs-keyword">export</span> <span class="hljs-built_in">default</span> PreviewTemplate;
 </pre>
     </code>
 </div>
