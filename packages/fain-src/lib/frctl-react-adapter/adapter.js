@@ -70,7 +70,7 @@ class ReactAdapter extends Adapter {
   }
 
   render(tplPath, tplCode, tplContext, meta) {
-    debug(`fractal adapter: rendering ${tplPath}`);
+    debug(`frctl-react-adapter: rendering ${tplPath}`);
 
     try {
       const Component = this.getCachedComponent(tplPath, tplCode);
@@ -79,6 +79,7 @@ class ReactAdapter extends Adapter {
       const html = ReactDOMServer.renderToStaticMarkup(element);
       return Promise.resolve(html);
     } catch (error) {
+      debug(error);
       return Promise.reject(error.message);
     }
   }

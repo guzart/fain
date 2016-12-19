@@ -1,21 +1,26 @@
 const fractal = require('@frctl/fractal').create(); // eslint-disable-line
 const path = require('path');
+
 const reactAdapter = require('./lib/frctl-react-adapter');
 
-const rootPath = path.resolve(__dirname, '..', '..');
+const paths = {
+  components: path.resolve('./src'),
+  docs: path.resolve('./docs'),
+  static: path.resolve('./public')
+};
 
 fractal.set('project.title', 'Fain Component Library');
 
 fractal.components.engine(reactAdapter);
 fractal.components.set('default.preview', '@preview');
-fractal.components.set('path', path.join(rootPath, 'src'));
+fractal.components.set('path', paths.components);
 fractal.components.set('ext', '.react');
 fractal.components.set('default.display', {
   padding: '1rem'
 });
 
-fractal.docs.set('path', path.join(__dirname, 'docs'));
+fractal.docs.set('path', paths.docs);
 
-fractal.web.set('static.path', path.join(__dirname, 'public'));
+fractal.web.set('static.path', paths.static);
 
 module.exports = fractal;

@@ -1,5 +1,0 @@
-{
-  "ignore": ["node_modules/*"],
-  "presets": ["react", "latest"],
-  "plugins": ["transform-object-rest-spread", "transform-runtime"]
-}
