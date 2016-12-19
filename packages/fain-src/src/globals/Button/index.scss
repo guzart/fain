@@ -1,0 +1,13 @@
+@import 'foundation-sites/scss/util/util';
+@import 'foundation-sites/scss/global';
+
+.button {
+  @include disable-mouse-outline;
+
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: $global-radius;
+  line-height: 1;
+  padding: 0;
+}

@@ -20,6 +20,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Button = require('../../globals/Button');
+
+var _Button2 = _interopRequireDefault(_Button);
+
 var _index = require('./index.scss');
 
 var _index2 = _interopRequireDefault(_index);
@@ -29,7 +33,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Button(props) {
   var buttonCN = (0, _classnames2.default)(props.className, _index2.default.button, _index2.default[props.size], _index2.default[props.color], (0, _defineProperty3.default)({}, _index2.default.expanded, props.expanded));
 
-  return _react2.default.createElement('button', (0, _extends3.default)({}, props, {
+  return _react2.default.createElement(_Button2.default, (0, _extends3.default)({}, props, {
     className: buttonCN,
     type: props.type
   }));

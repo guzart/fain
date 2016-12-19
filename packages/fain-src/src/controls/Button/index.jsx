@@ -3,6 +3,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import BaseButton from '../../globals/Button';
 import styles from './index.scss';
 
 type Props = {
@@ -25,7 +26,7 @@ function Button(props: Props) {
   );
 
   return (
-    <button
+    <BaseButton
       {...props}
       className={buttonCN}
       type={props.type}
