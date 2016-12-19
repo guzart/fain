@@ -53,7 +53,10 @@ function getHashKey(templatePath, templateCode) {
 class ReactAdapter extends Adapter {
   constructor(engineName, instance, source, app) {
     super(instance, source);
-    this.app = app;
+    this.fractal = app;
+    this.engineName = engineName;
+    this.instance = instance;
+    this.source = source;
     this.cache = {};
   }
 
@@ -74,7 +77,11 @@ class ReactAdapter extends Adapter {
 
     try {
       const Component = this.getCachedComponent(tplPath, tplCode);
-      const props = Object.assign({}, { filePath: tplPath }, meta, tplContext);
+      const { engineName, fractal, instance, source } = this;
+      const props = Object.assign({},
+        { engineName, fractal, instance, source, filePath: tplPath, meta },
+        tplContext
+      );
       const element = React.createElement(Component, props);
       const html = ReactDOMServer.renderToStaticMarkup(element);
       return Promise.resolve(html);
