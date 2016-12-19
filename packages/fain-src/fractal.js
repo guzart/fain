@@ -4,9 +4,10 @@ const path = require('path');
 const reactAdapter = require('./lib/frctl-react-adapter');
 
 const paths = {
-  components: path.resolve('./src'),
-  docs: path.resolve('./fractal-docs'),
-  static: path.resolve('./public')
+  components: path.resolve(__dirname, './src'),
+  dest: path.resolve(__dirname, '../../docs'),
+  docs: path.resolve(__dirname, './docs'),
+  static: path.resolve(__dirname, './public')
 };
 
 fractal.set('project.title', 'Fain Component Library');
@@ -22,5 +23,6 @@ fractal.components.set('default.display', {
 fractal.docs.set('path', paths.docs);
 
 fractal.web.set('static.path', paths.static);
+fractal.web.set('builder.dest', paths.dest);
 
 module.exports = fractal;

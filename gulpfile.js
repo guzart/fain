@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const path = require('path');
+const fractal = require('./packages/fain-src/fractal');
 
 const paths = {
   dest: path.resolve('./packages/fain'),
@@ -26,6 +27,16 @@ gulp.task('build:js', () =>
       }))
       .pipe(gulp.dest(paths.dest))
 );
+
+gulp.task('build:docs', () => {
+  const builder = fractal.web.builder();
+  const logger = fractal.cli.console;
+  builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
+  builder.on('error', err => logger.error(err.message));
+  return builder.build().then(() => {
+    logger.success('Fractal build completed!');
+  });
+});
 
 gulp.task('build', ['build:js', 'build:sass']);
 
