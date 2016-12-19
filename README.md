@@ -8,7 +8,12 @@ React components based on [ZURB Foundation Sites](http://foundation.zurb.com/sit
 To use these components you need to include this module as part of your ES6 transformations.
 
 1. `npm install fain --save`
-2. Include this package as part of your ES6 transformations
+2. Setup [CSS modules](https://github.com/css-modules/css-modules#implementations) in your
+   assets build system.
+   * Enable the `camelCase` option
+   * Add the `node_modules` dir to your `sass.includePaths`
+
+### Webpack
 
 ```js
 // webpack.config.js
@@ -17,40 +22,40 @@ module.exports = {
   // ...
   loaders: [
     {
-      test: \/.jsx?$/,
+      test: \/.scss?$/,
       exclude: /node_modules\/(?!fain)/,
-      loader: 'babel',
+      loader: ['style', 'css?camelCase', 'sass'],
     },
   ],
   //...
 };
 ```
 
-## Example
+## Customization
+
+_TODO: add example of prepending variables config_
+
+Themability for components is available using [Foundation SASS variables](http://foundation.zurb.com/sites/docs/global.html).
+
+## Usage
 
 ```js
 import React, { PropTypes } from 'react';
 
-import { Button } from 'fain/controls/buttons';
-import { Column, Container, Row } from 'fain/layout';
+import Button from 'fain/controls/Button';
 
 function Root() {
   render() {
     return (
-      <Container>
-        <Row>
-          <Column smallSize={8}>
-            <Button outline primary>Sign In</Button>
-          </Column>
-        </Row>
-      </Container>
+      <div>
+        <Button
+          color="primary"
+          size="large"
+        >Sign In</Button>
+      </div>
     );
   }
 }
 
 export default Root;
 ```
-
-## Customize
-
-Themability for components is available using [Foundation SASS variables](http://foundation.zurb.com/sites/docs/global.html).
