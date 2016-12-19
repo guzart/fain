@@ -4,16 +4,19 @@ React components based on [ZURB Foundation Sites](http://foundation.zurb.com/sit
 [CSS modules](https://github.com/css-modules/css-modules).
 
 Take a look at the **[Component Reference](https://guzart.github.io/fain/)** for an overview of
-the available components with the props and their current status.
+the available components with their `props` and current status.
 
 ## Install
 
 To use these components you need an assets build process (Webpack, Browserify, etc) with
 Sass and CSS Modules support.
 
-1. `npm install fain --save`
+1. Install package:  
+  `npm install fain --save`
+2. Install peer dependencies:  
+  `npm install foundation-sites react --save`
 2. Setup [CSS modules](https://github.com/css-modules/css-modules#implementations) in your
-   assets build system.
+   assets build process configuration.
    * Enable the `camelCase` option
    * Add the `node_modules` dir to your `sass.includePaths`
 
@@ -73,3 +76,5 @@ function Root() {
 
 export default Root;
 ```
+
+For more examples, head over to the **[Component Reference](https://guzart.github.io/fain/)**.
