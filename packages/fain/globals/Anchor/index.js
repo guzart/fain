@@ -16,31 +16,20 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Anchor = require('../../globals/Anchor');
-
-var _Anchor2 = _interopRequireDefault(_Anchor);
-
-var _index = require('../Button/index.scss');
+var _index = require('./index.scss');
 
 var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Anchor(props) {
-  var buttonCN = (0, _classnames2.default)(props.className, _index2.default.button, _index2.default[props.size], {
-    disabled: props.disabled,
-    expanded: props.expanded
-  });
-
-  return _react2.default.createElement(_Anchor2.default, (0, _extends3.default)({}, props, {
-    ariaDisabled: props.disabled,
-    className: buttonCN
-  }));
+  return _react2.default.createElement(
+    'a',
+    (0, _extends3.default)({}, props, {
+      className: (0, _classnames2.default)(props.className, _index2.default.anchor)
+    }),
+    props.children
+  );
 }
-
-Anchor.defaultProps = {
-  expanded: false,
-  size: 'default'
-};
 
 exports.default = Anchor;

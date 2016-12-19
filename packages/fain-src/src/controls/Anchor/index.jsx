@@ -3,10 +3,10 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import BaseAnchor from '../../globals/Anchor';
 import styles from '../Button/index.scss';
 
 type Props = {
-  children: any,
   className: ClassName,
   disabled: boolean,
   expanded: boolean,
@@ -25,11 +25,11 @@ function Anchor(props: Props) {
   );
 
   return (
-    <a
+    <BaseAnchor
       {...props}
       ariaDisabled={props.disabled}
       className={buttonCN}
-    >{props.children}</a>
+    />
   );
 }
 

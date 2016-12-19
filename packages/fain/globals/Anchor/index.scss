@@ -1,0 +1,22 @@
+@import 'foundation-sites/scss/util/util';
+@import 'foundation-sites/scss/global';
+@import 'foundation-sites/scss/typography/base';
+
+.anchor {
+  color: $anchor-color;
+  cursor: pointer;
+  line-height: inherit;
+  text-decoration: $anchor-text-decoration;
+
+  &:hover,
+  &:focus {
+    color: $anchor-color-hover;
+    @if $anchor-text-decoration-hover != $anchor-text-decoration {
+      text-decoration: $anchor-text-decoration-hover;
+    }
+  }
+
+  img {
+    border: 0;
+  }
+}
