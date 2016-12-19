@@ -8,7 +8,8 @@ the available components with the props and their current status.
 
 ## Install
 
-To use these components you need to include this module as part of your ES6 transformations.
+To use these components you need an assets build process (Webpack, Browserify, etc) with
+Sass and CSS Modules support.
 
 1. `npm install fain --save`
 2. Setup [CSS modules](https://github.com/css-modules/css-modules#implementations) in your
@@ -18,17 +19,26 @@ To use these components you need to include this module as part of your ES6 tran
 
 ### Webpack
 
+Use [sass-loader](https://github.com/jtangelder/sass-loader#sass-options)
+with [css-loader](https://github.com/webpack/css-loader).
+
 ```js
 // webpack.config.js
 
+var nodeModulesPath = path.resolve('./node_modules');
 module.exports = {
   // ...
   loaders: [
+    //...
     {
       test: \/.scss?$/,
-      exclude: /node_modules\/(?!fain)/,
-      loader: ['style', 'css?camelCase', 'sass'],
+      loader: [
+        'style',
+        'css?camelCase',
+        `sass?includePaths[]=${nodeModulesPath}`
+      ]
     },
+    //...
   ],
   //...
 };
@@ -36,7 +46,7 @@ module.exports = {
 
 ## Customization
 
-_TODO: add example of prepending variables config_
+_TODO: add webpack and babel examples of prepending a settings file_
 
 Themability for components is available using [Foundation SASS variables](http://foundation.zurb.com/sites/docs/global.html).
 
