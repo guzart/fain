@@ -5,7 +5,7 @@ const reactAdapter = require('./lib/frctl-react-adapter');
 
 const paths = {
   components: path.resolve('./src'),
-  docs: path.resolve('./docs'),
+  docs: path.resolve('./fractal-docs'),
   static: path.resolve('./public')
 };
 
