@@ -1,0 +1,18 @@
+import React from 'react';
+import Card from 'fain/containers/Card';
+import Img from 'fain/globals/Img';
+
+export default function CardExample(props) {
+  return (
+    <Card style={{ width: '300px' }}>
+      <Card.Divider>
+        A Divider
+      </Card.Divider>
+      <Img src="http://foundation.zurb.com/sites/docs/assets/img/generic/rectangle-1.jpg" />
+      <Card.Section>
+        <h4>This is a card</h4>
+        <p>It has an easy to override visual style.</p>
+      </Card.Section>
+    </Card>
+  );
+}
