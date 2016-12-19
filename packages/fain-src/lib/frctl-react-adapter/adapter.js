@@ -10,6 +10,12 @@ const vm = require('vm');
 
 
 const processSass = require('./processSass');
+
+// TODO: make babel options dynamic so that one css file is generated and import order is
+// persisted across an example using multiple components
+// * Look into using css-modules-transform.processCss(css, filepath) option to generate what
+// the component needs
+// * Add a comment with the hashkey to help the preview layout remove dups
 const babelOptions = {
   babelrc: false,
   plugins: [
@@ -84,6 +90,8 @@ class ReactAdapter extends Adapter {
       );
       const element = React.createElement(Component, props);
       const html = ReactDOMServer.renderToStaticMarkup(element);
+
+      // TODO: prepend the generated CSS for the given code
       return Promise.resolve(html);
     } catch (error) {
       debug(error);

@@ -11,6 +11,9 @@ import get from 'lodash/get';
 import React from 'react';
 import { utils } from '@frctl/fractal';
 
+// TODO: Stop importing all stylesheets in the preview, instead extract any <link /> tags
+// or <style /> tags from the yield string, remove dups
+
 function renderLinkStylesheets(props) {
   const builderUrls = props.fractal.web.get('builder.urls');
   const filePath = props.filePath;
