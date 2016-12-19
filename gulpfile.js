@@ -28,7 +28,7 @@ gulp.task('build:js', () =>
       .pipe(gulp.dest(paths.dest))
 );
 
-gulp.task('build:docs', () => {
+gulp.task('build:docs', ['build:js', 'build:sass'], () => {
   const builder = fractal.web.builder();
   const logger = fractal.cli.console;
   builder.on('progress', (completed, total) => logger.update(`Exported ${completed} of ${total} items`, 'info'));
@@ -38,7 +38,7 @@ gulp.task('build:docs', () => {
   });
 });
 
-gulp.task('build', ['build:js', 'build:sass']);
+gulp.task('build', ['build:js', 'build:sass', 'build:docs']);
 
 gulp.task('dev', () => gulp.watch(`${paths.src}/**/*.@(js|jsx|scss)`, ['build']));
 
