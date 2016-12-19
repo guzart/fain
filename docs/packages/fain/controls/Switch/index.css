@@ -1,0 +1,111 @@
+.index__switch___1f9ln {
+  height: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+  outline: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #fefefe;
+  user-select: none; }
+
+.index__switch-input___1sa8e {
+  position: absolute;
+  margin-bottom: 0;
+  opacity: 0; }
+
+.index__switch-paddle___118p2 {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0;
+  background: #cacaca;
+  transition: all 0.25s ease-out;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer; }
+  input + .index__switch-paddle___118p2 {
+    margin: 0; }
+  .index__switch-paddle___118p2::after {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translate3d(0, 0, 0);
+    border-radius: 0;
+    background: #fefefe;
+    transition: all 0.25s ease-out;
+    content: ''; }
+  input:checked ~ .index__switch-paddle___118p2 {
+    background: #1779ba; }
+    input:checked ~ .index__switch-paddle___118p2::after {
+      left: 2.25rem; }
+  [data-whatinput='mouse'] input:focus ~ .index__switch-paddle___118p2 {
+    outline: 0; }
+
+.index__switch-active___10LTE, .index__switch-inactive___3j1cU {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.index__switch-active___10LTE {
+  left: 8%;
+  display: none; }
+  input:checked + label > .index__switch-active___10LTE {
+    display: block; }
+
+.index__switch-inactive___3j1cU {
+  right: 15%; }
+  input:checked + label > .index__switch-inactive___3j1cU {
+    display: none; }
+
+.index__switch___1f9ln.index__tiny___3aSVb {
+  height: 1.5rem; }
+  .index__switch___1f9ln.index__tiny___3aSVb .index__switch-paddle___118p2 {
+    width: 3rem;
+    height: 1.5rem;
+    font-size: 0.625rem; }
+  .index__switch___1f9ln.index__tiny___3aSVb .index__switch-paddle___118p2::after {
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1rem;
+    height: 1rem; }
+  .index__switch___1f9ln.index__tiny___3aSVb input:checked ~ .index__switch-paddle___118p2::after {
+    left: 1.75rem; }
+
+.index__switch___1f9ln.index__small___MuhJQ {
+  height: 1.75rem; }
+  .index__switch___1f9ln.index__small___MuhJQ .index__switch-paddle___118p2 {
+    width: 3.5rem;
+    height: 1.75rem;
+    font-size: 0.75rem; }
+  .index__switch___1f9ln.index__small___MuhJQ .index__switch-paddle___118p2::after {
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem; }
+  .index__switch___1f9ln.index__small___MuhJQ input:checked ~ .index__switch-paddle___118p2::after {
+    left: 2rem; }
+
+.index__switch___1f9ln.index__large___ftXUS {
+  height: 2.5rem; }
+  .index__switch___1f9ln.index__large___ftXUS .index__switch-paddle___118p2 {
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1rem; }
+  .index__switch___1f9ln.index__large___ftXUS .index__switch-paddle___118p2::after {
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 2rem;
+    height: 2rem; }
+  .index__switch___1f9ln.index__large___ftXUS input:checked ~ .index__switch-paddle___118p2::after {
+    left: 2.75rem; }
+
+.index__showForSR___HtMDy {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
