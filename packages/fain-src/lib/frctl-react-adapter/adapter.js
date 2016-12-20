@@ -8,8 +8,8 @@ const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const vm = require('vm');
 
-
 const processSass = require('./processSass');
+const { cleanFilepath } = require('./utils');
 
 // TODO: make babel options dynamic so that one css file is generated and import order is
 // persisted across an example using multiple components
@@ -79,7 +79,7 @@ class ReactAdapter extends Adapter {
   }
 
   render(tplPath, tplCode, tplContext, meta) {
-    debug(`RENDERING: ${tplPath}`);
+    debug(`RENDERING: ${cleanFilepath(tplPath)}`);
 
     try {
       const Component = this.getCachedComponent(tplPath, tplCode);
