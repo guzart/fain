@@ -41,7 +41,7 @@ gulp.task('build:docs', ['build:js', 'build:sass'], () => {
 gulp.task('build', ['build:js', 'build:sass', 'build:docs']);
 
 gulp.task('dev:build', ['build:js', 'build:sass']);
-gulp.task('dev:fain', () => gulp.watch(`${paths.src}/**/*.@(js|jsx|scss)`));
+gulp.task('dev:fain', () => gulp.watch(`${paths.src}/**/*.@(js|jsx|scss)`, ['dev:build']));
 gulp.task('dev:fractal', ['dev:build'], () => fractal.cli.exec('start --sync'));
 
 gulp.task('dev', ['dev:build', 'dev:fain', 'dev:fractal']);
