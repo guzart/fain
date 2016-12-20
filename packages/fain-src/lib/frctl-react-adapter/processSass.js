@@ -1,4 +1,4 @@
-const debug = require('debug')('fain');
+const debug = require('debug')('fain:processSass');
 const sass = require('node-sass');
 const path = require('path');
 
@@ -6,7 +6,7 @@ const path = require('path');
 // (http://foundation.zurb.com/sites/docs/sass.html#the-settings-file)
 
 module.exports = function processSass(data, filename) {
-  debug(`procesSass: compile ${filename}`);
+  debug(`COMPILE: ${filename}`);
   const opts = {
     data: data,
     file: filename,

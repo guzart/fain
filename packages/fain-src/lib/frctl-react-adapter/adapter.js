@@ -1,7 +1,7 @@
 const babel = require('babel-core');
 const crypto = require('crypto');
 // const beautify = require('js-beautify').html;
-const debug = require('debug')('fain');
+const debug = require('debug')('fain:frctl-react-adapter');
 const Adapter = require('@frctl/fractal').Adapter;
 const path = require('path');
 const React = require('react');
@@ -79,7 +79,7 @@ class ReactAdapter extends Adapter {
   }
 
   render(tplPath, tplCode, tplContext, meta) {
-    debug(`frctl-react-adapter: rendering ${tplPath}`);
+    debug(`RENDERING: ${tplPath}`);
 
     try {
       const Component = this.getCachedComponent(tplPath, tplCode);
