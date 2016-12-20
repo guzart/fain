@@ -9,8 +9,6 @@ const vm = require('vm');
 const processSass = require('./processSass');
 const { cleanFilepath } = require('./utils');
 
-// * Add a comment with the hashkey to help the preview layout remove dups
-
 let componentStyle = '';
 const babelOptions = {
   babelrc: false,
@@ -88,8 +86,10 @@ class ReactAdapter extends Adapter {
       const { engineName, fractal, instance, source } = this;
       const props = Object.assign({},
         { engineName, fractal, instance, source, filePath: tplPath, meta },
+        { style: Component.style },
         tplContext
       );
+
       const element = React.createElement(Component, props);
       const html = ReactDOMServer.renderToStaticMarkup(element);
       const output = `<style>${Component.style}</style>\n${html}`;
