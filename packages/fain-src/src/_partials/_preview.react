@@ -1,30 +1,23 @@
 // @flow
 
-/* eslint-disable
-  no-underscore-dangle,
-  react/no-danger, react/jsx-filename-extension,
-  import/no-extraneous-dependencies */
+/* eslint-disable react/no-danger, react/jsx-filename-extension */
 
-import glob from 'glob';
-import path from 'path';
-import get from 'lodash/get';
+// import path from 'path';
+// import get from 'lodash/get';
 import React from 'react';
-import { utils } from '@frctl/fractal';
+// import { utils } from '@frctl/fractal';
 
-// TODO: Stop importing all stylesheets in the preview, instead extract any <link /> tags
-// or <style /> tags from the yield string, remove dups
-
-function renderLinkStylesheets(props) {
-  const builderUrls = props.fractal.web.get('builder.urls');
-  const filePath = props.filePath;
-
-  const publicPath = path.resolve(path.dirname(filePath), '../../public');
-  const result = glob.sync(path.join(publicPath, '**/*.css'));
-  return result
-    .map(f => path.relative(publicPath, f))
-    .map(f => utils.relUrlPath(f, get(props, 'meta.env.request.path', '/'), builderUrls))
-    .map(f => <link rel="stylesheet" href={f} key={f} />);
-}
+// function renderLinkStylesheets(props) {
+//   const builderUrls = props.fractal.web.get('builder.urls');
+//   const filePath = props.filePath;
+//
+//   const publicPath = path.resolve(path.dirname(filePath), '../../public');
+//   const result = glob.sync(path.join(publicPath, '**/*.css'));
+//   return result
+//     .map(f => path.relative(publicPath, f))
+//     .map(f => utils.relUrlPath(f, get(props, 'meta.env.request.path', '/'), builderUrls))
+//     .map(f => <link rel="stylesheet" href={f} key={f} />);
+// }
 
 type Props = {
   yield: string,
@@ -38,7 +31,6 @@ function PreviewTemplate(props: Props) {
         <meta name="referrer" content="origin" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {renderLinkStylesheets(props)}
       </head>
       <body>
         <div dangerouslySetInnerHTML={{ __html: props.yield }} />
