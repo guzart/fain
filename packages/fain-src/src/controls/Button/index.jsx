@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import BaseButton from '../../globals/Button';
+
 import styles from './index.scss';
 
 type Props = {
