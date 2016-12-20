@@ -3,6 +3,7 @@
 @import 'foundation-sites/scss/typography/base';
 
 .anchor {
+  background-color: transparent;
   color: $anchor-color;
   cursor: pointer;
   line-height: inherit;
@@ -14,9 +15,5 @@
     @if $anchor-text-decoration-hover != $anchor-text-decoration {
       text-decoration: $anchor-text-decoration-hover;
     }
-  }
-
-  img {
-    border: 0;
   }
 }
