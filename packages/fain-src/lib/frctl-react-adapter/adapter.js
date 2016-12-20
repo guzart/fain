@@ -1,9 +1,7 @@
 const babel = require('babel-core');
 const crypto = require('crypto');
-// const beautify = require('js-beautify').html;
 const debug = require('debug')('fain:frctl-react-adapter');
 const Adapter = require('@frctl/fractal').Adapter;
-const path = require('path');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const vm = require('vm');
@@ -11,23 +9,21 @@ const vm = require('vm');
 const processSass = require('./processSass');
 const { cleanFilepath } = require('./utils');
 
-// TODO: make babel options dynamic so that one css file is generated and import order is
-// persisted across an example using multiple components
-// * Look into using css-modules-transform.processCss(css, filepath) option to generate what
-// the component needs
 // * Add a comment with the hashkey to help the preview layout remove dups
+
+let componentStyle = '';
 const babelOptions = {
   babelrc: false,
   plugins: [
     [require.resolve('babel-plugin-css-modules-transform'), {
       camelCase: true,
-      extractCss: {
-        dir: path.resolve(__dirname, '..', '..', 'public'),
-        filename: '[path]/[name].css',
-        relativeRoot: '../fain/'
-      },
+      devMode: true,
       extensions: ['.scss'],
-      preprocessCss: processSass
+      preprocessCss: processSass,
+      processCss(css, filepath) {
+        debug(`BABEL CSS ${cleanFilepath(filepath)}`);
+        componentStyle = `${componentStyle}\n${css}`;
+      }
     }]
   ],
   presets: [
@@ -37,6 +33,8 @@ const babelOptions = {
 };
 
 function compile(code) {
+  // after first compilation, require will be hooked to use babel
+  // because it is shared with the vm
   const result = babel.transform(code, babelOptions);
   return result.code;
 }
@@ -68,14 +66,18 @@ class ReactAdapter extends Adapter {
 
   getCachedComponent(tplPath, tplCode) {
     const hashKey = getHashKey(tplPath, tplCode);
-    const Component = this.cache[hashKey];
-    if (Component) {
-      return Component;
+    if (this.cache[hashKey]) {
+      return this.cache[hashKey];
     }
 
+    debug(`COMPILE: ${cleanFilepath(tplPath)}`);
+    componentStyle = '';
     const sandbox = getSandbox();
     vm.runInNewContext(`${compile(tplCode)}`, sandbox);
-    return sandbox.exports.default;
+    const Component = sandbox.exports.default;
+    Component.style = componentStyle;
+    this.cache[hashKey] = Component;
+    return Component;
   }
 
   render(tplPath, tplCode, tplContext, meta) {
@@ -90,9 +92,8 @@ class ReactAdapter extends Adapter {
       );
       const element = React.createElement(Component, props);
       const html = ReactDOMServer.renderToStaticMarkup(element);
-
-      // TODO: prepend the generated CSS for the given code
-      return Promise.resolve(html);
+      const output = `<style>${Component.style}</style>\n${html}`;
+      return Promise.resolve(output);
     } catch (error) {
       debug(error);
       return Promise.reject(error.message);
