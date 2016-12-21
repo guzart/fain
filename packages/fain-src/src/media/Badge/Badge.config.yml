@@ -1,0 +1,16 @@
+---
+
+title: Badge
+
+collated: true
+
+variants:
+  - name: default
+    context:
+      children: "P"
+
+  - name: warning
+    label: "Color: Warning"
+    context:
+      children: W
+      color: warning

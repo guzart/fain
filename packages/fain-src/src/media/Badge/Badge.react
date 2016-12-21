@@ -3,6 +3,8 @@ import Badge from 'fain/media/Badge';
 
 export default function BadgeExample(props) {
   return (
-    <Badge>1</Badge>
+    <Badge
+      color={props.color}
+    >{props.children}</Badge>
   );
 }
