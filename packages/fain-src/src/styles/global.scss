@@ -1,14 +1,29 @@
-@import 'normalize-scss/sass/normalize';
-@import 'sassy-lists/stylesheets/helpers/missing-dependencies';
-@import 'sassy-lists/stylesheets/helpers/true';
-@import 'sassy-lists/stylesheets/functions/purge';
-@import 'sassy-lists/stylesheets/functions/remove';
-@import 'sassy-lists/stylesheets/functions/replace';
-@import 'sassy-lists/stylesheets/functions/to-list';
-
-@import 'foundation-sites/scss/util/util';
-@import 'foundation-sites/scss/global';
+@import './base';
 
 :global {
-  @include foundation-global-styles;
+  html {
+    box-sizing: border-box;
+    font-size: $global-font-size;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background: $body-background;
+    color: $body-font-color;
+    font-family: $body-font-family;
+    font-weight: $global-weight-normal;
+    line-height: $global-lineheight;
+    margin: 0;
+    padding: 0;
+
+    @if ($body-antialiased) {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
 }
