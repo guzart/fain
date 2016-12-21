@@ -1,5 +1,4 @@
 const babel = require('babel-core');
-const crypto = require('crypto');
 const debug = require('debug')('fain:frctl-react-adapter');
 const Adapter = require('@frctl/fractal').Adapter;
 const React = require('react');
@@ -40,16 +39,28 @@ function compile(code) {
 function getSandbox() {
   return {
     exports: {},
-    process: { env: 'production' },
+    process: { env: { BABEL_DISABLE_CACHE: 1, NODE_ENV: 'production' } },
     require,
     window: { navigator: { userAgent: 'Node' } }
   };
 }
 
-function getHashKey(templatePath, templateCode) {
-  const hash = crypto.createHash('sha256');
-  hash.update(`${templatePath}${templateCode}`);
-  return hash.digest('base64');
+function clearRequireCache() {
+  debug(Object.keys(require.cache).filter(id => !/node_modules/.test(id)));
+  Object.keys(require.cache)
+    .filter(id => /packages\/fain\/(?!node_modules)/.test(id))
+    .forEach(id => delete require.cache[id]);
+}
+
+function compileComponent(tplPath, tplCode) {
+  clearRequireCache();
+  debug(`COMPILE: ${cleanFilepath(tplPath)}`);
+  componentStyle = '';
+  const sandbox = getSandbox();
+  vm.runInNewContext(`${compile(tplCode)}`, sandbox);
+  const Component = sandbox.exports.default;
+  Component.style = componentStyle;
+  return Component;
 }
 
 class ReactAdapter extends Adapter {
@@ -62,27 +73,11 @@ class ReactAdapter extends Adapter {
     this.cache = {};
   }
 
-  getCachedComponent(tplPath, tplCode) {
-    const hashKey = getHashKey(tplPath, tplCode);
-    if (this.cache[hashKey]) {
-      return this.cache[hashKey];
-    }
-
-    debug(`COMPILE: ${cleanFilepath(tplPath)}`);
-    componentStyle = '';
-    const sandbox = getSandbox();
-    vm.runInNewContext(`${compile(tplCode)}`, sandbox);
-    const Component = sandbox.exports.default;
-    Component.style = componentStyle;
-    this.cache[hashKey] = Component;
-    return Component;
-  }
-
   render(tplPath, tplCode, tplContext, meta) {
     debug(`RENDERING: ${cleanFilepath(tplPath)}`);
 
     try {
-      const Component = this.getCachedComponent(tplPath, tplCode);
+      const Component = compileComponent(tplPath, tplCode);
       const { engineName, fractal, instance, source } = this;
       const props = Object.assign({},
         { engineName, fractal, instance, source, filePath: tplPath, meta },
