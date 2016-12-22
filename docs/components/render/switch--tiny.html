@@ -1,3 +1,116 @@
 
 
-<p><span>switch--tiny</span><span class="index__switch___1f9ln index__tiny___3aSVb"><input type="checkbox" name="switch--tiny" class="index__switch-input___1sa8e" id="switch--tiny"/><label class="index__switch-paddle___118p2" for="switch--tiny"></label></span></p>
+<style>
+.index__switch___1lgcV {
+  height: 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+  outline: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #fefefe;
+  user-select: none; }
+
+.index__switch-input___2MYgD {
+  position: absolute;
+  margin-bottom: 0;
+  opacity: 0; }
+
+.index__switch-paddle___TOshZ {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0;
+  background: #cacaca;
+  transition: all 0.25s ease-out;
+  font-weight: inherit;
+  color: inherit;
+  cursor: pointer; }
+  input + .index__switch-paddle___TOshZ {
+    margin: 0; }
+  .index__switch-paddle___TOshZ::after {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    transform: translate3d(0, 0, 0);
+    border-radius: 0;
+    background: #fefefe;
+    transition: all 0.25s ease-out;
+    content: ''; }
+  input:checked ~ .index__switch-paddle___TOshZ {
+    background: #1779ba; }
+    input:checked ~ .index__switch-paddle___TOshZ::after {
+      left: 2.25rem; }
+  [data-whatinput='mouse'] input:focus ~ .index__switch-paddle___TOshZ {
+    outline: 0; }
+
+.index__switch-active___3hMEa, .index__switch-inactive___at5Yh {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.index__switch-active___3hMEa {
+  left: 8%;
+  display: none; }
+  input:checked + label > .index__switch-active___3hMEa {
+    display: block; }
+
+.index__switch-inactive___at5Yh {
+  right: 15%; }
+  input:checked + label > .index__switch-inactive___at5Yh {
+    display: none; }
+
+.index__switch___1lgcV.index__tiny___GBwvq {
+  height: 1.5rem; }
+  .index__switch___1lgcV.index__tiny___GBwvq .index__switch-paddle___TOshZ {
+    width: 3rem;
+    height: 1.5rem;
+    font-size: 0.625rem; }
+  .index__switch___1lgcV.index__tiny___GBwvq .index__switch-paddle___TOshZ::after {
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1rem;
+    height: 1rem; }
+  .index__switch___1lgcV.index__tiny___GBwvq input:checked ~ .index__switch-paddle___TOshZ::after {
+    left: 1.75rem; }
+
+.index__switch___1lgcV.index__small___3DPOv {
+  height: 1.75rem; }
+  .index__switch___1lgcV.index__small___3DPOv .index__switch-paddle___TOshZ {
+    width: 3.5rem;
+    height: 1.75rem;
+    font-size: 0.75rem; }
+  .index__switch___1lgcV.index__small___3DPOv .index__switch-paddle___TOshZ::after {
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1.25rem;
+    height: 1.25rem; }
+  .index__switch___1lgcV.index__small___3DPOv input:checked ~ .index__switch-paddle___TOshZ::after {
+    left: 2rem; }
+
+.index__switch___1lgcV.index__large___3jizn {
+  height: 2.5rem; }
+  .index__switch___1lgcV.index__large___3jizn .index__switch-paddle___TOshZ {
+    width: 5rem;
+    height: 2.5rem;
+    font-size: 1rem; }
+  .index__switch___1lgcV.index__large___3jizn .index__switch-paddle___TOshZ::after {
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 2rem;
+    height: 2rem; }
+  .index__switch___1lgcV.index__large___3jizn input:checked ~ .index__switch-paddle___TOshZ::after {
+    left: 2.75rem; }
+
+.index__showForSR___CDz9c {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); }
+</style>
+<p><span>switch--tiny</span><span class="index__switch___1lgcV index__tiny___GBwvq"><input type="checkbox" name="switch--tiny" class="index__switch-input___2MYgD" id="switch--tiny"/><label class="index__switch-paddle___TOshZ" for="switch--tiny"></label></span></p>

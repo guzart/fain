@@ -32,6 +32,19 @@ _Object$keys(_controls).forEach(function (key) {
   });
 });
 
+var _general = require('./general');
+
+_Object$keys(_general).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+
+  _Object$defineProperty(exports, key, {
+    enumerable: true,
+    get: function get() {
+      return _general[key];
+    }
+  });
+});
+
 var _globals = require('./globals');
 
 _Object$keys(_globals).forEach(function (key) {

@@ -1,0 +1,8 @@
+@import 'fain/styles/base';
+
+@import 'foundation-sites/scss/components/flex';
+@import 'foundation-sites/scss/grid/grid';
+@import 'foundation-sites/scss/grid/flex-grid';
+
+@include foundation-flex-classes;
+@include foundation-flex-grid;

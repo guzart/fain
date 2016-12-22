@@ -208,17 +208,107 @@
     <code class="Code Code--lang-html">
         
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span> <span class="hljs-attr">prefix</span>=<span class="hljs-string">"og: http://ogp.me/ns#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">html</span> {
+        <span class="hljs-attribute">box-sizing</span>: border-box;
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    *,
+    *<span class="hljs-selector-pseudo">::before</span>,
+    *<span class="hljs-selector-pseudo">::after</span> {
+        <span class="hljs-attribute">box-sizing</span>: inherit;
+    }
+    
+    <span class="hljs-selector-tag">body</span> {
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+        <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Helvetica, Roboto, Arial, sans-serif;
+        <span class="hljs-attribute">font-weight</span>: normal;
+        <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">-moz-osx-font-smoothing</span>: grayscale;
+        <span class="hljs-attribute">-webkit-font-smoothing</span>: antialiased;
+    }
+    
+    <span class="hljs-selector-tag">html</span> {
+        <span class="hljs-attribute">box-sizing</span>: border-box;
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    *,
+    *<span class="hljs-selector-pseudo">::before</span>,
+    *<span class="hljs-selector-pseudo">::after</span> {
+        <span class="hljs-attribute">box-sizing</span>: inherit;
+    }
+    
+    <span class="hljs-selector-tag">body</span> {
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+        <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Helvetica, Roboto, Arial, sans-serif;
+        <span class="hljs-attribute">font-weight</span>: normal;
+        <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">-moz-osx-font-smoothing</span>: grayscale;
+        <span class="hljs-attribute">-webkit-font-smoothing</span>: antialiased;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"en"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"ltr"</span> <span class="hljs-attr">prefix</span>=<span class="hljs-string">"og: http://ogp.me/ns#"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"utf-8"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"referrer"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"origin"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"robots"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"index, follow"</span> /&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"viewport"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../controls/Button/index.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../controls/Switch/index.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../packages/fain/controls/Button/index.css"</span> /&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"../../packages/fain/controls/Switch/index.css"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+        <span class="hljs-selector-tag">html</span> {
+            <span class="hljs-attribute">box-sizing</span>: border-box;
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+        }
+        
+        *,
+        *<span class="hljs-selector-pseudo">::before</span>,
+        *<span class="hljs-selector-pseudo">::after</span> {
+            <span class="hljs-attribute">box-sizing</span>: inherit;
+        }
+        
+        <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+            <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Helvetica, Roboto, Arial, sans-serif;
+            <span class="hljs-attribute">font-weight</span>: normal;
+            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">-moz-osx-font-smoothing</span>: grayscale;
+            <span class="hljs-attribute">-webkit-font-smoothing</span>: antialiased;
+        }
+        
+        <span class="hljs-selector-tag">html</span> {
+            <span class="hljs-attribute">box-sizing</span>: border-box;
+            <span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+        }
+        
+        *,
+        *<span class="hljs-selector-pseudo">::before</span>,
+        *<span class="hljs-selector-pseudo">::after</span> {
+            <span class="hljs-attribute">box-sizing</span>: inherit;
+        }
+        
+        <span class="hljs-selector-tag">body</span> {
+            <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+            <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+            <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Helvetica, Roboto, Arial, sans-serif;
+            <span class="hljs-attribute">font-weight</span>: normal;
+            <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+            <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">-moz-osx-font-smoothing</span>: grayscale;
+            <span class="hljs-attribute">-webkit-font-smoothing</span>: antialiased;
+        }
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
@@ -233,54 +323,59 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-602c79dda05454ecc999bc21a0e9ee0d-panel-view">
     <code class="Code Code--lang-">
-        <pre><span class="hljs-comment">// @flow</span>
+        <pre>// @flow
 
-<span class="hljs-comment">/* eslint-disable
-  no-underscore-dangle,
-  react/no-danger, react/jsx-filename-extension,
-  import/no-extraneous-dependencies */</span>
+/* eslint-disable react/no-danger, react/jsx-filename-extension */
 
-<span class="hljs-keyword">import</span> glob from <span class="hljs-string">'glob'</span>;
-<span class="hljs-keyword">import</span> path from <span class="hljs-string">'path'</span>;
-<span class="hljs-keyword">import</span> <span class="hljs-built_in">get</span> from <span class="hljs-string">'lodash/get'</span>;
 <span class="hljs-keyword">import</span> React from <span class="hljs-string">'react'</span>;
-<span class="hljs-keyword">import</span> { utils } from <span class="hljs-string">'@frctl/fractal'</span>;
 
-function renderLinkStylesheets(props) {
-  <span class="hljs-keyword">const</span> builderUrls = props.fractal.web.<span class="hljs-built_in">get</span>(<span class="hljs-string">'builder.urls'</span>);
-  <span class="hljs-keyword">const</span> filePath = props.filePath;
+<span class="hljs-keyword">import</span> <span class="hljs-string">'fain/styles/global.scss'</span>;
 
-  <span class="hljs-keyword">const</span> publicPath = path.resolve(path.dirname(filePath), <span class="hljs-string">'../../public'</span>);
-  <span class="hljs-keyword">const</span> result = glob.sync(path.join(publicPath, <span class="hljs-string">'**/*.css'</span>));
-  <span class="hljs-built_in">return</span> result
-    .<span class="hljs-built_in">map</span>(f =&gt; path.relative(publicPath, f))
-    .<span class="hljs-built_in">map</span>(f =&gt; utils.relUrlPath(f, <span class="hljs-built_in">get</span>(props, <span class="hljs-string">'meta.env.request.path'</span>, <span class="hljs-string">'/'</span>), builderUrls))
-    .<span class="hljs-built_in">map</span>(f =&gt; &lt;link rel=<span class="hljs-string">"stylesheet"</span> href={f} key={f} /&gt;);
-}
+// Path helper <span class="hljs-keyword">for</span> assets
+// <span class="hljs-keyword">import</span> path from <span class="hljs-string">'path'</span>;
+// <span class="hljs-keyword">import</span> get from <span class="hljs-string">'lodash/get'</span>;
+// <span class="hljs-keyword">import</span> { utils } from <span class="hljs-string">'@frctl/fractal'</span>;
+// <span class="hljs-keyword">function</span> renderLinkStylesheets(props) {
+//   const builderUrls = props.fractal.web.get(<span class="hljs-string">'builder.urls'</span>);
+//   const filePath = props.filePath;
+//
+//   const publicPath = path.resolve(path.dirname(filePath), <span class="hljs-string">'../../public'</span>);
+//   const result = glob.sync(path.join(publicPath, <span class="hljs-string">'**/*.css'</span>));
+//   return result
+//     .map(f =&gt; path.relative(publicPath, f))
+//     .map(f =&gt; utils.relUrlPath(f, get(props, <span class="hljs-string">'meta.env.request.path'</span>, <span class="hljs-string">'/'</span>), builderUrls))
+//     .map(f =&gt; &lt;link rel=<span class="hljs-string">"stylesheet"</span> href={f} key={f} /&gt;);
+// }
 
 type Props = {
-  <span class="hljs-built_in">yield</span>: <span class="hljs-keyword">string</span>,
+  style: string,
+  yield: string,
 };
 
-function PreviewTemplate(props: Props) {
-  <span class="hljs-built_in">return</span> (
+<span class="hljs-keyword">function</span> renderStyle(style) {
+  if (!style) { return null; }
+  return &lt;style dangerouslySetInnerHTML={{ __html: style }} /&gt;;
+}
+
+<span class="hljs-keyword">function</span> PreviewTemplate(props: Props) {
+  return (
     &lt;html lang=<span class="hljs-string">"en"</span> dir=<span class="hljs-string">"ltr"</span> prefix=<span class="hljs-string">"og: http://ogp.me/ns#"</span> className=<span class="hljs-string">"no-js fonts-loaded"</span>&gt;
       &lt;head&gt;
         &lt;meta charSet=<span class="hljs-string">"utf-8"</span> /&gt;
         &lt;meta name=<span class="hljs-string">"referrer"</span> content=<span class="hljs-string">"origin"</span> /&gt;
         &lt;meta name=<span class="hljs-string">"robots"</span> content=<span class="hljs-string">"index, follow"</span> /&gt;
         &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1"</span> /&gt;
-        {renderLinkStylesheets(props)}
+        {renderStyle(props.style)}
       &lt;/head&gt;
       &lt;body&gt;
-        &lt;div dangerouslySetInnerHTML={{ __html: props.<span class="hljs-built_in">yield</span> }} /&gt;
+        &lt;div dangerouslySetInnerHTML={{ __html: props.yield }} /&gt;
       &lt;/body&gt;
     &lt;/html&gt;
   );
 }
 
 
-<span class="hljs-keyword">export</span> <span class="hljs-built_in">default</span> PreviewTemplate;
+export <span class="hljs-keyword">default</span> PreviewTemplate;
 </pre>
     </code>
 </div>
@@ -331,7 +426,7 @@ function PreviewTemplate(props: Props) {
         </li>
         <li class="Meta-item">
             <strong class="Meta-key">Filesystem Path:</strong>
-            <span class="Meta-value">packages/fain-src/src/_partials/_preview.react</span>
+            <span class="Meta-value">src/_partials/_preview.react</span>
         </li>
         
         
@@ -373,6 +468,46 @@ function PreviewTemplate(props: Props) {
 <div class="Tree" data-behaviour="tree" id="tree-components">
     <h3 class="Tree-title">Components</h3>
     <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-containers">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Containers</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card.html" data-pjax>
+                <span>Card</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
         
     
         
@@ -439,6 +574,318 @@ function PreviewTemplate(props: Props) {
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="switch.html" data-pjax>
                 <span>Switch</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-general">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>General</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-flexgrid">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Flexgrid</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--advanced-sizing.html" data-pjax>
+                <span>Advanced Sizing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--automatic-stacking.html" data-pjax>
+                <span>Automatic Stacking</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--block-grids.html" data-pjax>
+                <span>Block Grids</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--collapse-uncollapse-rows.html" data-pjax>
+                <span>Collapse Uncollapse Rows</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--horizontal-alignment.html" data-pjax>
+                <span>Horizontal Alignment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--offsets.html" data-pjax>
+                <span>Offsets</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--responsive-adjustments.html" data-pjax>
+                <span>Responsive Adjustments</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--source-ordering.html" data-pjax>
+                <span>Source Ordering</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--vertical-alignment.html" data-pjax>
+                <span>Vertical Alignment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-media">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Media</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="badge.html" data-pjax>
+                <span>Badge</span>
                 
 
 <div class="Status Status--unlabelled">

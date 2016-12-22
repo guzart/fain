@@ -1,0 +1,2986 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../fractal/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../fractal/css/default.css?cachebust=1.0.7" type="text/css">
+
+
+<title>Flex Grid: Default | Fain Component Library</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Fain Component Library</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-f042c7eab308b773844e7532e0f6965c">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/flexgrid--default.html" title="Component preview">
+            Flex Grid: Default
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-f042c7eab308b773844e7532e0f6965c">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/flexgrid--default.html"
+                sandbox="allow-same-origin allow-scripts"
+                 style="padding: 1rem !important; "
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-f042c7eab308b773844e7532e0f6965c">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-f042c7eab308b773844e7532e0f6965c-panel-html">
+                
+
+<svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+
+                <span>HTML</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-f042c7eab308b773844e7532e0f6965c-panel-view">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+</svg>
+
+
+                <span>View</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-f042c7eab308b773844e7532e0f6965c-panel-context">
+                
+
+<svg fill="#000000" height="19" viewBox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0 0h24v24H0z" id="a"/>
+    </defs>
+    <clipPath id="b">
+        <use overflow="visible" xlink:href="#a"/>
+    </clipPath>
+    <path clip-path="url(#b)" d="M11 5.08V2c-5 .5-9 4.81-9 10s4 9.5 9 10v-3.08c-3-.48-6-3.4-6-6.92s3-6.44 6-6.92zM18.97 11H22c-.47-5-4-8.53-9-9v3.08C16 5.51 18.54 8 18.97 11zM13 18.92V22c5-.47 8.53-4 9-9h-3.03c-.43 3-2.97 5.49-5.97 5.92z"/>
+</svg>
+
+
+                <span>Context</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-f042c7eab308b773844e7532e0f6965c-panel-assets">
+                
+
+<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+</svg>
+
+
+                <span>Assets</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-f042c7eab308b773844e7532e0f6965c-panel-info">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/>
+</svg>
+
+
+                <span>Info</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-f042c7eab308b773844e7532e0f6965c-panel-notes">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+
+                <span>Notes</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-f042c7eab308b773844e7532e0f6965c-panel-html">
+    <code class="Code Code--lang-html">
+        
+        
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.index__align-right___2mklA</span> {
+        <span class="hljs-attribute">justify-content</span>: flex-end;
+    }
+    
+    <span class="hljs-selector-class">.index__align-center___2McEU</span> {
+        <span class="hljs-attribute">justify-content</span>: center;
+    }
+    
+    <span class="hljs-selector-class">.index__align-justify___1P1BC</span> {
+        <span class="hljs-attribute">justify-content</span>: space-between;
+    }
+    
+    <span class="hljs-selector-class">.index__align-spaced___3aDzY</span> {
+        <span class="hljs-attribute">justify-content</span>: space-around;
+    }
+    
+    <span class="hljs-selector-class">.index__align-top___2Umf4</span> {
+        <span class="hljs-attribute">align-items</span>: flex-start;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-top___-Yhi2</span> {
+        <span class="hljs-attribute">align-self</span>: flex-start;
+    }
+    
+    <span class="hljs-selector-class">.index__align-bottom___3TeiW</span> {
+        <span class="hljs-attribute">align-items</span>: flex-end;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-bottom___1aiga</span> {
+        <span class="hljs-attribute">align-self</span>: flex-end;
+    }
+    
+    <span class="hljs-selector-class">.index__align-middle___2fXo3</span> {
+        <span class="hljs-attribute">align-items</span>: center;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-middle___2Pb_w</span> {
+        <span class="hljs-attribute">align-self</span>: center;
+    }
+    
+    <span class="hljs-selector-class">.index__align-stretch___F0QT1</span> {
+        <span class="hljs-attribute">align-items</span>: stretch;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-stretch___MrDvv</span> {
+        <span class="hljs-attribute">align-self</span>: stretch;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-1___3LIDl</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-2___w1sUN</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-3___QOTRM</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-4___B2JSf</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-5___3JyDK</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-6___17mp9</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-order-1___2W8t4</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-2___32nLj</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-3___1iwoe</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-4___1tzf0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-5___3t8T3</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-6___1092-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-order-1___2G-yF</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-2___25NJp</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-3___i7wbH</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-4___omwk-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-5___1AiKS</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-6___2p6h0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span> {
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75rem</span>;
+        <span class="hljs-attribute">margin-right</span>: auto;
+        <span class="hljs-attribute">margin-left</span>: auto;
+        <span class="hljs-attribute">display</span>: flex;
+        <span class="hljs-attribute">flex-flow</span>: row wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span> {
+        <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">0.625rem</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span> {
+            <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span> {
+            <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__expanded___3xtDO</span> {
+        <span class="hljs-attribute">max-width</span>: none;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__is-collapse-child___1pfDK</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>&gt;<span class="hljs-selector-class">.index__row___1ILk7</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span>&gt;<span class="hljs-selector-class">.index__row___1ILk7</span> {
+        <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">min-width</span>: initial;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__column___24_Vy</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">display</span>: flex;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__column___24_Vy</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-container___3bAtf</span> {
+        <span class="hljs-attribute">display</span>: flex;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-child-auto___33XiS</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-child-grow___2nrkp</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-child-shrink___3RTdJ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-row___HsYF-</span> {
+        <span class="hljs-attribute">flex-direction</span>: row;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-row-reverse___16K39</span> {
+        <span class="hljs-attribute">flex-direction</span>: row-reverse;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-column___Tdx7m</span> {
+        <span class="hljs-attribute">flex-direction</span>: column;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-column-reverse___2lege</span> {
+        <span class="hljs-attribute">flex-direction</span>: column-reverse;
+    }
+    
+    <span class="hljs-selector-class">.index__small-1___1U15B</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-0___27MW3</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-2___n5M9k</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-1___32y_o</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-3___3Qsmm</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-2___31jzW</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-4___1AHpF</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-3___13vlW</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-5___39TDR</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">41.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">41.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-4___3FU9B</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-6___1b-9e</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-5___2b5Dw</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">41.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-7___1i2iR</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">58.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">58.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-6___ydFor</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-8___3BCpi</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">66.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">66.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-7___catCV</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">58.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-9___8sqHR</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">75%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-8___1Yu7j</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">66.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-10___1Avjl</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">83.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">83.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-9___12Ts4</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">75%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-11___172op</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">91.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">91.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-10___3YU-1</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">83.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-12___QKfVu</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-11___2OflF</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">91.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-1___3LIDl</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-2___w1sUN</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-3___QOTRM</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-4___B2JSf</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-5___3JyDK</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-6___17mp9</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-1___2jjMq</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-1___2jjMq</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-1___2jjMq</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-2___3kTXB</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-2___3kTXB</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-2___3kTXB</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-3___1C2hm</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-3___1C2hm</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-3___1C2hm</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-4___5UG1H</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-4___5UG1H</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-4___5UG1H</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-5___196Q8</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-5___196Q8</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-5___196Q8</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">20%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-6___OI061</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-6___OI061</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-6___OI061</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-7___2BY_I</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-7___2BY_I</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-7___2BY_I</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14.28571%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">14.28571%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-8___3zjjK</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-8___3zjjK</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-8___3zjjK</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">12.5%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12.5%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-collapse___2twzg</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-collapse___2twzg</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-uncollapse___3Utb-</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-uncollapse___3Utb-</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.625rem</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-1___UXR_E</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-0___31LAJ</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-2___3D4lI</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-1___2Jwmq</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-3___21-79</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-2___2hgBL</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-4___32yU4</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-3___2-OXg</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-5___2VU1E</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">41.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-4___dtCYL</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-6___1fibw</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-5___11S96</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-7___1gHTU</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">58.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-6___2Dy7R</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-8___M1XHY</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">66.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-7___1ver6</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-9___3DybN</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">75%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-8___3xw4c</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-10____VoMC</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">83.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-9___8h95U</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-11___dYovM</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">91.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-10___3k3SI</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-12___1LFIs</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-11___1wT56</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-1___2W8t4</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-2___32nLj</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-3___1iwoe</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-4___1tzf0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-5___3t8T3</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-6___1092-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-1___27EQX</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-1___27EQX</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-1___27EQX</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-2___3Gykz</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-2___3Gykz</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-2___3Gykz</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-3___3E6vi</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-3___3E6vi</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-3___3E6vi</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-4___iiPjJ</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-4___iiPjJ</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-4___iiPjJ</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-5___1zHA7</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-5___1zHA7</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-5___1zHA7</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">20%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-6___35HVA</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-6___35HVA</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-6___35HVA</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-7___fGr-b</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-7___fGr-b</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-7___fGr-b</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14.28571%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">14.28571%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-8___1OPd7</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-8___1OPd7</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-8___1OPd7</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">12.5%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12.5%</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-expand___2ryoM</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-flex-dir-row___2DtRO</span> {
+            <span class="hljs-attribute">flex-direction</span>: row;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-dir-row-reverse___2rloY</span> {
+            <span class="hljs-attribute">flex-direction</span>: row-reverse;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-dir-column___2bgHI</span> {
+            <span class="hljs-attribute">flex-direction</span>: column;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-dir-column-reverse___3OxwA</span> {
+            <span class="hljs-attribute">flex-direction</span>: column-reverse;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-child-auto___1f6NY</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-child-grow___2MT64</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-child-shrink___1eQY5</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-collapse___1ObVv</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-collapse___1ObVv</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-uncollapse___OM18E</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-uncollapse___OM18E</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-1___2fRl-</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-0___1H_BL</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-2___2sRqB</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-1___2k1IP</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-3___32Eli</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-2___3QjlV</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-4___2om4G</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-3___5tlCV</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-5___2vj4n</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">41.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-4___1EKi5</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-6___1zuGy</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-5___3BaiN</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-7___2KVj8</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">58.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-6___1Z-Sf</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-8___1TBpz</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">66.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-7___1VCBh</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-9___TgK1r</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">75%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-8___2_GfH</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-10___2sr5_</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">83.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-9___1cI3A</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-11___ThaUI</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">91.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-10___AjLDo</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-12___2ztTs</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-11___30xAW</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-1___2G-yF</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-2___25NJp</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-3___i7wbH</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-4___omwk-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-5___1AiKS</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-6___2p6h0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-1___1FP-j</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-1___1FP-j</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-1___1FP-j</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-2___2QgYI</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-2___2QgYI</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-2___2QgYI</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-3___18TH-</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-3___18TH-</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-3___18TH-</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-4___1_vg1</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-4___1_vg1</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-4___1_vg1</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-5___2Add0</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-5___2Add0</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-5___2Add0</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">20%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-6___1hVvD</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-6___1hVvD</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-6___1hVvD</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-7___1KXfQ</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-7___1KXfQ</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-7___1KXfQ</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14.28571%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">14.28571%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-8___3HdIN</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-8___3HdIN</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-8___3HdIN</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">12.5%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12.5%</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-expand___BttUa</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-flex-dir-row___2yK7f</span> {
+            <span class="hljs-attribute">flex-direction</span>: row;
+        }
+        <span class="hljs-selector-class">.index__large-flex-dir-row-reverse___1rc53</span> {
+            <span class="hljs-attribute">flex-direction</span>: row-reverse;
+        }
+        <span class="hljs-selector-class">.index__large-flex-dir-column___1UqbO</span> {
+            <span class="hljs-attribute">flex-direction</span>: column;
+        }
+        <span class="hljs-selector-class">.index__large-flex-dir-column-reverse____Q8rx</span> {
+            <span class="hljs-attribute">flex-direction</span>: column-reverse;
+        }
+        <span class="hljs-selector-class">.index__large-flex-child-auto___3rMtJ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+        }
+        <span class="hljs-selector-class">.index__large-flex-child-grow___1PihJ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+        }
+        <span class="hljs-selector-class">.index__large-flex-child-shrink___1v5vm</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-collapse___13YUN</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-collapse___13YUN</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-selector-class">.index__large-uncollapse___hwQA-</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-uncollapse___hwQA-</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__shrink___3DDFF</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__align-right___2mklA</span> {
+        <span class="hljs-attribute">justify-content</span>: flex-end;
+    }
+    
+    <span class="hljs-selector-class">.index__align-center___2McEU</span> {
+        <span class="hljs-attribute">justify-content</span>: center;
+    }
+    
+    <span class="hljs-selector-class">.index__align-justify___1P1BC</span> {
+        <span class="hljs-attribute">justify-content</span>: space-between;
+    }
+    
+    <span class="hljs-selector-class">.index__align-spaced___3aDzY</span> {
+        <span class="hljs-attribute">justify-content</span>: space-around;
+    }
+    
+    <span class="hljs-selector-class">.index__align-top___2Umf4</span> {
+        <span class="hljs-attribute">align-items</span>: flex-start;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-top___-Yhi2</span> {
+        <span class="hljs-attribute">align-self</span>: flex-start;
+    }
+    
+    <span class="hljs-selector-class">.index__align-bottom___3TeiW</span> {
+        <span class="hljs-attribute">align-items</span>: flex-end;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-bottom___1aiga</span> {
+        <span class="hljs-attribute">align-self</span>: flex-end;
+    }
+    
+    <span class="hljs-selector-class">.index__align-middle___2fXo3</span> {
+        <span class="hljs-attribute">align-items</span>: center;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-middle___2Pb_w</span> {
+        <span class="hljs-attribute">align-self</span>: center;
+    }
+    
+    <span class="hljs-selector-class">.index__align-stretch___F0QT1</span> {
+        <span class="hljs-attribute">align-items</span>: stretch;
+    }
+    
+    <span class="hljs-selector-class">.index__align-self-stretch___MrDvv</span> {
+        <span class="hljs-attribute">align-self</span>: stretch;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-1___3LIDl</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-2___w1sUN</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-3___QOTRM</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-4___B2JSf</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-5___3JyDK</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-6___17mp9</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-order-1___2W8t4</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-2___32nLj</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-3___1iwoe</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-4___1tzf0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-5___3t8T3</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-6___1092-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-order-1___2G-yF</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-2___25NJp</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-3___i7wbH</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-4___omwk-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-5___1AiKS</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-6___2p6h0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span> {
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75rem</span>;
+        <span class="hljs-attribute">margin-right</span>: auto;
+        <span class="hljs-attribute">margin-left</span>: auto;
+        <span class="hljs-attribute">display</span>: flex;
+        <span class="hljs-attribute">flex-flow</span>: row wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span> {
+        <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">0.625rem</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span> {
+            <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span> {
+            <span class="hljs-attribute">margin-right</span>: -<span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">margin-left</span>: -<span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__expanded___3xtDO</span> {
+        <span class="hljs-attribute">max-width</span>: none;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__is-collapse-child___1pfDK</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>&gt;<span class="hljs-selector-class">.index__row___1ILk7</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__collapse___zv9Tv</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span>&gt;<span class="hljs-selector-class">.index__row___1ILk7</span> {
+        <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">min-width</span>: initial;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__column___24_Vy</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">display</span>: flex;
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__column___24_Vy</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span> <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-container___3bAtf</span> {
+        <span class="hljs-attribute">display</span>: flex;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-child-auto___33XiS</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-child-grow___2nrkp</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-child-shrink___3RTdJ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-row___HsYF-</span> {
+        <span class="hljs-attribute">flex-direction</span>: row;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-row-reverse___16K39</span> {
+        <span class="hljs-attribute">flex-direction</span>: row-reverse;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-column___Tdx7m</span> {
+        <span class="hljs-attribute">flex-direction</span>: column;
+    }
+    
+    <span class="hljs-selector-class">.index__flex-dir-column-reverse___2lege</span> {
+        <span class="hljs-attribute">flex-direction</span>: column-reverse;
+    }
+    
+    <span class="hljs-selector-class">.index__small-1___1U15B</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-0___27MW3</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-2___n5M9k</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-1___32y_o</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-3___3Qsmm</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-2___31jzW</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-4___1AHpF</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-3___13vlW</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-5___39TDR</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">41.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">41.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-4___3FU9B</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-6___1b-9e</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-5___2b5Dw</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">41.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-7___1i2iR</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">58.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">58.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-6___ydFor</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-8___3BCpi</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">66.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">66.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-7___catCV</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">58.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-9___8sqHR</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">75%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-8___1Yu7j</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">66.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-10___1Avjl</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">83.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">83.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-9___12Ts4</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">75%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-11___172op</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">91.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">91.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-10___3YU-1</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">83.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-12___QKfVu</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-offset-11___2OflF</span> {
+        <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">91.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-1___3LIDl</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-2___w1sUN</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-3___QOTRM</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-4___B2JSf</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-5___3JyDK</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-order-6___17mp9</span> {
+        <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-1___2jjMq</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-1___2jjMq</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-1___2jjMq</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-2___3kTXB</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-2___3kTXB</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-2___3kTXB</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-3___1C2hm</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-3___1C2hm</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-3___1C2hm</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-4___5UG1H</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-4___5UG1H</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-4___5UG1H</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-5___196Q8</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-5___196Q8</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-5___196Q8</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">20%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-6___OI061</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-6___OI061</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-6___OI061</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-7___2BY_I</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-7___2BY_I</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-7___2BY_I</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14.28571%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">14.28571%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-8___3zjjK</span> {
+        <span class="hljs-attribute">flex-wrap</span>: wrap;
+    }
+    
+    <span class="hljs-selector-class">.index__small-up-8___3zjjK</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-up-8___3zjjK</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">12.5%</span>;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12.5%</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-collapse___2twzg</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-collapse___2twzg</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__small-uncollapse___3Utb-</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__small-uncollapse___3Utb-</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.625rem</span>;
+        <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.625rem</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-1___UXR_E</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-0___31LAJ</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-2___3D4lI</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-1___2Jwmq</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-3___21-79</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-2___2hgBL</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-4___32yU4</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-3___2-OXg</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-5___2VU1E</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">41.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-4___dtCYL</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-6___1fibw</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-5___11S96</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-7___1gHTU</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">58.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-6___2Dy7R</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-8___M1XHY</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">66.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-7___1ver6</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-9___3DybN</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">75%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-8___3xw4c</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-10____VoMC</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">83.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-9___8h95U</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-11___dYovM</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">91.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-10___3k3SI</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-12___1LFIs</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-offset-11___1wT56</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-1___2W8t4</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-2___32nLj</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-3___1iwoe</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-4___1tzf0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-5___3t8T3</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-order-6___1092-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-1___27EQX</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-1___27EQX</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-1___27EQX</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-2___3Gykz</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-2___3Gykz</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-2___3Gykz</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-3___3E6vi</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-3___3E6vi</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-3___3E6vi</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-4___iiPjJ</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-4___iiPjJ</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-4___iiPjJ</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-5___1zHA7</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-5___1zHA7</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-5___1zHA7</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">20%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-6___35HVA</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-6___35HVA</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-6___35HVA</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-7___fGr-b</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-7___fGr-b</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-7___fGr-b</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14.28571%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">14.28571%</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-up-8___1OPd7</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__medium-up-8___1OPd7</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-up-8___1OPd7</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">12.5%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12.5%</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-expand___2ryoM</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-flex-dir-row___2DtRO</span> {
+            <span class="hljs-attribute">flex-direction</span>: row;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-dir-row-reverse___2rloY</span> {
+            <span class="hljs-attribute">flex-direction</span>: row-reverse;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-dir-column___2bgHI</span> {
+            <span class="hljs-attribute">flex-direction</span>: column;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-dir-column-reverse___3OxwA</span> {
+            <span class="hljs-attribute">flex-direction</span>: column-reverse;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-child-auto___1f6NY</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-child-grow___2MT64</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+        }
+        <span class="hljs-selector-class">.index__medium-flex-child-shrink___1eQY5</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__medium-unstack___3isQA</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">40em</span>) {
+        <span class="hljs-selector-class">.index__medium-collapse___1ObVv</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-collapse___1ObVv</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-selector-class">.index__medium-uncollapse___OM18E</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__medium-uncollapse___OM18E</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-1___2fRl-</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">8.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-0___1H_BL</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-2___2sRqB</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-1___2k1IP</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">8.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-3___32Eli</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-2___3QjlV</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-4___2om4G</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-3___5tlCV</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-5___2vj4n</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">41.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-4___1EKi5</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-6___1zuGy</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-5___3BaiN</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">41.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-7___2KVj8</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">58.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-6___1Z-Sf</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-8___1TBpz</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">66.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-7___1VCBh</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">58.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-9___TgK1r</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">75%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-8___2_GfH</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">66.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-10___2sr5_</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">83.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-9___1cI3A</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">75%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-11___ThaUI</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">91.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-10___AjLDo</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">83.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-12___2ztTs</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-offset-11___30xAW</span> {
+            <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">91.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-1___2G-yF</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">1</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-2___25NJp</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-3___i7wbH</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">3</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-4___omwk-</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">4</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-5___1AiKS</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">5</span>;
+        }
+        <span class="hljs-selector-class">.index__large-order-6___2p6h0</span> {
+            <span class="hljs-attribute">order</span>: <span class="hljs-number">6</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-1___1FP-j</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-1___1FP-j</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-1___1FP-j</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-2___2QgYI</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-2___2QgYI</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-2___2QgYI</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">50%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">50%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-3___18TH-</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-3___18TH-</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-3___18TH-</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">33.33333%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">33.33333%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-4___1_vg1</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-4___1_vg1</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-4___1_vg1</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">25%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">25%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-5___2Add0</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-5___2Add0</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-5___2Add0</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">20%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">20%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-6___1hVvD</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-6___1hVvD</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-6___1hVvD</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">16.66667%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">16.66667%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-7___1KXfQ</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-7___1KXfQ</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-7___1KXfQ</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">14.28571%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">14.28571%</span>;
+        }
+        <span class="hljs-selector-class">.index__large-up-8___3HdIN</span> {
+            <span class="hljs-attribute">flex-wrap</span>: wrap;
+        }
+        <span class="hljs-selector-class">.index__large-up-8___3HdIN</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-up-8___3HdIN</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">12.5%</span>;
+            <span class="hljs-attribute">max-width</span>: <span class="hljs-number">12.5%</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-expand___BttUa</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-flex-dir-row___2yK7f</span> {
+            <span class="hljs-attribute">flex-direction</span>: row;
+        }
+        <span class="hljs-selector-class">.index__large-flex-dir-row-reverse___1rc53</span> {
+            <span class="hljs-attribute">flex-direction</span>: row-reverse;
+        }
+        <span class="hljs-selector-class">.index__large-flex-dir-column___1UqbO</span> {
+            <span class="hljs-attribute">flex-direction</span>: column;
+        }
+        <span class="hljs-selector-class">.index__large-flex-dir-column-reverse____Q8rx</span> {
+            <span class="hljs-attribute">flex-direction</span>: column-reverse;
+        }
+        <span class="hljs-selector-class">.index__large-flex-child-auto___3rMtJ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> auto;
+        }
+        <span class="hljs-selector-class">.index__large-flex-child-grow___1PihJ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">0</span> auto;
+        }
+        <span class="hljs-selector-class">.index__large-flex-child-shrink___1v5vm</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">1</span> auto;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+    <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">100%</span>;
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__row___1ILk7</span><span class="hljs-selector-class">.index__large-unstack___2N4et</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span> <span class="hljs-number">1</span> <span class="hljs-number">0px</span>;
+        }
+    }
+    
+    @<span class="hljs-keyword">media</span> print,
+    screen and (min-width: <span class="hljs-number">64em</span>) {
+        <span class="hljs-selector-class">.index__large-collapse___13YUN</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-collapse___13YUN</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-selector-class">.index__large-uncollapse___hwQA-</span>&gt;<span class="hljs-selector-class">.index__column___24_Vy</span>,
+        <span class="hljs-selector-class">.index__large-uncollapse___hwQA-</span>&gt;<span class="hljs-selector-class">.index__columns___3m8WQ</span> {
+            <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">0.9375rem</span>;
+            <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">0.9375rem</span>;
+        }
+    }
+    
+    <span class="hljs-selector-class">.index__shrink___3DDFF</span> {
+        <span class="hljs-attribute">flex</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> auto;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:#f9f9f9;border:solid 1px #c6c6c6;font-size:11px;line-height:2rem;margin-bottom:1.5rem;margin-left:0;margin-right:0;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__row___1ILk7"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:#eee;outline:solid 1px #ccc;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__columns___3m8WQ index__small-6___1b-9e"</span>&gt;</span>6 columns<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:#eee;outline:solid 1px #ccc;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__columns___3m8WQ index__small-6___1b-9e"</span>&gt;</span>6 columns<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:#f9f9f9;border:solid 1px #c6c6c6;font-size:11px;line-height:2rem;margin-bottom:1.5rem;margin-left:0;margin-right:0;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__row___1ILk7"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:#eee;outline:solid 1px #ccc;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__columns___3m8WQ index__medium-6___1fibw index__large-4___2om4G"</span>&gt;</span>12/6/4 columns<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background:#eee;outline:solid 1px #ccc;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__columns___3m8WQ index__medium-6___1fibw index__large-8___1TBpz"</span>&gt;</span>12/6/8 columns<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-f042c7eab308b773844e7532e0f6965c-panel-view">
+    <code class="Code Code--lang-">
+        <pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> FlexGrid <span class="hljs-keyword">from</span> <span class="hljs-string">'fain/general/FlexGrid'</span>;
+
+<span class="hljs-keyword">const</span> { Col, Row } = FlexGrid;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FlexGridExample</span>(<span class="hljs-params">props</span>) </span>{
+<span class="hljs-keyword">const</span> { colStyle, rowStyle } = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">Row</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{rowStyle}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Col</span> <span class="hljs-attr">size</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">small:</span> <span class="hljs-attr">6</span> }} <span class="hljs-attr">style</span>=<span class="hljs-string">{colStyle}</span>&gt;</span>6 columns<span class="hljs-tag">&lt;/<span class="hljs-name">Col</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Col</span> <span class="hljs-attr">size</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">small:</span> <span class="hljs-attr">6</span> }} <span class="hljs-attr">style</span>=<span class="hljs-string">{colStyle}</span>&gt;</span>6 columns<span class="hljs-tag">&lt;/<span class="hljs-name">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Row</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">Row</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{rowStyle}</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Col</span> <span class="hljs-attr">size</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">medium:</span> <span class="hljs-attr">6</span>, <span class="hljs-attr">large:</span> <span class="hljs-attr">4</span> }} <span class="hljs-attr">style</span>=<span class="hljs-string">{colStyle}</span>&gt;</span>12/6/4 columns<span class="hljs-tag">&lt;/<span class="hljs-name">Col</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Col</span> <span class="hljs-attr">size</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">medium:</span> <span class="hljs-attr">6</span>, <span class="hljs-attr">large:</span> <span class="hljs-attr">8</span> }} <span class="hljs-attr">style</span>=<span class="hljs-string">{colStyle}</span>&gt;</span>12/6/8 columns<span class="hljs-tag">&lt;/<span class="hljs-name">Col</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">Row</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-f042c7eab308b773844e7532e0f6965c-panel-context">
+    
+    
+    <code class="Code Code--lang-json">
+        <pre>{
+  <span class="hljs-attr">"colStyle"</span>: {
+    <span class="hljs-attr">"background"</span>: <span class="hljs-string">"#eee"</span>,
+    <span class="hljs-attr">"outline"</span>: <span class="hljs-string">"solid 1px #ccc"</span>
+  },
+  <span class="hljs-attr">"rowStyle"</span>: {
+    <span class="hljs-attr">"background"</span>: <span class="hljs-string">"#f9f9f9"</span>,
+    <span class="hljs-attr">"border"</span>: <span class="hljs-string">"solid 1px #c6c6c6"</span>,
+    <span class="hljs-attr">"fontSize"</span>: <span class="hljs-string">"11px"</span>,
+    <span class="hljs-attr">"lineHeight"</span>: <span class="hljs-string">"2rem"</span>,
+    <span class="hljs-attr">"marginBottom"</span>: <span class="hljs-string">"1.5rem"</span>,
+    <span class="hljs-attr">"marginLeft"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"marginRight"</span>: <span class="hljs-number">0</span>
+  }
+}</pre>
+    </code>
+    
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-f042c7eab308b773844e7532e0f6965c-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-90e6bb08a2be04fe1107c646526656fa">Col.jsx</option>
+                
+                <option value="file-e946b9b5687699198a8182355e7fb63a">Row.jsx</option>
+                
+                <option value="file-60788f8044483a476a14734f3319f6a7">index.js</option>
+                
+                <option value="file-3d5a1350206677849e9fd7870355b20f">index.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-90e6bb08a2be04fe1107c646526656fa" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JSX FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./index.scss'</span>;
+
+type Props = {
+  alignSelf?: <span class="hljs-string">'bottom'</span> | <span class="hljs-string">'middle'</span> | <span class="hljs-string">'top'</span>,
+  <span class="hljs-attr">className</span>: ClassName,
+  offset?: <span class="hljs-built_in">Object</span>,
+  order?: <span class="hljs-built_in">Object</span>,
+  size?: <span class="hljs-built_in">Object</span>,
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getAlignSelfClassName</span>(<span class="hljs-params">alignSelf</span>) </span>{
+  <span class="hljs-keyword">if</span> (!alignSelf) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> styles[<span class="hljs-string">`align-self-<span class="hljs-subst">${alignSelf}</span>`</span>];
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getOffsetClassName</span>(<span class="hljs-params">offset</span>) </span>{
+  <span class="hljs-keyword">if</span> (!offset) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(offset).map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${name}</span>-offset-<span class="hljs-subst">${offset[name]}</span>`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getOrderClassName</span>(<span class="hljs-params">order</span>) </span>{
+  <span class="hljs-keyword">if</span> (!order) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(order).map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${name}</span>-order-<span class="hljs-subst">${order[name]}</span>`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSizeClassName</span>(<span class="hljs-params">size</span>) </span>{
+  <span class="hljs-keyword">if</span> (!size) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(size).map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${name}</span>-<span class="hljs-subst">${size[name]}</span>`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FlexGridCol</span>(<span class="hljs-params">props: Props</span>) </span>{
+  <span class="hljs-keyword">const</span> { alignSelf, offset, order, size, ...other } = props;
+  <span class="hljs-keyword">const</span> colClassName = classNames(
+    props.className,
+    styles.columns,
+    getAlignSelfClassName(alignSelf),
+    getOffsetClassName(offset),
+    getOrderClassName(order),
+    getSizeClassName(size),
+  );
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      {<span class="hljs-attr">...other</span>}
+      <span class="hljs-attr">className</span>=<span class="hljs-string">{colClassName}</span>
+    /&gt;</span>
+  );
+}
+
+export default FlexGridCol;
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/flexgrid/Col.jsx"><span>/components/raw/flexgrid/Col.jsx</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/general/FlexGrid/Col.jsx</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.2 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-e946b9b5687699198a8182355e7fb63a" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JSX FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./index.scss'</span>;
+
+type Props = {
+  align?: string,
+  collapse?: <span class="hljs-built_in">Array</span>&lt;string&gt;,
+  <span class="hljs-attr">className</span>: ClassName,
+  sizeUp?: <span class="hljs-built_in">Object</span>,
+  uncollapse?: <span class="hljs-built_in">Array</span>&lt;string&gt;,
+  unstack?: <span class="hljs-built_in">Array</span>&lt;string&gt;,
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getAlignClassName</span>(<span class="hljs-params">align</span>) </span>{
+  <span class="hljs-keyword">if</span> (!align) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> styles[<span class="hljs-string">`align-<span class="hljs-subst">${align}</span>`</span>];
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getCollapseClassName</span>(<span class="hljs-params">collapse</span>) </span>{
+  <span class="hljs-keyword">if</span> (!collapse) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> collapse.map(<span class="hljs-function"><span class="hljs-params">size</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${size}</span>-collapse`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getSizeUpClassName</span>(<span class="hljs-params">sizeUp</span>) </span>{
+  <span class="hljs-keyword">if</span> (!sizeUp) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(sizeUp).map(<span class="hljs-function"><span class="hljs-params">name</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${name}</span>-up-<span class="hljs-subst">${sizeUp[name]}</span>`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUncollapseClassName</span>(<span class="hljs-params">collapse</span>) </span>{
+  <span class="hljs-keyword">if</span> (!collapse) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> collapse.map(<span class="hljs-function"><span class="hljs-params">size</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${size}</span>-uncollapse`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUnstackClassName</span>(<span class="hljs-params">unstack</span>) </span>{
+  <span class="hljs-keyword">if</span> (!unstack) { <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span>; }
+  <span class="hljs-keyword">return</span> unstack.map(<span class="hljs-function"><span class="hljs-params">size</span> =&gt;</span> styles[<span class="hljs-string">`<span class="hljs-subst">${size}</span>-unstack`</span>]);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FlexGridRow</span>(<span class="hljs-params">props: Props</span>) </span>{
+  <span class="hljs-keyword">const</span> { align, collapse, sizeUp, uncollapse, unstack, ...other } = props;
+  <span class="hljs-keyword">const</span> rowClassName = classNames(
+    props.className,
+    styles.row,
+    getAlignClassName(align),
+    getCollapseClassName(collapse),
+    getSizeUpClassName(sizeUp),
+    getUncollapseClassName(uncollapse),
+    getUnstackClassName(unstack),
+  );
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+      {<span class="hljs-attr">...other</span>}
+      <span class="hljs-attr">className</span>=<span class="hljs-string">{rowClassName}</span>
+    /&gt;</span>
+  );
+}
+
+export default FlexGridRow;
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/flexgrid/Row.jsx"><span>/components/raw/flexgrid/Row.jsx</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/general/FlexGrid/Row.jsx</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">1.4 KB</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-60788f8044483a476a14734f3319f6a7" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> Col <span class="hljs-keyword">from</span> <span class="hljs-string">'./Col'</span>;
+<span class="hljs-keyword">import</span> Row <span class="hljs-keyword">from</span> <span class="hljs-string">'./Row'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  Col,
+  Row,
+};
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/flexgrid/index.js"><span>/components/raw/flexgrid/index.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/general/FlexGrid/index.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">95 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-3d5a1350206677849e9fd7870355b20f" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">'fain/styles/base'</span>;
+
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'foundation-sites/scss/components/flex'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'foundation-sites/scss/grid/grid'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'foundation-sites/scss/grid/flex-grid'</span>;
+
+@<span class="hljs-keyword">include</span> foundation-flex-classes;
+@<span class="hljs-keyword">include</span> foundation-flex-grid;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/flexgrid/index.scss"><span>/components/raw/flexgrid/index.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/general/FlexGrid/index.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">235 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-f042c7eab308b773844e7532e0f6965c-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@flexgrid--default</span>
+        </li>
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(10)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href=""><span>default</span></a>, 
+            
+                <a href="flexgrid--advanced-sizing.html"><span>advanced-sizing</span></a>, 
+            
+                <a href="flexgrid--automatic-stacking.html"><span>automatic-stacking</span></a>, 
+            
+                <a href="flexgrid--block-grids.html"><span>block-grids</span></a>, 
+            
+                <a href="flexgrid--collapse-uncollapse-rows.html"><span>collapse-uncollapse-rows</span></a>, 
+            
+                <a href="flexgrid--horizontal-alignment.html"><span>horizontal-alignment</span></a>, 
+            
+                <a href="flexgrid--offsets.html"><span>offsets</span></a>, 
+            
+                <a href="flexgrid--responsive-adjustments.html"><span>responsive-adjustments</span></a>, 
+            
+                <a href="flexgrid--source-ordering.html"><span>source-ordering</span></a>, 
+            
+                <a href="flexgrid--vertical-alignment.html"><span>vertical-alignment</span></a>
+            
+            </span>
+        </li>
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/flexgrid--default.html"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ <span>With layout</span></a><br></li>
+                    <li><a data-no-pjax href="../render/flexgrid--default.html"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ <span>Component only</span></a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/general/FlexGrid/FlexGrid.react</span>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-f042c7eab308b773844e7532e0f6965c-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">Components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-containers">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Containers</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="card.html" data-pjax>
+                <span>Card</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-controls">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Controls</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="anchor.html" data-pjax>
+                <span>Anchor</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="switch.html" data-pjax>
+                <span>Switch</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-general">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>General</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-flexgrid">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Flexgrid</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--advanced-sizing.html" data-pjax>
+                <span>Advanced Sizing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--automatic-stacking.html" data-pjax>
+                <span>Automatic Stacking</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--block-grids.html" data-pjax>
+                <span>Block Grids</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--collapse-uncollapse-rows.html" data-pjax>
+                <span>Collapse Uncollapse Rows</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--horizontal-alignment.html" data-pjax>
+                <span>Horizontal Alignment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--offsets.html" data-pjax>
+                <span>Offsets</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--responsive-adjustments.html" data-pjax>
+                <span>Responsive Adjustments</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--source-ordering.html" data-pjax>
+                <span>Source Ordering</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--vertical-alignment.html" data-pjax>
+                <span>Vertical Alignment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-media">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Media</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="badge.html" data-pjax>
+                <span>Badge</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">Documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../fractal/js/mandelbrot.js?cachebust=1.0.7"></script>
+
+
+
+</body>
+</html>

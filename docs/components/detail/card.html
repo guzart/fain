@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../../fractal/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../../fractal/css/default.css?cachebust=1.0.7" type="text/css">
+
+
+<title>Card | Fain Component Library</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../../index.html" class="Header-title" data-pjax>Fain Component Library</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+
+    
+    
+
+<div class="Pen" data-behaviour="pen" id="pen-3728a965832301f4ec1c26cd5cbbaabb">
+
+    
+
+    <div class="Pen-panel Pen-header">
+    <h1 class="Pen-title">
+        <a class="Pen-previewLink" href="../preview/card.html" title="Component preview">
+            Card
+            <svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+
+        </a>
+    </h1>
+    
+
+<div class="Status Status--tag">
+
+<label class="Status-label" style="background-color: #29CC29; border-color: #29CC29;">Ready</label>
+
+</div>
+
+
+</div>
+
+
+    <div class="Pen-panel Pen-preview Preview" data-behaviour="preview" id="preview-3728a965832301f4ec1c26cd5cbbaabb">
+    <div class="Preview-wrapper" data-role="resizer">
+        <div class="Preview-resizer">
+            
+             <iframe
+                class="Preview-iframe"
+                data-role="window"
+                src="../preview/card.html"
+                sandbox="allow-same-origin allow-scripts"
+                 style="padding: 1rem !important; "
+                marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" scrolling="yes">
+            </iframe>
+        </div>
+        <div class="Preview-handle" data-role="resize-handle"></div>
+        <div class="Preview-overlay"></div>
+    </div>
+</div>
+
+
+    <div class="Pen-handle Pen-handle--browser" data-role="resize-handle"></div>
+
+    <div class="Pen-panel Pen-info" data-role="info">
+    <div class="Browser" data-behaviour="browser" id="browser-3728a965832301f4ec1c26cd5cbbaabb">
+
+    
+
+<div class="Browser-controls">
+    <ul class="Browser-tabs">
+        
+        
+        <li class="Browser-tab Browser-tab--html is-active " data-role="tab">
+            <a href="#browser-3728a965832301f4ec1c26cd5cbbaabb-panel-html">
+                
+
+<svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
+</svg>
+
+
+                <span>HTML</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--view" data-role="tab">
+            <a href="#browser-3728a965832301f4ec1c26cd5cbbaabb-panel-view">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+</svg>
+
+
+                <span>View</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--context" data-role="tab">
+            <a href="#browser-3728a965832301f4ec1c26cd5cbbaabb-panel-context">
+                
+
+<svg fill="#000000" height="19" viewBox="0 0 24 24" width="19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path d="M0 0h24v24H0z" id="a"/>
+    </defs>
+    <clipPath id="b">
+        <use overflow="visible" xlink:href="#a"/>
+    </clipPath>
+    <path clip-path="url(#b)" d="M11 5.08V2c-5 .5-9 4.81-9 10s4 9.5 9 10v-3.08c-3-.48-6-3.4-6-6.92s3-6.44 6-6.92zM18.97 11H22c-.47-5-4-8.53-9-9v3.08C16 5.51 18.54 8 18.97 11zM13 18.92V22c5-.47 8.53-4 9-9h-3.03c-.43 3-2.97 5.49-5.97 5.92z"/>
+</svg>
+
+
+                <span>Context</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--resources" data-role="tab">
+            <a href="#browser-3728a965832301f4ec1c26cd5cbbaabb-panel-assets">
+                
+
+<svg fill="#000000" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+</svg>
+
+
+                <span>Assets</span>
+            </a>
+        </li>
+        
+        
+        
+        
+        
+        <li class="Browser-tab Browser-tab--info" data-role="tab">
+            <a href="#browser-3728a965832301f4ec1c26cd5cbbaabb-panel-info">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/>
+</svg>
+
+
+                <span>Info</span>
+            </a>
+        </li>
+        
+        
+        
+        <li class="Browser-tab Browser-tab--notes" data-role="tab">
+            <a href="#browser-3728a965832301f4ec1c26cd5cbbaabb-panel-notes">
+                
+
+<svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+    <path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg>
+
+
+                <span>Notes</span>
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+    
+    <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-3728a965832301f4ec1c26cd5cbbaabb-panel-html">
+    <code class="Code Code--lang-html">
+        
+        
+        <pre><span class="hljs-comment">&lt;!-- Start: @card--default --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.index__card___1pDOX</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e6e6e6</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+        <span class="hljs-attribute">box-shadow</span>: none;
+        <span class="hljs-attribute">overflow</span>: hidden;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card___1pDOX</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-divider___3Cj7P</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#e6e6e6</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-divider___3Cj7P</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-section___2-cmD</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-section___2-cmD</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card___1pDOX</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e6e6e6</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+        <span class="hljs-attribute">box-shadow</span>: none;
+        <span class="hljs-attribute">overflow</span>: hidden;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card___1pDOX</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-divider___3Cj7P</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#e6e6e6</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-divider___3Cj7P</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-section___2-cmD</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-section___2-cmD</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card___1pDOX</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e6e6e6</span>;
+        <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span>;
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+        <span class="hljs-attribute">box-shadow</span>: none;
+        <span class="hljs-attribute">overflow</span>: hidden;
+        <span class="hljs-attribute">color</span>: <span class="hljs-number">#0a0a0a</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card___1pDOX</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-divider___3Cj7P</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+        <span class="hljs-attribute">background</span>: <span class="hljs-number">#e6e6e6</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-divider___3Cj7P</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-section___2-cmD</span> {
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__card-section___2-cmD</span>&gt; <span class="hljs-selector-pseudo">:last-child</span> {
+        <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0</span>;
+    }
+    
+    <span class="hljs-selector-class">.index__img___1leFm</span> {
+        <span class="hljs-attribute">-ms-interpolation-mode</span>: bicubic;
+        <span class="hljs-attribute">border-style</span>: none;
+        <span class="hljs-attribute">display</span>: inline-block;
+        <span class="hljs-attribute">height</span>: auto;
+        <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100%</span>;
+        <span class="hljs-attribute">vertical-align</span>: middle;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"width:300px;"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__card___1pDOX"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__card-divider___3Cj7P"</span>&gt;</span>A Divider<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"http://foundation.zurb.com/sites/docs/assets/img/generic/rectangle-1.jpg"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__img___1leFm"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"presentation"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"index__card-section___2-cmD"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>This is a card<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>It has an easy to override visual style.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- End: @card--default --&gt;</span></pre>
+        
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-3728a965832301f4ec1c26cd5cbbaabb-panel-view">
+    <code class="Code Code--lang-">
+        <pre><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> Card <span class="hljs-keyword">from</span> <span class="hljs-string">'fain/containers/Card'</span>;
+<span class="hljs-keyword">import</span> Img <span class="hljs-keyword">from</span> <span class="hljs-string">'fain/globals/Img'</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-keyword">function</span> CardExample(props) {
+  <span class="hljs-keyword">return</span> (
+    &lt;Card style={{ width: <span class="hljs-string">'300px'</span> }}&gt;
+      &lt;Card.Divider&gt;
+        A Divider
+      &lt;/Card.Divider&gt;
+      &lt;Img src=<span class="hljs-string">"http://foundation.zurb.com/sites/docs/assets/img/generic/rectangle-1.jpg"</span> /&gt;
+      &lt;Card.Section&gt;
+        &lt;h4&gt;This <span class="hljs-keyword">is</span> a card&lt;/h4&gt;
+        &lt;p&gt;It has an easy <span class="hljs-keyword">to</span> override visual style.&lt;/p&gt;
+      &lt;/Card.Section&gt;
+    &lt;/Card&gt;
+  );
+}
+</pre>
+    </code>
+</div>
+
+    
+    <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-3728a965832301f4ec1c26cd5cbbaabb-panel-context">
+    
+    
+    <code class="Code Code--lang-js">
+        <pre><span class="hljs-comment">/* No context defined for this component. */</span></pre>
+    </code>
+    
+</div>
+
+    
+    
+
+
+<div class="Browser-panel Browser-resources" data-role="tab-panel" id="browser-3728a965832301f4ec1c26cd5cbbaabb-panel-assets">
+    <div class="FileBrowser">
+
+        <div class="FileBrowser-selectWrapper">
+            <label class="FileBrowser-select-label" for="filebrowser-select">File:</label>
+            <select class="FileBrowser-select" id="filebrowser-select">
+                
+                <option value="file-046be4d1db98986ffed5fba65f04bf8a">Card.jsx</option>
+                
+                <option value="file-56576593b9984822174a48842b77cab2">Divider.jsx</option>
+                
+                <option value="file-e36267fe409604bf0710653741a79eab">Section.jsx</option>
+                
+                <option value="file-0e5e58ecbb6cab01485e555da50b9d2a">index.js</option>
+                
+                <option value="file-b9c3c4a1d27906ee310e26df31e49425">index.scss</option>
+                
+            </select>
+        </div>
+
+        
+        <div class="FileBrowser-item is-active" id="file-046be4d1db98986ffed5fba65f04bf8a" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JSX FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./index.scss'</span>;
+
+type Props = {
+  <span class="hljs-attr">className</span>: ClassName,
+  <span class="hljs-attr">componentClass</span>: string,
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Card</span>(<span class="hljs-params">props: Props</span>) </span>{
+  <span class="hljs-keyword">const</span> { <span class="hljs-attr">componentClass</span>: Component, ...other } = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span>
+      {<span class="hljs-attr">...other</span>}
+      <span class="hljs-attr">className</span>=<span class="hljs-string">{classNames(props.className,</span> <span class="hljs-attr">styles.card</span>)}
+    /&gt;</span>
+  );
+}
+
+Card.defaultProps = {
+  componentClass: 'div',
+};
+
+export default Card;
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/card/Card.jsx"><span>/components/raw/card/Card.jsx</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/containers/Card/Card.jsx</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">456 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-56576593b9984822174a48842b77cab2" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JSX FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./index.scss'</span>;
+
+type Props = {
+  <span class="hljs-attr">className</span>: ClassName,
+  <span class="hljs-attr">componentClass</span>: string,
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CardDivider</span>(<span class="hljs-params">props: Props</span>) </span>{
+  <span class="hljs-keyword">const</span> { <span class="hljs-attr">componentClass</span>: Component, ...other } = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span>
+      {<span class="hljs-attr">...other</span>}
+      <span class="hljs-attr">className</span>=<span class="hljs-string">{classNames(props.className,</span> <span class="hljs-attr">styles.cardDivider</span>)}
+    /&gt;</span>
+  );
+}
+
+CardDivider.defaultProps = {
+  componentClass: 'div',
+};
+
+export default CardDivider;
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/card/Divider.jsx"><span>/components/raw/card/Divider.jsx</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/containers/Card/Divider.jsx</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">484 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-e36267fe409604bf0710653741a79eab" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JSX FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> classNames <span class="hljs-keyword">from</span> <span class="hljs-string">'classnames'</span>;
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-keyword">import</span> styles <span class="hljs-keyword">from</span> <span class="hljs-string">'./index.scss'</span>;
+
+type Props = {
+  <span class="hljs-attr">className</span>: ClassName,
+  <span class="hljs-attr">componentClass</span>: string,
+};
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">CardSection</span>(<span class="hljs-params">props: Props</span>) </span>{
+  <span class="hljs-keyword">const</span> { <span class="hljs-attr">componentClass</span>: Component, ...other } = props;
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Component</span>
+      {<span class="hljs-attr">...other</span>}
+      <span class="hljs-attr">className</span>=<span class="hljs-string">{classNames(props.className,</span> <span class="hljs-attr">styles.cardSection</span>)}
+    /&gt;</span>
+  );
+}
+
+CardSection.defaultProps = {
+  componentClass: 'div',
+};
+
+export default CardSection;
+</span></pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/card/Section.jsx"><span>/components/raw/card/Section.jsx</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/containers/Card/Section.jsx</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">484 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-0e5e58ecbb6cab01485e555da50b9d2a" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-JavaScript FileBrowser-code">
+                                <pre><span class="hljs-comment">// @flow</span>
+
+<span class="hljs-keyword">import</span> Card <span class="hljs-keyword">from</span> <span class="hljs-string">'./Card'</span>;
+<span class="hljs-keyword">import</span> Divider <span class="hljs-keyword">from</span> <span class="hljs-string">'./Divider'</span>;
+<span class="hljs-keyword">import</span> Section <span class="hljs-keyword">from</span> <span class="hljs-string">'./Section'</span>;
+
+Card.Divider = Divider;
+Card.Section = Section;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> Card;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/card/index.js"><span>/components/raw/card/index.js</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/containers/Card/index.js</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">174 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="FileBrowser-item" id="file-b9c3c4a1d27906ee310e26df31e49425" data-role="resource-preview">
+            <ul class="Meta">
+                <li class="Meta-item">
+                    <strong class="Meta-key">Content:</strong>
+                    <span class="Meta-value">
+                        <div class="FileBrowser-itemPreview">
+                            
+                            <code class="Code Code--lang-SCSS FileBrowser-code">
+                                <pre>@<span class="hljs-keyword">import</span> <span class="hljs-string">'fain/styles/base'</span>;
+@<span class="hljs-keyword">import</span> <span class="hljs-string">'foundation-sites/scss/components/card'</span>;
+
+@<span class="hljs-keyword">include</span> foundation-card;
+</pre>
+                            </code>
+                            
+                        </div>
+                    </span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">URL:</strong>
+                    <span class="Meta-value"><a data-no-pjax href="../raw/card/index.scss"><span>/components/raw/card/index.scss</span></a></span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Filesystem Path:</strong>
+                    <span class="Meta-value">src/containers/Card/index.scss</span>
+                </li>
+                <li class="Meta-item">
+                    <strong class="Meta-key">Size:</strong>
+                    <span class="Meta-value">104 Bytes</span>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+
+
+    
+    <div class="Browser-panel" data-role="tab-panel" id="browser-3728a965832301f4ec1c26cd5cbbaabb-panel-info">
+    <ul class="Meta">
+        <li class="Meta-item">
+            <strong class="Meta-key">Handle:</strong>
+            <span class="Meta-value">@card</span>
+        </li>
+        
+        
+        
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Preview:</strong>
+            <span class="Meta-value">
+                <ul>
+                    <li><a data-no-pjax href="../preview/card.html"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ <span>With layout</span></a><br></li>
+                    <li><a data-no-pjax href="../render/card.html"><svg fill="#000000" height="22" viewBox="0 0 24 24" width="22" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h4v-2H5V8h14v10h-4v2h4c1.1 0 2-.9 2-2V6c0-1.1-.89-2-2-2zm-7 6l-4 4h3v6h2v-6h3l-4-4z"/>
+</svg>
+ <span>Component only</span></a></li>
+                </ul>
+            </span>
+        </li>
+        <li class="Meta-item">
+            <strong class="Meta-key">Filesystem Path:</strong>
+            <span class="Meta-value">src/containers/Card/Card.react</span>
+        </li>
+        
+        
+    </ul>
+</div>
+
+    
+    <div class="Browser-panel Browser-notes" data-role="tab-panel" id="browser-3728a965832301f4ec1c26cd5cbbaabb-panel-notes">
+    <div class="Prose Prose--condensed">
+        
+        <p class="Browser-isEmptyNote">There are no notes for this item.</p>
+        
+    </div>
+</div>
+
+    
+
+</div>
+
+</div>
+
+
+    
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">Components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-containers">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Containers</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Card</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-controls">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Controls</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="anchor.html" data-pjax>
+                <span>Anchor</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="switch.html" data-pjax>
+                <span>Switch</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-general">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>General</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-flexgrid">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Flexgrid</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--advanced-sizing.html" data-pjax>
+                <span>Advanced Sizing</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--automatic-stacking.html" data-pjax>
+                <span>Automatic Stacking</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--block-grids.html" data-pjax>
+                <span>Block Grids</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--collapse-uncollapse-rows.html" data-pjax>
+                <span>Collapse Uncollapse Rows</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--horizontal-alignment.html" data-pjax>
+                <span>Horizontal Alignment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--offsets.html" data-pjax>
+                <span>Offsets</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--responsive-adjustments.html" data-pjax>
+                <span>Responsive Adjustments</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--source-ordering.html" data-pjax>
+                <span>Source Ordering</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="flexgrid--vertical-alignment.html" data-pjax>
+                <span>Vertical Alignment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-media">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Media</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="badge.html" data-pjax>
+                <span>Badge</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">Documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../index.html" data-pjax>
+                <span>Overview</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../../fractal/js/mandelbrot.js?cachebust=1.0.7"></script>
+
+
+
+</body>
+</html>
