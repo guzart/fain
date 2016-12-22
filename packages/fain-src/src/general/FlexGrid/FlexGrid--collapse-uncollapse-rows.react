@@ -1,0 +1,22 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row collapse={['small']} uncollapse={['medium']} style={rowStyle}>
+        <Col size={{ small: 6 }} style={colStyle}>
+          Removes gutter at small media query and adds at medium.
+        </Col>
+        <Col size={{ small: 6 }} style={colStyle}>
+          Removes gutter at small media query and adds at medium.
+        </Col>
+      </Row>
+
+    </div>
+  );
+}

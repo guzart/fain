@@ -1,0 +1,22 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row style={rowStyle}>
+        <Col size={{ small: 12, large: 'expand' }} style={colStyle}>One</Col>
+        <Col size={{ small: 12, large: 'expand' }} style={colStyle}>Two</Col>
+        <Col size={{ small: 12, large: 'expand' }} style={colStyle}>Three</Col>
+        <Col size={{ small: 12, large: 'expand' }} style={colStyle}>Four</Col>
+        <Col size={{ small: 12, large: 'expand' }} style={colStyle}>Five</Col>
+        <Col size={{ small: 12, large: 'expand' }} style={colStyle}>Six</Col>
+      </Row>
+
+    </div>
+  );
+}

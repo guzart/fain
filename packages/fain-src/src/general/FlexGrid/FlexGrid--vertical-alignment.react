@@ -1,0 +1,46 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row align="middle" style={rowStyle}>
+        <Col style={colStyle}>I&quot;m in the middle!</Col>
+        <Col style={colStyle}>
+          I am as well, but I have so much text I take up more space!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere
+          ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis
+          accusamus explicabo soluta, quod provident distinctio aliquam omnis?
+          Labore, ullam possimus.
+        </Col>
+      </Row>
+
+      <Row align="top" style={rowStyle}>
+        <Col style={colStyle}>These columns align to the top.</Col>
+        <Col style={colStyle}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere
+          ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis
+          accusamus explicabo soluta, quod provident distinctio aliquam omnis?
+          Labore, ullam possimus.
+        </Col>
+      </Row>
+
+      <Row style={rowStyle}>
+        <Col alignSelf="bottom" style={colStyle}>Align bottom</Col>
+        <Col alignSelf="middle" style={colStyle}>Align middle</Col>
+        <Col alignSelf="top" style={colStyle}>Align top</Col>
+        <Col style={colStyle}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Non harum laborum cum voluptate vel, eius adipisci similique
+          dignissimos nobis at excepturi incidunt fugit molestiae
+          quaerat, consequuntur porro temporibus. Nisi, ex?
+        </Col>
+      </Row>
+
+    </div>
+  );
+}

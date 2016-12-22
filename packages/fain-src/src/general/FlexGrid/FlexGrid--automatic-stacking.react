@@ -1,0 +1,22 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row unstack={['medium']} style={rowStyle}>
+        <Col style={colStyle}>One</Col>
+        <Col style={colStyle}>Two</Col>
+        <Col style={colStyle}>Three</Col>
+        <Col style={colStyle}>Four</Col>
+        <Col style={colStyle}>Five</Col>
+        <Col style={colStyle}>Six</Col>
+      </Row>
+
+    </div>
+  );
+}

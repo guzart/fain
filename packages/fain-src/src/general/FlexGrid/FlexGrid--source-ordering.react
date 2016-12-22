@@ -1,0 +1,22 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row style={rowStyle}>
+        <Col order={{ small: 2, medium: 1 }} style={colStyle}>
+          This column will come second on small, and first on medium and larger.
+        </Col>
+        <Col order={{ small: 1, medium: 2 }} style={colStyle}>
+          This column will come first on small, and second on medium and larger.
+        </Col>
+      </Row>
+
+    </div>
+  );
+}

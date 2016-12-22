@@ -1,0 +1,38 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row style={rowStyle}>
+        <Col size={{ small: 4 }} style={colStyle}>Aligned to</Col>
+        <Col size={{ small: 4 }} style={colStyle}>the &quot;left&quot;</Col>
+      </Row>
+
+      <Row align="right" style={rowStyle}>
+        <Col size={{ small: 4 }} style={colStyle}>Aligned to</Col>
+        <Col size={{ small: 4 }} style={colStyle}>the &quot;right&quot;</Col>
+      </Row>
+
+      <Row align="center" style={rowStyle}>
+        <Col size={{ small: 4 }} style={colStyle}>Aligned to</Col>
+        <Col size={{ small: 4 }} style={colStyle}>the &quot;center&quot;</Col>
+      </Row>
+
+      <Row align="justify" style={rowStyle}>
+        <Col size={{ small: 4 }} style={colStyle}>Aligned to</Col>
+        <Col size={{ small: 4 }} style={colStyle}>the &quot;justify&quot;</Col>
+      </Row>
+
+      <Row align="spaced" style={rowStyle}>
+        <Col size={{ small: 4 }} style={colStyle}>Aligned to</Col>
+        <Col size={{ small: 4 }} style={colStyle}>the &quot;spaced&quot;</Col>
+      </Row>
+
+    </div>
+  );
+}

@@ -1,0 +1,18 @@
+---
+
+title: Flex Grid
+
+collated: false
+
+context:
+  colStyle:
+    background: "#eee"
+    outline: "solid 1px #ccc"
+  rowStyle:
+    background: "#f9f9f9"
+    border: "solid 1px #c6c6c6"
+    fontSize: "11px"
+    lineHeight: "2rem"
+    marginBottom: "1.5rem"
+    marginLeft: 0
+    marginRight: 0

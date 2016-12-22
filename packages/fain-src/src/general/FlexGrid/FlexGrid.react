@@ -1,90 +1,23 @@
 import React from 'react';
 import FlexGrid from 'fain/general/FlexGrid';
 
-export default function ButtonExample() {
-  const style = { outline: 'solid 1px #ccc' };
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+const { colStyle, rowStyle } = props;
   return (
     <div>
-      <FlexGrid.Row>
-        <FlexGrid.Col size={{ small: 6 }} style={style}>6 columns</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 6 }} style={style}>6 columns</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>4 columns</FlexGrid.Col>
-        <FlexGrid.Col>Whatever&quot;s left!</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-        <FlexGrid.Col size={{ small: 12, large: 'expand' }} style={style}>One</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 12, large: 'expand' }} style={style}>Two</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 12, large: 'expand' }} style={style}>Three</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 12, large: 'expand' }} style={style}>Four</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 12, large: 'expand' }} style={style}>Five</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 12, large: 'expand' }} style={style}>Six</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row unstack="medium">
-        <FlexGrid.Col style={style}>One</FlexGrid.Col>
-        <FlexGrid.Col style={style}>Two</FlexGrid.Col>
-        <FlexGrid.Col style={style}>Three</FlexGrid.Col>
-        <FlexGrid.Col style={style}>Four</FlexGrid.Col>
-        <FlexGrid.Col style={style}>Five</FlexGrid.Col>
-        <FlexGrid.Col style={style}>Six</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>Aligned to</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>the &quot;left&quot;</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row align="right">
-        <FlexGrid.Col size={{ small: 4 }} style={style}>Aligned to</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>the &quot;right&quot;</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row align="center">
-        <FlexGrid.Col size={{ small: 4 }} style={style}>Aligned to</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>the &quot;center&quot;</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row align="justify">
-        <FlexGrid.Col size={{ small: 4 }} style={style}>Aligned to</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>the &quot;justify&quot;</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row align="spaced">
-        <FlexGrid.Col size={{ small: 4 }} style={style}>Aligned to</FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 4 }} style={style}>the &quot;spaced&quot;</FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row align="middle">
-        <FlexGrid.Col style={style}>I&quot;m in the middle!</FlexGrid.Col>
-        <FlexGrid.Col style={style}>
-          I am as well, but I have so much text I take up more space!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere
-          ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis
-          accusamus explicabo soluta, quod provident distinctio aliquam omnis?
-          Labore, ullam possimus.
-        </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row align="top">
-        <FlexGrid.Col style={style}>These columns align to the top.</FlexGrid.Col>
-        <FlexGrid.Col style={style}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis facere
-          ducimus earum minus, inventore, ratione doloremque deserunt neque perspiciatis
-          accusamus explicabo soluta, quod provident distinctio aliquam omnis?
-          Labore, ullam possimus.
-        </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row collapse={['small']} uncollapse={['medium']}>
-        <FlexGrid.Col size={{ small: 6 }} style={style}>
-          Removes gutter at small media query and adds at medium.
-        </FlexGrid.Col>
-        <FlexGrid.Col size={{ small: 6 }} style={style}>
-          Removes gutter at small media query and adds at medium.
-        </FlexGrid.Col>
-      </FlexGrid.Row>
-      <FlexGrid.Row>
-        <FlexGrid.Col
-          offset={{ large: 2 }}
-          size={{ small: 4 }}
-          style={style}
-        >Offset 2 on large</FlexGrid.Col>
-        <FlexGrid.Col
-          size={{ small: 4 }}
-          style={style}
-        >4 columns</FlexGrid.Col>
-      </FlexGrid.Row>
+
+      <Row style={rowStyle}>
+        <Col size={{ small: 6 }} style={colStyle}>6 columns</Col>
+        <Col size={{ small: 6 }} style={colStyle}>6 columns</Col>
+      </Row>
+
+      <Row style={rowStyle}>
+        <Col size={{ medium: 6, large: 4 }} style={colStyle}>12/6/4 columns</Col>
+        <Col size={{ medium: 6, large: 8 }} style={colStyle}>12/6/8 columns</Col>
+      </Row>
+
     </div>
   );
 }

@@ -1,0 +1,25 @@
+import React from 'react';
+import FlexGrid from 'fain/general/FlexGrid';
+
+const { Col, Row } = FlexGrid;
+
+export default function FlexGridExample(props) {
+  const { colStyle, rowStyle } = props;
+  return (
+    <div>
+
+      <Row style={rowStyle}>
+        <Col
+          offset={{ large: 2 }}
+          size={{ small: 4 }}
+          style={colStyle}
+        >Offset 2 on large</Col>
+        <Col
+          size={{ small: 4 }}
+          style={colStyle}
+        >4 columns</Col>
+      </Row>
+
+    </div>
+  );
+}
