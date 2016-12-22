@@ -14,8 +14,8 @@ const { colStyle, rowStyle } = props;
       </Row>
 
       <Row style={rowStyle}>
-        <Col size={{ medium: 6, large: 4 }} style={colStyle}>12/6/4 columns</Col>
-        <Col size={{ medium: 6, large: 8 }} style={colStyle}>12/6/8 columns</Col>
+        <Col size={{ small: 12, medium: 6, large: 4 }} style={colStyle}>12/6/4 columns</Col>
+        <Col size={{ small: 12, medium: 6, large: 8 }} style={colStyle}>12/6/8 columns</Col>
       </Row>
 
     </div>
