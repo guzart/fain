@@ -11,7 +11,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "fractal": "fractal start --sync"
+    "build": "gulp build",
+    "fractal": "fractal start --sync",
+    "prepublish": "npm run build",
+    "start": "gulp dev"
   },
   "author": "Arturo Guzman",
   "license": "MIT",
@@ -30,6 +33,9 @@
     "@frctl/mandelbrot": "^1.0.7",
     "babel-core": "^6.21.0",
     "babel-plugin-css-modules-transform": "^1.1.0",
+    "babel-plugin-transform-class-properties": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.20.2",
+    "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.1.4",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
@@ -37,6 +43,8 @@
     "debug": "^2.4.5",
     "foundation-sites": "^6.3.0",
     "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
     "js-beautify": "^1.6.4",
     "lodash": "^4.17.2",
     "node-sass": "^4.0.0",

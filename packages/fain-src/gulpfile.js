@@ -1,11 +1,11 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const path = require('path');
-const fractal = require('./packages/fain-src/fractal');
+const fractal = require('./fractal');
 
 const paths = {
-  dest: path.resolve('./packages/fain'),
-  src: path.resolve('./packages/fain-src/src')
+  dest: path.resolve('../fain'),
+  src: path.resolve('./src')
 };
 
 gulp.task('build:sass', () =>
