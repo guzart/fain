@@ -1,9 +1,4 @@
 // @flow
 
-import Col from './Col';
-import Row from './Row';
-
-export default {
-  Col,
-  Row,
-};
+export { default as Col } from './Col';
+export { default as Row } from './Row';
