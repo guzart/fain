@@ -28,8 +28,6 @@ with [css-loader](https://github.com/webpack/css-loader).
 ```js
 // webpack.config.js
 
-var nodeModulesPath = path.resolve('./node_modules');
-
 module.exports = {
   // ...
   loaders: [
@@ -37,9 +35,9 @@ module.exports = {
     {
       test: \/.scss?$/,
       loader: [
-        'style',
-        'css?camelCase=1',
-        `sass?includePaths[]=${nodeModulesPath}`
+        'style-loader',
+        'css-loader?camelCase=1',
+        `sass-loader?includePaths[]=${path.resolve('./node_modules')}`
       ]
     },
     //...
