@@ -48,9 +48,40 @@ module.exports = {
 
 ## Customization
 
-_TODO: add webpack and babel examples of prepending a settings file_
-
 Themability for components is available using [Foundation SASS variables](http://foundation.zurb.com/sites/docs/global.html).
+
+### Webpack
+
+Prepend your `_settings.scss` to the files that will load the fain components.
+
+```js
+// webpack.config.js
+
+// ...
+function getSassSettings() {
+  var data = fs.readFileSync(path.resolve('./styles/_settings.scss'));
+  return global.encodeURIComponent(data.toString('utf-8'));
+}
+// ...
+module.exports = {
+  // ...
+  loaders: [
+    //...
+    {
+      test: \/.scss?$/,
+      loader: [
+        'style-loader',
+        'css-loader?camelCase=1',
+        `sass-loader?data=${getSassSettings()}&includePaths[]=${path.resolve('./node_modules')}`
+      ]
+    },
+    //...
+  ],
+  // ...
+};
+```
+
+_TODO: add babel examples of prepending a settings file_
 
 ## Usage
 
