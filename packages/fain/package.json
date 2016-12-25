@@ -1,6 +1,6 @@
 {
   "name": "fain",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "React components based on zurb foundation using CSS modules",
   "main": "index.js",
   "repository": {
